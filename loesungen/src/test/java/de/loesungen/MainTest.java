@@ -75,4 +75,5 @@ public class MainTest {
         String result = new Main().convertToString(i);
         assertEquals("10",result);
     }
+
 }

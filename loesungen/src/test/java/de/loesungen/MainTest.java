@@ -1,5 +1,6 @@
 package de.loesungen;
 
+import de.loesungen.exception.MeinFehlerException;
 import org.junit.Test;
 
 import java.io.ByteArrayInputStream;
@@ -14,7 +15,7 @@ import static org.junit.jupiter.api.Assertions.*;
 public class MainTest {
 
     @Test
-    public void has_printed_Hello_world(){
+    public void begruessung_has_printed_Hello_world(){
 
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
         PrintStream orginalOut = System.out;
@@ -28,7 +29,7 @@ public class MainTest {
     }
 
     @Test
-    public void has_add_up(){
+    public void zusammenRechnen_has_add_up(){
         int a = 10;
         int b = 5;
         int result = new Main().zusammenRechnen(a,b);
@@ -37,7 +38,7 @@ public class MainTest {
     }
 
     @Test
-    public void got_string_with_komma(){
+    public void kommaZwischen_got_string_with_komma(){
         String w1 = "HI";
         String w2 = "MOIN";
 
@@ -47,7 +48,7 @@ public class MainTest {
     }
 
     @Test
-    public void called_ZusammenRechnen(){
+    public void aufrufBegruessung_called_ZusammenRechnen(){
         Main main = spy(new Main());
 
         main.aufrufBegruessung();
@@ -55,5 +56,23 @@ public class MainTest {
         verify(main).zusammenRechnen(3, 5);
     }
 
+    @Test
+    public void convertToInt_converted_To_Int(){
+        String s = "10";
+        int result = new Main().convertToInt(s);
 
+        assertEquals(10,result);
+    }
+
+    @Test
+    public void convertToInt_should_Throws_IllegalArgumentException(){
+        assertThrows(MeinFehlerException.class,()->new Main().convertToInt("MOIN"));
+    }
+
+    @Test
+    public void convertToString_should_return_string_of_value(){
+        int i = 10;
+        String result = new Main().convertToString(i);
+        assertEquals("10",result);
+    }
 }

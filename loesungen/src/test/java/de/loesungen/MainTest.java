@@ -1,11 +1,13 @@
 package de.loesungen;
 
 import de.loesungen.exception.MeinFehlerException;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
 
-import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
+
 import static org.mockito.Mockito.*;
 
 
@@ -76,4 +78,37 @@ public class MainTest {
         assertEquals("10",result);
     }
 
+    @ParameterizedTest
+    @CsvSource({
+            "5,Positiv",
+            "-3,Negativ",
+            "0,Zero"
+    })
+    public void returnsPositivNegativOrZero_returnsEachValue(int input,String output){
+        assertEquals(output,new Main().returnsPositivNegativOrZero(input));
+    }
+
+    @ParameterizedTest
+    @CsvSource({
+            "false,false",
+            "true,true",
+            "true,false",
+            "false,true"
+    })
+    public void connectBoolean_shouldReturnGivenParameters(boolean a, boolean b) {
+
+        boolean result = new Main().connectBoolean(a,b);
+
+        assertEquals(a||b,result);
+    }
+
+    @Test
+    public void flipArray_shouldReturnReversedArray() {
+        String[] array = {"A", "B", "C"};
+        String[] expected = {"C", "B", "A"};
+
+        String[] result = new Main().flipArray(array);
+
+        assertArrayEquals(expected, result);
+    }
 }

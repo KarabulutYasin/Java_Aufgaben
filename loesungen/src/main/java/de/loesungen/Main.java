@@ -1,8 +1,8 @@
 package de.loesungen;
 
 import de.loesungen.exception.MeinFehlerException;
+import de.loesungen.exception.AlterNegativException;
 
-import javax.swing.text.html.parser.Parser;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.

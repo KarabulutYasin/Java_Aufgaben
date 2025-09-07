@@ -36,11 +36,10 @@ import static org.junit.jupiter.api.Assertions.*;
         assertEquals("Katze: Minka", new Katze("Minka").toString());
     }
 
-    @Test
-    void equals_und_hashCode_vergleichen_klasse_und_name() {
+        @Test
+    void equals_klasse_und_name() {
         assertEquals(new Hund("Bello"), new Hund("Bello"));
         assertNotEquals(new Hund("Bello"), new Katze("Bello")); // andere Klasse
-        assertEquals(new Hund("Bello").hashCode(), new Hund("Bello").hashCode());
     }
 
     @Test

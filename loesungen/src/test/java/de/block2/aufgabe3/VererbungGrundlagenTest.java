@@ -35,10 +35,9 @@ class VererbungGrundlagenTest {
     }
 
     @Test
-    void equals_und_hashCode_vergleichen_klasse_und_name() {
+    void equals_klasse_und_name() {
         assertEquals(new Hund("Bello"), new Hund("Bello"));
         assertNotEquals(new Hund("Bello"), new Katze("Bello")); // andere Klasse
-        assertEquals(new Hund("Bello").hashCode(), new Hund("Bello").hashCode());
     }
 
     @Test

@@ -7,14 +7,14 @@ public abstract class Tier {
     private final String name;
     public String art = "Tier";
 
-    protected Tier(String name) {
+    public Tier(String name) {
         if (name == null || name.isBlank()) throw new IllegalArgumentException("name");
         this.name = name;
     }
 
     public String getName() { return name; }
 
-    protected String basisLaut() { return "..."; }
+    public String basisLaut() { return "..."; }
 
     public abstract String lautGeben();
 

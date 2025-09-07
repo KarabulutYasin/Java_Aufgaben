@@ -3,7 +3,9 @@ package de.block2.aufgabe3;
 public class Hund extends Tier {
     public String art = "Hund"; // Feld-Verdecken (hiding) Demo
 
-    public Hund(String name) { super(name); }
+    public Hund(String name) {
+        super(name);
+    }
 
     @Override
     public String lautGeben() { return "Wuff"; }

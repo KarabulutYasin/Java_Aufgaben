@@ -3,29 +3,13 @@ package de.block2.aufgabe4;
 
 public class CounterDemo {
 
-    // Test sind auskommmentiert weil sie nicht kompilieren
-    // deswegen wenn du an der aufgabe bist die kommentare entfernen
+    //TODO
+    // Schreibe einen Construktor der einen String Parameter "name" erwartet
+    // Der Konstruktor soll den Namen in einem Attribut speichern
 
-    // Oh Oh wir wollen mit counter zählen wie viele Objekte erzeugt wurden
-    // Aber irgendwas stimmt hier nicht
+    //TODO
+    // Schreibe eine Methode getName die den Namen zurückgibt
+    // Und eine Methode getAnzahlErzeugteObjekte die die Anzahl der erzeugten Objekte zurückgibt
+    // Und eine Methode resetCounter die den Zähler wieder auf 0 setzt von der Anzahl der erzeugten Objekte
 
-    private int counter = 0;
-    private final String name;
-
-    public CounterDemo(String name) {
-        if (name == null || name.isBlank()) throw new IllegalArgumentException("name darf nicht leer sein");
-        this.name = name;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public int getAnzahlErzeugteObjekte() {
-        return counter;
-    }
-
-    public void resetCounter() {
-        counter = 0;
-    }
 }

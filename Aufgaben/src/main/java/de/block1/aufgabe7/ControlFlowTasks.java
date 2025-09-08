@@ -4,45 +4,50 @@ import java.util.List;
 
 public class ControlFlowTasks {
 
-    /*
-    * Wenn eine Aufgabe mit mehreren Möglichkeiten Lösbar ist
-    * mach es mit mehreren möglichkeiten für übungszwecke ich schreibe
-    * das aber jetzt nicht mehr
-    * (for while for each do while)
-    * (switch if else)
-    * */
+    //TODO
+    // Wenn eine Aufgabe mit mehreren Möglichkeiten Lösbar ist
+    // mach es mit mehreren möglichkeiten zur übungszwecke
+    // (for while for each do while)
+    // (switch if else)
 
-    // Aufgabe: Note als Text zurückgeben (1..5 -> "Sehr gut".. "Mangelhaft", sonst "Ungültig")
+    //TODO
+    // Note als Text zurückgeben (1..5 -> "Sehr gut".. "Mangelhaft", sonst "Ungültig")
     public String gradeToText(int grade) {
         return null;
     }
 
-    // Aufgabe: Wochentagsnummer (1=Mo..7=So) -> "Werktag"/"Wochenende"
+    //TODO
+    // Wochentagsnummer (1=Mo..7=So) -> "Werktag"/"Wochenende"
     public String dayType(int day) {
         return null;
     }
 
-    // Aufgabe: Summe 1..n (inklusive)
+    //TODO
+    // Summiere 1...n (inklusive von 1 und n)
     public int sumOneToN(int n) {
         return -1;
     }
 
-    // Aufgabe: Länge aller Strings addieren (ohne die Liste zu modifizieren!)
+    //TODO
+    // Länge aller Strings addieren (ohne die Liste zu modifizieren!)
     public int totalLength(List<String> items) {
         return -1;
     }
 
-    // Aufgabe: Zähle, wie oft x verdoppelt werden muss, um >= limit zu erreichen.
+    //TODO
+    // Zähle, wie oft x verdoppelt werden muss, um >= limit zu erreichen.
     public int doublesUntilAtLeast(int start, int limit) {
         return 0;
     }
 
-    // Aufgabe: Ersten geraden Wert in der Liste finden, sonst -1
+    //TODO
+    // Ersten geraden Wert in der Liste finden, wenn es keinen gibt -1 zurückgeben
     public int firstEven(List<Integer> nums) {
         return -2;
     }
 
-    // Aufgabe: Summe nur der positiven Zahlen bilden (Negative überspringen)
+    //TODO
+    // Summe nur der positiven Zahlen bilden (Negative überspringen)
     public int sumPositives(List<Integer> nums) {
         return -1;
     }

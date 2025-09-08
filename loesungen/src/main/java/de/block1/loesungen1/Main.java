@@ -2,27 +2,27 @@ package de.block1.loesungen1;
 
 import de.block1.exception.MeinFehlerException;
 
-
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {}
 
     public void begruessung() {
-        //TODO Schreibe eine Funktion die Hello World Printet
+        //TODO
+        // Schreibe eine Funktion die Hello World auf der Konsole ausgibt
+
         System.out.println("Hello World");
     }
 
     public int zusammenRechnen(int a, int b){
-        //TODO Gebe Das ergebnis der Addition zurück
+        //TODO
+        // Gebe das Ergebnis der Addition zurück von denn Parametern a und b
 
         return a+b;
     }
 
     public String kommaZwischen(String wort1, String wort2){
-        //TODO gebe einen String zurück der erstmal
-        //TODO das erste wort dann ein komme und dann das
-        //TODO zweite  wort enthält
+        //TODO
+        // Gebe ein String zurück der die Wörter wort1 und wort2
+        // konkateniert mit einem Komme dazwischen
 
         // Beispiel HI und Moin => HI,Moin
 
@@ -38,15 +38,18 @@ public class Main {
     }
 
     public void aufrufBegruessung(){
-        //TODO Rufe zusammenRechen mit denn werten 3 und 5 auf
+        //TODO
+        // Rufe zusammenRechen mit denn Übergabewerten 3 und 5 auf
 
         zusammenRechnen(3,5);
     }
 
     public int convertToInt(String s){
-        //TODO Konvertiere Denn String in int
-        //TODO Falls es nicht konvertierbar ist wirf eine
-        //TODO MeinFehlerException erstelle dafür eine Klasse
+        //TODO
+        // Konvertiere Denn String in int
+        // Falls es aber nicht konvertierbar ist wirf eine
+        // MeinFehlerException erstelle dafür eine Klasse
+
         try {
             return Integer.parseInt(s);
         }catch (Exception e){
@@ -57,14 +60,16 @@ public class Main {
     }
 
     public String convertToString(int i){
-        //TODO Gebe denn int als String zurück
+        //TODO
+        // Gebe i als String zurück
         return String.valueOf(i);
     }
 
     public String returnsPositivNegativOrZero(int i){
-        //TODO Gebe Zero zurück wenn i 0 ist
-        //TODO Gebe Positiv zurück wenn i größer 0 ist
-        //TODO Gebe Negativ zurück wenn i kleiner 0 ist
+        //TODO
+        // Gebe falls i 0 ist denn String "Zero" zurück
+        // Gebe falls i größer 0 ist denn String "Positiv" zurück
+        // Gebe falls i kleiner 0 ist denn String "Negativ" zurück
 
         //Methode 1.1
 
@@ -109,14 +114,20 @@ public class Main {
     }
 
     public boolean connectBoolean(boolean a, boolean b) {
-        //TODO Gebe true zurück wenn a oder b true sind (auch wenn beide true sind)
+        //TODO
+        // Gebe true zurück wenn a oder b true sind (auch wenn beide true sind)
 
-        //Methode 1
         return a || b;
     }
 
     public String[] flipArray(String[] array) {
-        //TODO Drehe das Array um
+        //TODO
+        // Ordne das Array um indem die Werte umgedreht werden
+
+        //Bsp
+        // Vorher ["A", "B", "C"]
+        // Nachher ["C", "B", "A"]
+
         for (int i = 0; i < array.length / 2; i++) {
             String temp = array[i];
             array[i] = array[array.length - 1 - i];

@@ -67,6 +67,10 @@ class HundTest {
 
     @Test
     void lautMitBasis_returnsCorrectString() {
-        assertEquals("... Wuff", objUnderTest.lautMitBasis(), "lautMitBasis() gibt nicht '... Wuff' zurück");
+        try{
+            assertEquals("... Wuff", objUnderTest.getClass().getMethod("lautMitBasis").invoke(objUnderTest), "lautMitBasis() gibt nicht '... Wuff' zurück");
+        }catch (Exception e){
+            fail("Fehler beim Aufruf von lautMitBasis(): " + e.getMessage());
+        }
     }
 }

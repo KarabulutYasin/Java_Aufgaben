@@ -5,21 +5,13 @@ public final class Point {
     // TIPP denk an Libs die du vielleicht schon gelernt hast und hier benutzen könntest
 
     //TODO
-    /*
-     * 1.Schreibe eine Klasse Point mit den Instanzvariablen x und y (beide int).
-     *
-     * 2.Schreibe einen Konstruktor der beide Variablen initialisiert.
-     *
-     * 3.Schreibe Getter für beide Variablen.
-     *
-     * 4.Schreibe eine Methode distanceTo(Point other), die die Distanz berechnet
-     *    zwischen diesem Punkt und einem anderen Punkt.
-     *
-     * 5.schreibe eine equals-Methode, die zwei Punkte als gleich betrachtet,
-     *    wenn ihre x- und y-Koordinaten gleich sind.
-     *
-     * 6.Schreibe eine toString-Methode, die einen Punkt in der Form "Point(x,y)" darstellt.
-     * */
+    // 1. Schreibe eine Klasse Point mit den Instanzvariablen (Attributen) x und y (beide int).
+    // 2. Schreibe einen Konstruktor der beide Variablen initialisiert.
+    // 3. Schreibe Getter für beide Variablen.
+    // 4. Schreibe eine Methode distanceTo(Point other), die die Distanz berechnet zwischen diesem Punkt und einem anderen Punkt.
+    // 5. schreibe eine equals-Methode, die zwei Punkte als gleich betrachtet, wenn ihre x- und y-Koordinaten gleich sind.
+    // 6. Schreibe eine toString-Methode, die einen Punkt in der Form "Point(x,y)" darstellt.
+
     private  int x;
     private  int y;
 

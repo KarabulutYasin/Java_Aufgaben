@@ -16,7 +16,9 @@ public final class Point {
     // 5. schreibe eine equals-Methode, die zwei Punkte als gleich betrachtet, wenn ihre x- und y-Koordinaten gleich sind.
     // 6. Schreibe eine toString-Methode, die einen Punkt in der Form "Point(x,y)" darstellt.
 
-    public Point(int x, int y) { this.x = x; this.y = y; }
+    public Point(int x, int y) {
+        this.x = x; this.y = y;
+    }
 
     public int getX() { return x; }
     public int getY() { return y; }

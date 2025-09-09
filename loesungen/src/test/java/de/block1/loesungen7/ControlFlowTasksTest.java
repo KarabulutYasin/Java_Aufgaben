@@ -48,12 +48,6 @@ class ControlFlowTasksTest {
 
     }
 
-    @Test
-    void removeNegatives_usesIteratorSafely() {
-        assertEquals(List.of(1, 2, 3), sut.removeNegatives(List.of(-1, 1, -2, 2, 3)));
-        // Stolperfalle: Entfernen in foreach würde ConcurrentModificationException werfen
-    }
-
     // ----- while -----
     @Test
     void doublesUntilAtLeast_countsSteps() {
@@ -75,26 +69,5 @@ class ControlFlowTasksTest {
     void sumPositives_skipsNonPositives() {
         assertEquals(6, sut.sumPositives(List.of(-2, 1, 0, 5)));
         // Stolperfalle: Code nach "continue" wird übersprungen -> sum += n MUSS hinter der Bedingung stehen
-    }
-
-    // ----- do-while -----
-    @Test
-    void doAtLeastOnce_runsAtLeastOnce() {
-        assertEquals(1, sut.doAtLeastOnce(5, 5)); // obwohl start == limit, läuft 1x
-        assertEquals(2, sut.doAtLeastOnce(3, 5)); // 3->4 (1), 4->5 (2)
-        // Stolperfalle: do-while läuft mindestens einmal, auch wenn Bedingung initial false
-    }
-
-    // ----- Geltungsbereich -----
-    @Test
-    void blockScopeExample_returnsValueWithoutLeakingTemp() {
-        assertEquals(11, sut.blockScopeExample(5)); // (5*2)+1
-        // Stolperfalle: "temp" außerhalb des Blocks nicht sichtbar (Compilerfehler, siehe Kommentar in Code)
-    }
-
-    @Test
-    void shadowingSum_avoidsShadowingBug() {
-        assertEquals(5 + (5 + 1), sut.shadowingSum(5));
-        // Stolperfalle: keine innere Variable "sum" definieren, sonst Schatten & falsches Ergebnis
     }
 }

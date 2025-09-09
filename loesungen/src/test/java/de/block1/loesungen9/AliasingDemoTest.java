@@ -9,15 +9,10 @@ class AliasingDemoTest {
 
     @Test
     void copyArray_createsIndependentArray() {
-        AliasingDemo sut = new AliasingDemo();
-        int[] a = {1, 2, 3};
-        int[] b = sut.copyArray(a);
+        int[] input = {1,2,3};
+        int[] result = new AliasingDemo().copyArray(input);
 
-        b[0] = 99; // ändere nur b
-
-        // a bleibt unverändert -> keine Alias-Problematik
-        assertEquals(1, a[0]);
-        assertEquals(99, b[0]);
-        assertNotSame(a, b); // Referenzen unterschiedlich
+        assertArrayEquals(input,result,"Der Inhalt der Arrays ist unterschiedlich");
+        assertNotSame(input,result,"Referenz ist die selbe");
     }
 }

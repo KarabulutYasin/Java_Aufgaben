@@ -8,7 +8,11 @@ import org.junit.jupiter.api.Test;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
+import static java.lang.Math.sqrt;
 import static org.junit.jupiter.api.Assertions.*;
 
 class PointTest {
@@ -68,6 +72,23 @@ class PointTest {
             }
         }
     }
+
+//    @Test
+//    void Distance_works_how_it_should(){
+//        List<Point> point1Liste = Arrays.asList(
+//                CreatePoint(1,1),
+//                CreatePoint(2,0),
+//                CreatePoint(0,2),
+//                CreatePoint(4,4)
+//        );
+//        List<Point> point2Liste = Arrays.asList(
+//                CreatePoint(1,1), // Kein Abstand
+//                CreatePoint(0,2), // Hinrichtung
+//                CreatePoint(2,0), // Rückrichtung
+//                CreatePoint(2,2) // Erweiterung
+//
+//        );
+//    }
 
     @Test
     void Equals_works_for_equal_objects() {

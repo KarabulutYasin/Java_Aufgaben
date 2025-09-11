@@ -1,6 +1,6 @@
-package de.a.fundamentals.aufgabe1;
+package de.a.fundamentals.a.lineareProgramme;
 
-public class Main {
+public class LineareProgramme {
     public static void main(String[] args) {
     }
 
@@ -27,7 +27,7 @@ public class Main {
         return null;
     }
 
-    public void aufrufBegruessung(){
+    public void aufrufZusammenRechnen(){
         //TODO
         // Rufe zusammenRechen mit denn Übergabewerten 3 und 5 auf
     }

@@ -38,9 +38,9 @@ public class LineareProgrammeTest {
     @ParameterizedTest
     @CsvSource({"HI,MOIN", "A,B", "123,456", "a,''"})
     public void kommaZwischen_got_string_with_komma(String w1, String w2){
-       String result =  new LineareProgramme().kommaZwischen(w1,w2);
+        String result =  new LineareProgramme().kommaZwischen(w1,w2);
 
-       assertEquals(w1 + "," + w2 ,result, "Result of \"kommaZwischen\" is not correct \nExpected was: "+ (w1 + "," + w2) +"\nBut was: "+result);
+        assertEquals(w1 + "," + w2 ,result, "Result of \"kommaZwischen\" is not correct \nExpected was: "+ (w1 + "," + w2) +"\nBut was: "+result);
     }
 
     @Test

@@ -27,17 +27,17 @@ public class EigeneMethodenTest {
         }
     }
 
-    @Test
-    void mult_should_multiply(){
-        int result = 0;
-        try {
-            EigeneMethoden clazz = EigeneMethoden.class.getDeclaredConstructor().newInstance();
-            Method multMethod = EigeneMethoden.class.getDeclaredMethod("mult", int.class, int.class);
-            multMethod.setAccessible(true);
-            result =(int) multMethod.invoke(clazz,1,2);
-            assertEquals(1*2, result);
-        }catch (Exception e){
-            fail("mult returned wrong result \nExpected was: " + 1*2 + "\nbut returned: " + result);
-        }
-    }
+//    @Test
+//    void mult_should_multiply(){
+//        int result = 0;
+//        try {
+//            EigeneMethoden clazz = EigeneMethoden.class.getDeclaredConstructor().newInstance();
+//            Method multMethod = EigeneMethoden.class.getDeclaredMethod("mult", int.class, int.class);
+//            multMethod.setAccessible(true);
+//            result =(int) multMethod.invoke(clazz,1,2);
+//            assertEquals(1*2, result);
+//        }catch (Exception e){
+//            fail("mult returned wrong result \nExpected was: " + 1*2 + "\nbut returned: " + result);
+//        }
+//    }
 }

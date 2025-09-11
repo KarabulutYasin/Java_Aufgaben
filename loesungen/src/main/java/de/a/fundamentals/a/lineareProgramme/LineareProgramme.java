@@ -50,7 +50,6 @@ public class LineareProgramme {
         // Konvertiere Denn String in int
         // Falls es aber nicht konvertierbar ist wirf eine
         // MeinFehlerException erstelle dafür eine Klasse
-
         try {
             return Integer.parseInt(s);
         }catch (Exception e){

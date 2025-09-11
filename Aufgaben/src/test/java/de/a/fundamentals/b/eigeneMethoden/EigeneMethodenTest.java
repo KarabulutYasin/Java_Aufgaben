@@ -1,7 +1,6 @@
 package de.a.fundamentals.b.eigeneMethoden;
 
-import de.a.fundamentals.b.eigeneMetoden.EigeneMethoden;
-import org.junit.jupiter.api.Test;
+import de.a.fundamentals.b.EigeneMethoden.EigeneMethoden;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.CsvSource;
@@ -13,7 +12,6 @@ import java.util.Arrays;
 import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.*;
-import static org.junit.jupiter.api.Assertions.fail;
 
 public class EigeneMethodenTest {
 

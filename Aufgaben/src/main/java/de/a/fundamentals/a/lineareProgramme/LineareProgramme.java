@@ -21,6 +21,7 @@ public class LineareProgramme {
         //TODO
         // Gebe ein String zurück der die Wörter wort1 und wort2
         // konkateniert mit einem Komme dazwischen
+        // man kann davon ausgehen das kein String null ist
 
         // Beispiel HI und Moin => HI,Moin
 

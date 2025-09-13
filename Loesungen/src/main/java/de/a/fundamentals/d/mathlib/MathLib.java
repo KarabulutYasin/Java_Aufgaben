@@ -1,6 +1,6 @@
-package de.a.fundamentals.loesungen5;
+package de.a.fundamentals.d.mathlib;
 
-public class MathTasks {
+public class MathLib {
 
     //TODO
     // Mach dich mit der Math library von Java vertraut um die folgenden Aufgaben zu lösen

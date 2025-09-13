@@ -1,6 +1,8 @@
 package de.a.fundamentals.loesungen2;
 
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
 
 import java.io.ByteArrayInputStream;
 import java.nio.charset.StandardCharsets;
@@ -13,25 +15,22 @@ class Aufgaben2Test {
 
     private final Aufgaben2 sut = new Aufgaben2();
 
-    @Test
-    void echoNextToken_readsSingleToken() {
-        Scanner sc = new Scanner(new ByteArrayInputStream("42\n".getBytes(StandardCharsets.UTF_8)));
-        assertEquals("42", sut.echoNextToken(sc));
+    @ParameterizedTest
+    @CsvSource({"42", "-7", "0", "-2147483648", "2147483647","Moin","Hi"})
+    void echoNextToken_readsSingleToken(String str) {
+        Scanner sc = new Scanner(new ByteArrayInputStream(str.getBytes(StandardCharsets.UTF_8)));
+        assertEquals(str, sut.echoNextToken(sc));
     }
 
-    @Test
-    void absInt_and_absDouble_work() {
-        assertEquals(5, sut.absInt(-5));
-        assertEquals(0, sut.absInt(0));
+    @ParameterizedTest
+    @CsvSource({"5","-2","0"})
+    void absInt_gives_back_abs(int x) {
+        assertEquals(Math.abs(x),sut.absInt(x));
     }
 
     @Test
     void numbersOneToTen_returnsList1to10() {
-        List<Integer> got = sut.numbersOneToTen();
-        assertEquals(10, got.size());
-        for (int i = 1; i <= 10; i++) {
-            assertEquals(i, got.get(i - 1));
-        }
+        assertEquals(List.of(1,2,3,4,5,6,7,8,9,10), sut.numbersOneToTen());
     }
 
     @Test
@@ -40,6 +39,7 @@ class Aufgaben2Test {
         Scanner sc = new Scanner(new ByteArrayInputStream(input.getBytes(StandardCharsets.UTF_8)));
         List<String> got = sut.readUntilStop(sc);
         assertEquals(List.of("hello", "world"), got);
+        if (got.contains("STOP") || got.contains("ignored")) fail("List contains 'STOP' or lines after it");
     }
 
     @Test
@@ -49,7 +49,6 @@ class Aufgaben2Test {
                 {4, 5, 6}
         };
         String expected1 = "1 2 3\n4 5 6";
-        String expected2 = "1 2 3 \n4 5 6 \n";
-        assertTrue(sut.matrixToString(m).equals(expected1) || sut.matrixToString(m).equals(expected2));
+        assertTrue(sut.matrixToString(m).contains(expected1));
     }
 }

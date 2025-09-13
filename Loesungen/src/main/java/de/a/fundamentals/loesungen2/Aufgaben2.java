@@ -38,7 +38,7 @@ public class Aufgaben2 {
 
     public List<String> readUntilStop(Scanner sc) {
         //TODO
-        // Schreibe eine Methode die solange ein input in eine Liste schreibt bis der Benutzer "stop" eingibt
+        // Schreibe eine Methode die solange ein input in eine Liste schreibt bis der Benutzer "stop" eingibt (Groß oder Klein ist egal)
         // und dann die Liste zurückgibt
 
         List<String> result = new ArrayList<>();

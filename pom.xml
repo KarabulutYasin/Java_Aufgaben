@@ -10,7 +10,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>Aufgaben</module>
-        <module>loesungen</module>
+        <module>Loesungen</module>
     </modules>
 
     <dependencies>

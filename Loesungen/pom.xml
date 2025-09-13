@@ -10,7 +10,7 @@
     </parent>
 
     <groupId>de.loesungen</groupId>
-    <artifactId>loesungen</artifactId>
+    <artifactId>Loesungen</artifactId>
 
     <properties>
         <maven.compiler.source>24</maven.compiler.source>

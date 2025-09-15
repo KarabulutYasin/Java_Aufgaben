@@ -1,4 +1,4 @@
-package de.a.fundamentals.aufgabe7;
+package de.a.fundamentals.e.kontrollstrukturen;
 
 import org.junit.jupiter.api.Test;
 
@@ -7,9 +7,9 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class ControlFlowTasksTest {
+class KontrollStrukturenTest {
 
-    private final ControlFlowTasks sut = new ControlFlowTasks();
+    private final KontrollStrukturen sut = new KontrollStrukturen();
 
     // ----- If-Else-Kaskaden -----
     @Test

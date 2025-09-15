@@ -1,10 +1,8 @@
-package de.a.fundamentals.loesungen7;
+package de.a.fundamentals.e.kontrollstrukturen;
 
-import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 
-public class ControlFlowTasks {
+public class KontrollStrukturen {
 
     //TODO
     // Wenn eine Aufgabe mit mehreren Möglichkeiten Lösbar ist

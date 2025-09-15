@@ -1,4 +1,4 @@
-package de.a.fundamentals.b.eigeneMetoden;
+package de.a.fundamentals.b.eigeneMethoden;
 
 public class EigeneMethoden {
     //TODO

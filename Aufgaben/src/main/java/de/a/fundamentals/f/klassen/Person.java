@@ -1,7 +1,5 @@
 package de.a.fundamentals.f.klassen;
 
-import de.a.fundamentals.f.klassen.exception.EmptyNameException;
-import de.a.fundamentals.z.exception.AlterNegativException;
 
 public class Person {
     //TODO

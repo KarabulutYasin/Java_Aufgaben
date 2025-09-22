@@ -1,6 +1,6 @@
 package de.a.fundamentals.a.lineareProgramme;
 
-import de.a.fundamentals.exception.MeinFehlerException;
+import de.a.fundamentals.z.exception.MeinFehlerException;
 import org.apache.commons.lang3.math.NumberUtils;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;

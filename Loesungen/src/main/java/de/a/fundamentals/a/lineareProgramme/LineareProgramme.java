@@ -1,6 +1,6 @@
 package de.a.fundamentals.a.lineareProgramme;
 
-import de.a.fundamentals.exception.MeinFehlerException;
+import de.a.fundamentals.z.exception.MeinFehlerException;
 
 public class LineareProgramme {
     public static void main(String[] args) {}

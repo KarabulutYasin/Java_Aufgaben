@@ -13,35 +13,4 @@ public class Person {
     //TIPP Achte darauf das eine Person nicht unter 0 Jahre sein kann
 
     // Name: Yasin, Alter: 21
-    private String name;
-    private int age;
-
-
-    public Person(String name, int age) {
-        setName(name);
-        setAge(age);
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public void setName(String name) {
-        if (name == null || name.isEmpty()) throw new EmptyNameException("Name darf nicht leer sein");
-        else this.name = name;
-    }
-
-    public void setAge(int alter) {
-        if (alter < 0) throw new AlterNegativException("Alter darf nicht negativ sein");
-        this.age = alter;
-    }
-
-    @Override
-    public String toString() {
-        return "Name: " + name + ", Alter: " + age;
-    }
 }

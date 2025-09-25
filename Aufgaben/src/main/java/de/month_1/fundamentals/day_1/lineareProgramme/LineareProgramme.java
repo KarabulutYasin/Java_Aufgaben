@@ -6,7 +6,7 @@ public class LineareProgramme {
 
     public void begruessung() {
         //TODO
-        // Schreibe eine Funktion die Hello World auf der Konsole ausgibt
+        // Schreibe eine Funktion die "Hello World" auf der Konsole ausgibt
 
     }
 

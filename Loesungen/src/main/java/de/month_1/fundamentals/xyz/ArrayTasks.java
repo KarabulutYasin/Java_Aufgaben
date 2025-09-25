@@ -1,4 +1,4 @@
-package de.month_1.fundamentals.loesungen10;
+package de.month_1.fundamentals.xyz;
 
 import java.util.Arrays;
 

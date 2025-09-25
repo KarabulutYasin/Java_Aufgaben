@@ -1,4 +1,4 @@
-package de.month_1.fundamentals.loesungen10;
+package de.month_1.fundamentals.xyz;
 
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;

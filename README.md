@@ -1,50 +1,74 @@
-
 # 🚀 Java Aufgaben
-Dieses Repository enthält eine Sammlung von Java-Aufgaben, die darauf abzielen, grundlegende Programmierkenntnisse zu vermitteln und zu festigen. Jede Aufgabe ist so konzipiert, dass sie spezifische Konzepte und Techniken in Java abdeckt.
+
+Dieses Repository enthält eine Sammlung von Java-Aufgaben, die darauf abzielen, grundlegende Programmierkenntnisse zu
+vermitteln und zu festigen. Jede Aufgabe ist so konzipiert, dass sie spezifische Konzepte und Techniken in Java abdeckt.
 
 ## Inhaltsverzeichnis
+
 - [Before Start](#Before-Start)
 - [Aufbau des Projekts](#-Aufbau-des-Projekts)
 - [Direkte Links](#-direkte-links)
-- - [Month 1 Fundamentels](#month-1---fundamentals)
+-
+    - [Month 1 Fundamentels](#month-1)
 
 ## ⚡Before Start
+
+<details>
+  <summary>Before Starts </summary>
+
 * Prüfe ob Maven auf deinem Rechner installiert ist
 * Wenn folgender Command kein Fehler wirft ist Maven vorhanden
+
 ```shell
 mvn -v
 ```
+
 * Wenn Maven vorhanden ist
+
 ```shell
 mvn clean install -DskipTests
 ```
+
 ### Wenn Maven nicht vorhanden ist folgendes laufen lassen je nach Betriebssystem
+
 * Batch for Windows
+
 ```shell
 .\mvnw.cmd clean install -DskipTests
 ```
+
 * Batch for Linux / Mac
+
 ```shell
 ./mvnw clean install -DskipTests
 ```
 
+</details>
+
 # 📦 Aufbau des Projekts
 
+<details>
+    <summary>Projekt Struktur</summary>
 Das Projekt ist in 2 Glieder unterteilt
 
 * [Aufgaben](Aufgaben)
 * [Lösungen](Loesungen)
 
-In den Modulen "Aufgaben" und "Lösungen" sind dieselben Aufgaben und Tests nur das die Aufgaben im Package "Aufgaben" unbearbeitet sind
+In den Modulen "Aufgaben" und "Lösungen" sind dieselben Aufgaben und Tests nur das die Aufgaben im Package "Aufgaben"
+unbearbeitet sind
 
 Man bearbeite die Aufgaben und kann dann seinen Lösungsansatz mit den zugehörigen Tests Überprüfen
 
 (oder in der Lösung spicken, falls man nicht weiter kommt :D)
-
+</details>
 
 # 📝 Direkte Links
 
-# Month 1 - Fundamentals
+- ### Month 1
+
+<details>
+  <summary>Fundamentals</summary>
+
 | Aufgaben                                                                                                              | Test                                                                                                                           | Lösung                                                                                                                        |
 |-----------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|
 | [Lineare Progamme](Aufgaben/src/main/java/de/month_1/fundamentals/day_1/lineareProgramme/LineareProgramme.java)       | [Lineare Programme Test](Aufgaben/src/test/java/de/month_1/fundamentals/day_1/lineareProgramme/LineareProgrammeTest.java)      | [Lineare Aufgaben Lösung](Loesungen/src/main/java/de/month_1/fundamentals/day_1/lineareProgramme/LineareProgramme.java)       |
@@ -60,7 +84,11 @@ Man bearbeite die Aufgaben und kann dann seinen Lösungsansatz mit den zugehöri
 | [Point](Aufgaben/src/main/java/de/month_1/fundamentals/day_11/point/Point.java)                                       | [Point Test](Aufgaben/src/test/java/de/month_1/fundamentals/day_11/point/PointTest.java)                                       | [Point Lösung](Loesungen/src/main/java/de/month_1/fundamentals/day_11/point/Point.java)                                       |
 | [Arrays](Aufgaben/src/main/java/de/month_1/fundamentals/day_12/arrays/ArrayTasks.java)                                | [Arrays Test](Aufgaben/src/test/java/de/month_1/fundamentals/day_12/arrays/ArrayTasksTest.java)                                | [Arrays Lösung](Loesungen/src/main/java/de/month_1/fundamentals/day_12/arrays/ArrayTasks.java)                                |
 | [Library](Aufgaben/src/main/java/de/month_1/fundamentals/day_13/librarys/LibraryTasks.java)                           | [Library Test](Aufgaben/src/test/java/de/month_1/fundamentals/day_13/librarys/LibraryTasksTest.java)                           | [Library Lösung](Loesungen/src/main/java/de/month_1/fundamentals/day_13/librarys/LibraryTasks.java)                           |
-| [Interface Aufgabestellung](Aufgaben/src/main/java/de/month_1/fundamentals/day_14/interfaces/ReadMe.md)               | [Interface Test Package](Aufgaben/src/test/java/de/month_1/fundamentals/day_14/interfaces)                                     | [Interface Lösung Package](Loesungen/src/main/java/de/month_1/fundamentals/day_14/interfaces)                                 |
-| [Vererbung Aufgabestellung](Aufgaben/src/main/java/de/month_1/fundamentals/day_15/vererbung/Aufgabenstellung.md)      | [Vererbung Test Package](Aufgaben/src/test/java/de/month_1/fundamentals/day_15/vererbung)                                      | [Vererbung Lösung Package](Loesungen/src/main/java/de/month_1/fundamentals/day_15/vererbung)                                  |
+| [Interface Aufgabestellung](Aufgaben/src/main/java/de/month_1/fundamentals/day_14/interfaces/ReadMe.md)               | [Interface Test](Aufgaben/src/test/java/de/month_1/fundamentals/day_14/interfaces/AllTestsOfDay_14.java)                       | [Interface Lösungsblatt](Loesungen/src/main/java/de/month_1/fundamentals/day_14/interfaces/LösungsBlattDay_14.md)             |
+| [Vererbung Aufgabestellung](Aufgaben/src/main/java/de/month_1/fundamentals/day_15/vererbung/Aufgabenstellung.md)      | [Vererbung Test](Aufgaben/src/test/java/de/month_1/fundamentals/day_15/vererbung/AllTestsOfDay_15.java)                        | [Vererbung Lösunsblatt](Loesungen/src/main/java/de/month_1/fundamentals/day_15/vererbung/LösungsBlattDay_15.md)               |
 | [Static](Aufgaben/src/main/java/de/month_1/fundamentals/day_16/staticDemo/StaticDemo.java)                            | [Static Test](Aufgaben/src/test/java/de/month_1/fundamentals/day_16/staticDemo/StaticDemoTest.java)                            | [Static Lösung](Loesungen/src/main/java/de/month_1/fundamentals/day_16/staticDemo/StaticDemo.java)                            |
+| [This Super Aufgabenstellung](Aufgaben/src/main/java/de/month_1/fundamentals/day_17/thissuper/Aufgabenstellung.md)    | [This Super Test](Aufgaben/src/test/java/de/month_1/fundamentals/day_17/thissuper/AllTestsOfDay_17.java)                       | [This Super Lösungsblatt](Loesungen/src/main/java/de/month_1/fundamentals/day_17/thissuper/LösungsBlattDay_17.md)             |
+
+</details>
+
 

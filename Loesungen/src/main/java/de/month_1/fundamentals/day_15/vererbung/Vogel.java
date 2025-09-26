@@ -1,4 +1,4 @@
-package de.block2.aufgabe3;
+package de.month_1.fundamentals.day_15.vererbung;
 
 public class Vogel extends Tier implements KannFliegen {
 

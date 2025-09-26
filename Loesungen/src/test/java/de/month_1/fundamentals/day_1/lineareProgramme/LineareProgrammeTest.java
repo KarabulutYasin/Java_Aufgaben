@@ -1,6 +1,5 @@
 package de.month_1.fundamentals.day_1.lineareProgramme;
 
-import de.month_1.fundamentals.z.exception.MeinFehlerException;
 import org.apache.commons.lang3.math.NumberUtils;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -60,7 +59,7 @@ public class LineareProgrammeTest {
                 new LineareProgramme().convertToInt(str),
                 "String was not converted correctly");
         else assertThrows(
-                MeinFehlerException.class,
+                RuntimeException.class,
                 () -> new LineareProgramme().convertToInt(str),
                 "String " + str + " did not throw Exception");
     }

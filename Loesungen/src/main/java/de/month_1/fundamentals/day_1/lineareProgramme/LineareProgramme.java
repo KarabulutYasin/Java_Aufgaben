@@ -1,7 +1,5 @@
 package de.month_1.fundamentals.day_1.lineareProgramme;
 
-import de.month_1.fundamentals.z.exception.MeinFehlerException;
-
 public class LineareProgramme {
     public static void main(String[] args) {}
 

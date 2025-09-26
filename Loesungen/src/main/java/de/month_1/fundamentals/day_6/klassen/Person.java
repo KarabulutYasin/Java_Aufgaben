@@ -1,7 +1,7 @@
 package de.month_1.fundamentals.day_6.klassen;
 
 import de.month_1.fundamentals.day_6.klassen.exception.EmptyNameException;
-import de.month_1.fundamentals.z.exception.AlterNegativException;
+import de.month_1.fundamentals.day_6.klassen.exception.AlterNegativException;
 
 public class Person {
     //TODO

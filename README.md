@@ -59,6 +59,8 @@ unbearbeitet sind
 
 Man bearbeite die Aufgaben und kann dann seinen Lösungsansatz mit den zugehörigen Tests Überprüfen
 
+Man sollte auch beachten das ca ab Tag 12 die Aufgabenstellungen etwas Lascher werden damit man anfängt selber mitzudenken und die Fehlermeldungen zu lesen 
+
 (oder in der Lösung spicken, falls man nicht weiter kommt :D)
 </details>
 

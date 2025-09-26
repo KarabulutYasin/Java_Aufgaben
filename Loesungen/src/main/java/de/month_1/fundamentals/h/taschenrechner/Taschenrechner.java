@@ -2,7 +2,6 @@ package de.month_1.fundamentals.h.taschenrechner;
 
 import de.month_1.fundamentals.h.taschenrechner.Exception.EmptyPatternException;
 import de.month_1.fundamentals.h.taschenrechner.Exception.NoPatternFoundException;
-import de.a.fundamentals.h.taschenrechner.Rechenzeichen.*;
 import de.month_1.fundamentals.h.taschenrechner.Rechenzeichen.*;
 
 import java.util.ArrayList;

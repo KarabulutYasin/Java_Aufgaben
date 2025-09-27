@@ -18,6 +18,7 @@ public class KontrollStrukturen {
 
     //TODO
     // Wochentagsnummer (1=Mo..7=So) -> "Werktag"/"Wochenende"
+    // Wenn eine Zahl außerhalb von 1..7 ist -> "Ungültig"
     public String dayType(int day) {
         return null;
     }

@@ -83,10 +83,4 @@ public class LineareProgrammeTest {
     public void connectBoolean_shouldReturnGivenParameters(boolean a, boolean b) {
         assertEquals(a||b,new LineareProgramme().connectBoolean(a,b));
     }
-
-    @ParameterizedTest
-    @CsvSource(value = {"'A,B,C','C,B,A'", "'1,2,3','3,2,1'", "'X','X'","'',''"},nullValues = "null",emptyValue = "")
-    public void flipArray_shouldReturnReversedArray(String arrayAsString, String expectedAsString) {
-        assertArrayEquals(expectedAsString.split(","), new LineareProgramme().flipArray(arrayAsString.split(",")));
-    }
 }

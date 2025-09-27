@@ -51,7 +51,7 @@ public class LineareProgramme {
         try {
             return Integer.parseInt(s);
         }catch (Exception e){
-            throw new MeinFehlerException(e.getMessage());
+            throw new RuntimeException(e.getMessage());
         }
     }
 
@@ -114,21 +114,5 @@ public class LineareProgramme {
         // Gebe true zurück wenn a oder b true sind (auch wenn beide true sind)
 
         return a || b;
-    }
-
-    public String[] flipArray(String[] array) {
-        //TODO
-        // Ordne das Array um indem die Werte umgedreht werden
-
-        //Bsp
-        // Vorher ["A", "B", "C"]
-        // Nachher ["C", "B", "A"]
-
-        for (int i = 0; i < array.length / 2; i++) {
-            String temp = array[i];
-            array[i] = array[array.length - 1 - i];
-            array[array.length - 1 - i] = temp;
-        }
-        return array;
     }
 }

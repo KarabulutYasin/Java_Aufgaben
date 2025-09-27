@@ -64,15 +64,4 @@ public class LineareProgramme {
 
         return false;
     }
-
-    public String[] flipArray(String[] array) {
-        //TODO
-        // Ordne das Array um indem die Werte umgedreht werden
-
-        //Bsp
-        // Vorher ["A", "B", "C"]
-        // Nachher ["C", "B", "A"]
-
-        return null;
-    }
 }

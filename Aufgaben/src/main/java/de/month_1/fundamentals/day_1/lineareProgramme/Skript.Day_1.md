@@ -88,7 +88,7 @@ In Java gibt es verschiedene Datentypen. Manchmal ist es nötig einen Datentyp i
 
 Hierbei herscht eine Hierarchie der Datentypen wenn man nach der Hierarchie geht wird es Automatisch konvertiert wenn man jedoch in die andere Richtung geht muss man es explizit machen dabei können dann werte verloren gehen
 
-![img.png](img.png)
+![img.png](../../../../../../resources/img.png)
 
 | Von    | Zu     | Beispiel                               |
 |--------|--------|----------------------------------------|

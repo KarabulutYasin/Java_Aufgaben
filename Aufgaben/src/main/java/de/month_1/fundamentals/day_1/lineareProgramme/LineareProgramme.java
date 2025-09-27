@@ -49,15 +49,6 @@ public class LineareProgramme {
         return null;
     }
 
-    public String returnsPositivNegativOrZero(int i){
-        //TODO
-        // Gebe falls i 0 ist denn String "Zero" zurück
-        // Gebe falls i größer 0 ist denn String "Positiv" zurück
-        // Gebe falls i kleiner 0 ist denn String "Negativ" zurück
-
-        return null;
-    }
-
     public boolean connectBoolean(boolean a, boolean b) {
         //TODO
         // Gebe true zurück wenn a oder b true sind (auch wenn beide true sind)

@@ -61,54 +61,6 @@ public class LineareProgramme {
         return String.valueOf(i);
     }
 
-    public String returnsPositivNegativOrZero(int i){
-        //TODO
-        // Gebe falls i 0 ist denn String "Zero" zurück
-        // Gebe falls i größer 0 ist denn String "Positiv" zurück
-        // Gebe falls i kleiner 0 ist denn String "Negativ" zurück
-
-        //Methode 1.1
-
-        if (i == 0) {
-            return "Zero";
-        } else if (i > 0) {
-            return "Positiv";
-        } else{
-            return "Negativ";
-        }
-
-        //Methode 1.2 (Kurzschreibweise wenn nur eine anweisung innerhalb des ifs)
-
-        /*
-        if (i == 0) return "Zero";
-        else if (i < 0) return "Negativ";
-        else return "Positiv";
-        */
-
-        //Methode 2.1
-        /*
-        switch (Integer.signum(i)) {
-            case 1 -> {
-                return "Positiv";
-            }
-            case -1 -> {
-                return "Negativ";
-            }
-            default -> {
-                return "Zero";
-            }
-        }
-        */
-
-        //Methode 2.2
-
-        /*return switch (Integer.signum(i)) {
-            case 1 -> "Positiv";
-            case -1 -> "Negativ";
-            default -> "Zero";
-        };*/
-    }
-
     public boolean connectBoolean(boolean a, boolean b) {
         //TODO
         // Gebe true zurück wenn a oder b true sind (auch wenn beide true sind)

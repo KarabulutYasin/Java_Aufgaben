@@ -73,12 +73,6 @@ public class LineareProgrammeTest {
     }
 
     @ParameterizedTest
-    @CsvSource({"5,Positiv", "-3,Negativ", "0,Zero"})
-    public void returnsPositivNegativOrZero_returnsEachValue(int input,String output){
-        assertEquals(output,new LineareProgramme().returnsPositivNegativOrZero(input));
-    }
-
-    @ParameterizedTest
     @CsvSource({"false,false", "true,true", "true,false", "false,true"})
     public void connectBoolean_shouldReturnGivenParameters(boolean a, boolean b) {
         assertEquals(a||b,new LineareProgramme().connectBoolean(a,b));

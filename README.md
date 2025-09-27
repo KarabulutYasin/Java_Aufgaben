@@ -45,7 +45,7 @@ mvn clean install -DskipTests
 
 </details>
 
-# 📦 Aufbau des Projekts
+## 📦 Aufbau des Projekts
 
 <details>
     <summary>Projekt Struktur</summary>
@@ -64,7 +64,7 @@ Man sollte auch beachten das ca ab Tag 12 die Aufgabenstellungen etwas Lascher w
 (oder in der Lösung spicken, falls man nicht weiter kommt :D)
 </details>
 
-# 📝 Direkte Links
+## 📝 Direkte Links
 
 - ### Month 1
 

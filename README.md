@@ -45,7 +45,7 @@ mvn clean install -DskipTests
 
 </details>
 
-# 📦 Aufbau des Projekts
+## 📦 Aufbau des Projekts
 
 <details>
     <summary>Projekt Struktur</summary>
@@ -54,7 +54,7 @@ Das Projekt ist in 2 Glieder unterteilt
 * [Aufgaben](Aufgaben)
 * [Lösungen](Loesungen)
 
-In den Modulen "Aufgaben" und "Lösungen" sind dieselben Aufgaben und Tests nur das die Aufgaben im Package "Aufgaben"
+In den Modulen "Aufgaben" und "Lösungen" sind dieselben Aufgaben und Tests nur das die Aufgaben im Module "Aufgaben"
 unbearbeitet sind
 
 Man bearbeite die Aufgaben und kann dann seinen Lösungsansatz mit den zugehörigen Tests Überprüfen
@@ -64,7 +64,7 @@ Man sollte auch beachten das ca ab Tag 12 die Aufgabenstellungen etwas Lascher w
 (oder in der Lösung spicken, falls man nicht weiter kommt :D)
 </details>
 
-# 📝 Direkte Links
+## 📝 Direkte Links
 
 - ### Month 1
 

@@ -1,4 +1,4 @@
-package de.month_1.fundamentals.day_7.fehlerbehandlung;
+package de.month_1.fundamentals.day_12.fehlerbehandlung;
 
 public class EigeneException {
 

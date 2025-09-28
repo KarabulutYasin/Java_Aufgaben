@@ -1,8 +1,8 @@
-package de.month_1.fundamentals.day_7.fehlerbehandlung;
+package de.month_1.fundamentals.day_12.fehlerbehandlung;
 
-import de.month_1.fundamentals.day_7.fehlerbehandlung.exception.OwnException;
-import de.month_1.fundamentals.day_7.fehlerbehandlung.exception.OwnRuntimeException;
-import de.month_1.fundamentals.day_7.fehlerbehandlung.exception.ZeroDivisionException;
+import de.month_1.fundamentals.day_12.fehlerbehandlung.exception.OwnException;
+import de.month_1.fundamentals.day_12.fehlerbehandlung.exception.OwnRuntimeException;
+import de.month_1.fundamentals.day_12.fehlerbehandlung.exception.ZeroDivisionException;
 
 public class EigeneException {
 

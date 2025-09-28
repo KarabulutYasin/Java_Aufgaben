@@ -87,19 +87,3 @@ Konstruktoren initialisieren die Attribute beim Erzeugen eines Objekts.
     }
 ```
 </details>
-
-### Eigene Exceptions
-<details>
-    <summary>Eigene Exceptions</summary>
-    Eigene Exceptions werden verwendet, um spezielle Fehlerfälle zu behandeln.
-    Wird im folgenden noch weiter vertieft
-
-```java
-    Beispiel für eine eigene Exception:
-    public class AlterNegativException extends RuntimeException {
-        public AlterNegativException(String message) {
-            super(message);
-        }
-    }
-```
-</details>

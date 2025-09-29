@@ -86,4 +86,38 @@ public class KontrollStrukturen {
         }
         return sum;
     }
+
+    public static void main(String[] args) {
+        KontrollStrukturen ks = new KontrollStrukturen();
+        String divider = "------------------------------";
+
+        System.out.println(divider);
+        System.out.println("gradeToText mit parameter 1:");
+        System.out.println(ks.gradeToText(1));
+
+        System.out.println(divider);
+        System.out.println("dayType mit parameter 1:");
+        System.out.println(ks.dayType(1));
+
+        System.out.println(divider);
+        System.out.println("sumOneToN mit parameter 5:");
+        System.out.println(ks.sumOneToN(5));
+
+        System.out.println(divider);
+        System.out.println("totalLength mit parameter [\"Hallo\", \"Welt\"]:");
+        System.out.println(ks.totalLength(List.of("Hallo", "Welt")));
+
+        System.out.println(divider);
+        System.out.println("doublesUntilAtLeast mit parameter (3, 20):");
+        System.out.println(ks.doublesUntilAtLeast(3, 20));
+
+        System.out.println(divider);
+        System.out.println("firstEven mit parameter [1, 3, 5, 6, 7];");
+        System.out.println(ks.firstEven(List.of(1, 3, 5, 6, 7)));
+
+        System.out.println(divider);
+        System.out.println("sumPositives mit parameter [-1, 2, -3, 4]:");
+        System.out.println(ks.sumPositives(List.of(-1, 2, -3, 4)));
+        System.out.println(divider);
+    }
 }

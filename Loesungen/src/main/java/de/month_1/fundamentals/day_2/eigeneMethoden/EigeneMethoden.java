@@ -8,11 +8,6 @@ public class EigeneMethoden {
     // 2. "mult" die zwei int multipliziert und das Ergebnis (int) zurückgibt
     // 3. "multByTwo" es soll "mult" mit einem festen Parameter 2 aufgerufen werden und zurückgegeben werden(int)
 
-    public static void main(String[] args){
-        //Nicht zu bearbeiten
-        new EigeneMethoden().run();
-    }
-
     public void nope(){
         //macht nix
     }
@@ -25,10 +20,10 @@ public class EigeneMethoden {
         return mult(x,2);
     }
 
-    public void run(){
+    public static void main(String[] args){
         //Nicht zu bearbeiten
-        Class emClass = this.getClass();
         EigeneMethoden em = new EigeneMethoden();
+        Class emClass = em.getClass();
         try {
             String divider = "--------------------";
 

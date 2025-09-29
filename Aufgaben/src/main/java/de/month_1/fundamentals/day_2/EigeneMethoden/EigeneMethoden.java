@@ -10,13 +10,8 @@ public class EigeneMethoden {
 
     public static void main(String[] args){
         //Nicht zu bearbeiten
-        new EigeneMethoden().run();
-    }
-
-    public void run(){
-        //Nicht zu bearbeiten
-        Class emClass = this.getClass();
         EigeneMethoden em = new EigeneMethoden();
+        Class emClass = em.getClass();
         try {
             String divider = "--------------------";
 

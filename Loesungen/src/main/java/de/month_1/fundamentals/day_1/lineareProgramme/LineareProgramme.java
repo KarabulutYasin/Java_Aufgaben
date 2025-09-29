@@ -2,6 +2,7 @@ package de.month_1.fundamentals.day_1.lineareProgramme;
 
 public class LineareProgramme {
     public static void main(String[] args) {
+        //Nicht zu bearbeiten
         new LineareProgramme().run();
     }
 

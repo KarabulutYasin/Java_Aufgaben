@@ -2,6 +2,8 @@ package de.month_1.fundamentals.day_1.lineareProgramme;
 
 public class LineareProgramme {
     public static void main(String[] args) {
+        //Nicht zu bearbeiten
+        new LineareProgramme().run();
     }
 
     public void begruessung() {
@@ -54,5 +56,39 @@ public class LineareProgramme {
         // Gebe true zurück wenn a oder b true sind (auch wenn beide true sind)
 
         return false;
+    }
+
+    public void run (){
+        // Hier ist nicht zu machen man kann aber die Parameter ändern um zu sehen was Passiert
+        String divider = "------------------------------";
+        System.out.println(divider);
+
+        System.out.println("Ausgabe von Begrüssung:" );
+        begruessung();
+        System.out.println(divider);
+
+        System.out.println("Ausgabe von zusammenrechnen mit Parameter 10 und 20:" );
+        System.out.println(zusammenRechnen(10,20));
+        System.out.println(divider);
+
+        System.out.println("Ausgabe von kommaZwischen mit Parameter Hi und Moin:" );
+        System.out.println(kommaZwischen("Hi","Moin"));
+        System.out.println(divider);
+
+        System.out.println("Aufruf von aufrufZusammenRechnen:" );
+        aufrufZusammenRechnen();
+        System.out.println(divider);
+
+        System.out.println("Ausgabe von convertToInt mit Parameter \"123\":" );
+        System.out.println(convertToInt("123"));
+        System.out.println(divider);
+
+        System.out.println("Ausgabe von convertToString mit Parameter 123:" );
+        System.out.println(convertToString(123));
+        System.out.println(divider);
+
+        System.out.println("Ausgabe von connectBoolean mit Parameter true und false:" );
+        System.out.println(connectBoolean(true,false));
+        System.out.println(divider);
     }
 }

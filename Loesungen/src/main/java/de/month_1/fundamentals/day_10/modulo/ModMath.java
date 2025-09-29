@@ -26,4 +26,20 @@ public class ModMath {
         int res0 = normalizeMod(base + delta, 12);
         return res0 + 1;
     }
+
+    public static void main(String[] args) {
+        // Hier ist nichts zu bearbeiten
+        ModMath modMath = new ModMath();
+        String divider = "----------------------";
+
+        System.out.println(divider);
+        System.out.println("normalizeMod with parameters 10,4:");
+        System.out.println(modMath.normalizeMod(10,4));
+
+        System.out.println(divider);
+        System.out.println("addHours12 with parameters 11, 9");
+        System.out.println(modMath.addHours12(11,9));
+
+        System.out.println(divider);
+    }
 }

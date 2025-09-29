@@ -50,4 +50,34 @@ public class ListAufgaben {
 
         return null;
     }
+
+    public static void main(String[] args) {
+        ListAufgaben aufgaben = new ListAufgaben();
+        String divider = "------------------------------";
+
+        System.out.println(divider);
+        System.out.println("returnInstanceOfList");
+        System.out.println(aufgaben.returnInstanceOfList());
+
+        System.out.println(divider);
+        System.out.println("returnListWithNumbersOneToTen");
+        System.out.println(aufgaben.returnListWithNumbersOneToTen());
+
+        System.out.println(divider);
+        System.out.println("listToString mit[\"Max\", \"Moritz\"]");
+        System.out.println(aufgaben.listToString(List.of("Max", "Moritz")));
+
+        System.out.println(divider);
+        System.out.println("entferneElement mit [\"A\", \"B\", \"C\"] und Element B");
+        System.out.println(aufgaben.entferneElement(new ArrayList(List.of("A", "B", "C")), "B"));
+
+        System.out.println(divider);
+        System.out.println("isElementInList mit [\"A\", \"B\", \"C\"] und Element B");
+        System.out.println(aufgaben.isElementInList(new ArrayList(List.of("A", "B", "C")), "B"));
+
+        System.out.println(divider);
+        System.out.println("sortiereListe mit [5, 3, 8, 1, 2]");
+        System.out.println(aufgaben.sortiereListe(new ArrayList(List.of(5, 3, 8, 1, 2))));
+        System.out.println(divider);
+    }
 }

@@ -9,8 +9,8 @@ class TypkonversionTest {
 
     @ParameterizedTest
     @CsvSource({"2","1","-2","0"})
-    void convertIntToShort_returns_given_value_as_int(short x){
-        assertEquals((int) x, new Typkonversion().convertIntToShort(x));
+    void convertIntToShort_returns_given_value_as_intToInt(short x){
+        assertEquals((int) x, new Typkonversion().convertShortToInt(x));
     }
 
     @ParameterizedTest

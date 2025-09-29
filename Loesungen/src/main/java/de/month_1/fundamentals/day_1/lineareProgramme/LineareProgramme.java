@@ -1,10 +1,6 @@
 package de.month_1.fundamentals.day_1.lineareProgramme;
 
 public class LineareProgramme {
-    public static void main(String[] args) {
-        //Nicht zu bearbeiten
-        new LineareProgramme().run();
-    }
 
     public void begruessung() {
         //TODO
@@ -71,37 +67,38 @@ public class LineareProgramme {
         return a || b;
     }
 
-    public void run (){
-        // Hier ist nicht zu machen man kann aber die Parameter ändern um zu sehen was Passiert
+    public static void main(String[] args) {
+        //Nicht zu bearbeiten
+        LineareProgramme lp = new LineareProgramme();
         String divider = "------------------------------";
         System.out.println(divider);
 
         System.out.println("Ausgabe von Begrüssung:" );
-        begruessung();
+        lp.begruessung();
         System.out.println(divider);
 
         System.out.println("Ausgabe von zusammenrechnen mit Parameter 10 und 20:" );
-        System.out.println(zusammenRechnen(10,20));
+        System.out.println(lp.zusammenRechnen(10,20));
         System.out.println(divider);
 
         System.out.println("Ausgabe von kommaZwischen mit Parameter Hi und Moin:" );
-        System.out.println(kommaZwischen("Hi","Moin"));
+        System.out.println(lp.kommaZwischen("Hi","Moin"));
         System.out.println(divider);
 
         System.out.println("Aufruf von aufrufZusammenRechnen:" );
-        aufrufZusammenRechnen();
+        lp.aufrufZusammenRechnen();
         System.out.println(divider);
 
         System.out.println("Ausgabe von convertToInt mit Parameter \"123\":" );
-        System.out.println(convertToInt("123"));
+        System.out.println(lp.convertToInt("123"));
         System.out.println(divider);
 
         System.out.println("Ausgabe von convertToString mit Parameter 123:" );
-        System.out.println(convertToString(123));
+        System.out.println(lp.convertToString(123));
         System.out.println(divider);
 
         System.out.println("Ausgabe von connectBoolean mit Parameter true und false:" );
-        System.out.println(connectBoolean(true,false));
+        System.out.println(lp.connectBoolean(true,false));
         System.out.println(divider);
     }
 }

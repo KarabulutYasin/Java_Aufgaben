@@ -58,7 +58,6 @@ public class LineareProgramme {
         //Nicht zu bearbeiten
         LineareProgramme lp = new LineareProgramme();
 
-        // Hier ist nicht zu machen man kann aber die Parameter ändern um zu sehen was Passiert
         String divider = "------------------------------";
         System.out.println(divider);
 

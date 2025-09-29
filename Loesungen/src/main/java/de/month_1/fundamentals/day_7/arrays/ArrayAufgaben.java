@@ -1,5 +1,7 @@
 package de.month_1.fundamentals.day_7.arrays;
 
+import java.util.Arrays;
+
 public class ArrayAufgaben {
 
     //TODO
@@ -174,5 +176,66 @@ public class ArrayAufgaben {
         }
 
         return result;
+    }
+
+    public static void main(String[] args) {
+        ArrayAufgaben aa = new ArrayAufgaben();
+        String divider = "------------------------------";
+
+        System.out.println(divider);
+        System.out.println("createSequence mit parameter 10:");
+        System.out.println(Arrays.toString(aa.createSequence(10)));
+
+        System.out.println(divider);
+        System.out.println("findMax mit array {3, 1, 4, 1, 5, 9}:");
+        System.out.println(aa.findMax(new int[]{3, 1, 4, 1, 5, 9}));
+
+        System.out.println(divider);
+        System.out.println("sum mit array {1, 2, 3, 4, 5}:");
+        System.out.println(aa.sum(new int[]{1, 2, 1, 3, 1}));
+
+        System.out.println(divider);
+        System.out.println("countOccurrences von 1 im array {1, 2, 1, 3, 1}:");
+        System.out.println(aa.countOccurrences(new int[]{1, 2, 1, 3, 1}, 1));
+
+        System.out.println(divider);
+        System.out.println("reverse von array {1, 2, 3, 4, 5}:");
+        int[] arrToReverse = {1, 2, 3, 4, 5};
+        aa.reverse(arrToReverse);
+        System.out.println(Arrays.toString(arrToReverse));
+
+        System.out.println(divider);
+        System.out.println("filterEven von array {1, 2, 3, 4, 5, 6}:");
+        int[] evenFiltered = aa.filterEven(new int[]{1, 2, 3, 4, 5, 6});
+        System.out.println(Arrays.toString(evenFiltered));
+
+        System.out.println(divider);
+        System.out.println("isSorted von array {1, 2, 3, 4, 5}:");
+        System.out.println(aa.isSorted(new int[]{1, 2, 3, 4, 5}));
+
+        System.out.println(divider);
+        System.out.println("Index of 3 in array {1, 2, 3, 4, 5}:");
+        System.out.println(aa.indexOf(new int[]{1, 2, 3, 4, 5}, 3));
+
+        System.out.println(divider);
+        System.out.println("multiplyBy 2 in array {1, 2, 3}:");
+        int[] arrToMultiply = {1, 2, 3};
+        aa.multiplyBy(arrToMultiply, 2);
+        System.out.println(Arrays.toString(arrToMultiply));
+
+        System.out.println(divider);
+        System.out.println("concatenate arrays {1, 2} and {3, 4}:");
+        int[] concatenated = aa.concatenate(new int[]{1, 2}, new int[]{3, 4});
+        System.out.println(Arrays.toString(concatenated));
+
+        System.out.println(divider);
+        System.out.println("Average of array {1, 2, 3, 4, 5}:");
+        System.out.println(aa.average(new int[]{1, 2, 3, 4, 5}));
+
+        System.out.println(divider);
+        System.out.println("removeDuplicates from array {1, 2, 2, 3, 3, 4}:");
+        int[] noDuplicates = aa.removeDuplicates(new int[]{1, 2, 2, 3, 3, 4});
+        System.out.println(Arrays.toString(noDuplicates));
+        System.out.println(divider);
     }
 }

@@ -9,7 +9,7 @@ public class EigeneMethoden {
     // 3. "multByTwo" es soll "mult" mit einem festen Parameter 2 aufgerufen werden und zurückgegeben werden(int)
 
     public static void main(String[] args){
-        //Nicht zu bearbeiten
+        //Muss nicht bearbeitet werden
         EigeneMethoden em = new EigeneMethoden();
         Class emClass = em.getClass();
         try {

@@ -70,6 +70,7 @@ public class ListAufgaben {
     }
 
     public static void main(String[] args) {
+        //Muss nicht bearbeitet werden
         ListAufgaben aufgaben = new ListAufgaben();
         String divider = "------------------------------";
 

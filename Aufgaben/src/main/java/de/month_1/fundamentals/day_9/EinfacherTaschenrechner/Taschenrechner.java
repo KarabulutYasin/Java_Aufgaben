@@ -22,4 +22,22 @@ public class Taschenrechner {
     public double berechne(String pattern) {
         return -1;
     }
+
+    public static void main(String[] args){
+        // Muss nicht bearbeitet werden
+        Taschenrechner tr = new Taschenrechner();
+        String divider = "---------------------";
+        String[] equations = {"5 + 3", "10 / 2", "7* 4", "9 -3", "8 / 0", "6 ^ 2", "4 + a"};
+
+        for (String equation : equations) {
+            System.out.println(divider);
+            try {
+                System.out.println("berechne mit string: " + equation+ ":");
+                System.out.println(tr.berechne(equation));
+            } catch (RuntimeException e) {
+                System.out.println(equation + " -> Fehler: " + e.getMessage());
+            }
+        }
+        System.out.println(divider);
+    }
 }

@@ -68,7 +68,7 @@ public class LineareProgramme {
     }
 
     public static void main(String[] args) {
-        //Nicht zu bearbeiten
+        //Muss nicht bearbeitet werden
         LineareProgramme lp = new LineareProgramme();
         String divider = "------------------------------";
         System.out.println(divider);

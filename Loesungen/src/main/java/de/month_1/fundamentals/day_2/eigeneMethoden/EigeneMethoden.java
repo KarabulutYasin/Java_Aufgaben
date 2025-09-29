@@ -21,7 +21,7 @@ public class EigeneMethoden {
     }
 
     public static void main(String[] args){
-        //Nicht zu bearbeiten
+        //Muss nicht bearbeitet werden
         EigeneMethoden em = new EigeneMethoden();
         Class emClass = em.getClass();
         try {

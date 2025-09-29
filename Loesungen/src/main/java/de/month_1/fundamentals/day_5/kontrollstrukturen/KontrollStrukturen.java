@@ -88,6 +88,7 @@ public class KontrollStrukturen {
     }
 
     public static void main(String[] args) {
+        //Muss nicht bearbeitet werden
         KontrollStrukturen ks = new KontrollStrukturen();
         String divider = "------------------------------";
 

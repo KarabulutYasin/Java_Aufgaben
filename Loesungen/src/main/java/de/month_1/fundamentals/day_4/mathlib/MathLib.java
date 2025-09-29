@@ -50,7 +50,7 @@ public class MathLib {
     }
 
     public static void main(String[] args) {
-        //Nicht zu bearbeiten
+        //Muss nicht bearbeitet werden
         MathLib mathLib = new MathLib();
         String divider = "------------------------------";
 

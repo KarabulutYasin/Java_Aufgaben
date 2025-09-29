@@ -61,6 +61,7 @@ public class Typkonversion {
     }
 
     public static void main(String[] args) {
+        //Muss nicht bearbeitet werden
         Typkonversion tk = new Typkonversion();
         String divider = "------------------------------";
 

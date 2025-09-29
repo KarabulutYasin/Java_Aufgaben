@@ -47,4 +47,39 @@ public class MathLib {
     public int randomInt(int min, int max) {
         return 0;
     }
+
+    public static void main(String[] args) {
+        //Nicht zu bearbeiten
+        MathLib mathLib = new MathLib();
+        String divider = "------------------------------";
+
+        System.out.println(divider);
+        System.out.println("sqrt mit parameter 16: ");
+        System.out.println(mathLib.sqrt(16));
+
+        System.out.println(divider);
+        System.out.println("pow mit parameter 2, 3: ");
+        System.out.println(mathLib.pow(2, 3));
+
+        System.out.println(divider);
+        System.out.println("round mit parameter 4.6: ");
+        System.out.println(mathLib.round(4.6));
+
+        System.out.println(divider);
+        System.out.println("absInt mit parameter -5: ");
+        System.out.println(mathLib.absInt(-5));
+
+        System.out.println(divider);
+        System.out.println("sin mit parameter Math.PI / 2: ");
+        System.out.println(mathLib.sin(Math.PI / 2));
+
+        System.out.println(divider);
+        System.out.println("random01: ");
+        System.out.println(mathLib.random01());
+
+        System.out.println(divider);
+        System.out.println("randomInt mit parameter 1, 10: ");
+        System.out.println(mathLib.randomInt(1, 10));
+        System.out.println(divider);
+    }
 }

@@ -91,4 +91,9 @@ class ListAufgabenTest {
                 Arguments.of((Object) null, null)
         );
     }
+
+    @Test
+    void main_does_not_throw() {
+        assertDoesNotThrow(() -> ListAufgaben.main(new String[]{}));
+    }
 }

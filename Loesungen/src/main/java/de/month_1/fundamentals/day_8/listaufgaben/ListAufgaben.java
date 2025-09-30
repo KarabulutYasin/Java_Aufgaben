@@ -1,5 +1,8 @@
 package de.month_1.fundamentals.day_8.listaufgaben;
 
+import de.helper.utiltiy.MainProvider;
+
+import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -71,32 +74,18 @@ public class ListAufgaben {
 
     public static void main(String[] args) {
         //Muss nicht bearbeitet werden
-        ListAufgaben aufgaben = new ListAufgaben();
-        String divider = "------------------------------";
+        Method[] methods = ListAufgaben.class.getDeclaredMethods();
+        Class<?> clazz = ListAufgaben.class;
 
-        System.out.println(divider);
-        System.out.println("returnInstanceOfList");
-        System.out.println(aufgaben.returnInstanceOfList());
-
-        System.out.println(divider);
-        System.out.println("returnListWithNumbersOneToTen");
-        System.out.println(aufgaben.returnListWithNumbersOneToTen());
-
-        System.out.println(divider);
-        System.out.println("listToString mit[\"Max\", \"Moritz\"]");
-        System.out.println(aufgaben.listToString(List.of("Max", "Moritz")));
-
-        System.out.println(divider);
-        System.out.println("entferneElement mit [\"A\", \"B\", \"C\"] und Element B");
-        System.out.println(aufgaben.entferneElement(new ArrayList(List.of("A", "B", "C")), "B"));
-
-        System.out.println(divider);
-        System.out.println("isElementInList mit [\"A\", \"B\", \"C\"] und Element B");
-        System.out.println(aufgaben.isElementInList(new ArrayList(List.of("A", "B", "C")), "B"));
-
-        System.out.println(divider);
-        System.out.println("sortiereListe mit [5, 3, 8, 1, 2]");
-        System.out.println(aufgaben.sortiereListe(new ArrayList(List.of(5, 3, 8, 1, 2))));
-        System.out.println(divider);
+        MainProvider.printAscii();
+        for (Method method: methods) {
+            if(method.getName().equals("main")) continue;
+            if ("sortiereListe".equals(method.getName())) MainProvider.exec(method,clazz, new ArrayList<>(List.of(3,1,2)));
+            if ("listToString".equals(method.getName())) MainProvider.exec(method,clazz, new ArrayList<>(List.of(1,2,3)));
+            if ("entferneElement".equals(method.getName())) MainProvider.exec(method,clazz, new ArrayList<>(List.of("A","B","C")),"B");
+            if ("isElementInList".equals(method.getName())) MainProvider.exec(method,clazz, new ArrayList<>(List.of("A","B","C")),"B");
+            if ("returnInstanceOfList".equals(method.getName())) MainProvider.exec(method,clazz);
+            if ("returnListWithNumbersOneToTen".equals(method.getName())) MainProvider.exec(method,clazz);
+        }
     }
 }

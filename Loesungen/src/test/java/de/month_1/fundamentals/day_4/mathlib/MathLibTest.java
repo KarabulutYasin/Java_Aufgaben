@@ -68,4 +68,9 @@ class MathLibTest {
     void randomInt_minGreaterThanMax_throws() {
         assertThrows(IllegalArgumentException.class, () -> objectUnderTest.randomInt(10, 5));
     }
+
+    @Test
+    void main_does_not_throw() {
+        assertDoesNotThrow(() -> MathLib.main(new String[]{}));
+    }
 }

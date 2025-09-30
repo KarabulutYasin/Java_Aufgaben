@@ -77,4 +77,9 @@ public class LineareProgrammeTest {
     public void connectBoolean_shouldReturnGivenParameters(boolean a, boolean b) {
         assertEquals(a||b,new LineareProgramme().connectBoolean(a,b));
     }
+
+    @Test
+    public void main_does_not_throw() {
+        assertDoesNotThrow(() -> LineareProgramme.main(new String[]{}));
+    }
 }

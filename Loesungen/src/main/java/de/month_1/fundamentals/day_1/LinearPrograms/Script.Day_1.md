@@ -1,105 +1,105 @@
-# Skript - Lineare Programme
+# Script - Linear Programs
 
-## Inhaltsverzeichnis
+## Table of Contents
 
-- [Ausgabe auf der Konsole](#ausgabe-von-texten)
-- [Rechenoperationen](#rechenoperationen)
-- [Konkatenieren von Strings](#konkatenation-von-strings-)
-- [Aufruf von Methoden](#aufruf-von-methoden-innerhalb-einer-klasse)
-- [Konvertieren von Datentypen](#konvertieren-von-datentypen)
-- [Rechenoperationen bei boolean](#rechenoperationen-bei-boolean)
+- [Output to the Console](#output-of-texts)
+- [Arithmetic Operations](#arithmetic-operations)
+- [Concatenating Strings](#concatenation-of-strings)
+- [Calling Methods](#calling-methods-within-a-class)
+- [Converting Data Types](#converting-data-types)
+- [Arithmetic Operations with boolean](#arithmetic-operations-with-boolean)
 
-### Wir können Texte auf der Konsole ausgeben lassen
+### We can output texts to the console
 
 <details>
-    <summary>Ausgabe von Texten</summary>
- Wir können Texte mit `System.out.println();` ausgeben lassen
+    <summary>Output of Texts</summary>
+We can output texts using `System.out.println();`
 
 ```java
-System.out.println("Ich liebe Java"); // Würde "Ich liebe Java" ausgeben
+System.out.println("I love Java"); // Would output "I love Java"
 ```
 
 </details>
 
-### Rechenoperationen
+### Arithmetic Operations
 
 <details>
-    <summary>Rechenoperationen</summary>
+    <summary>Arithmetic Operations</summary>
 
-In Java gibt es auch verschiedenste Rechenoperation
+In Java, there are various arithmetic operations
 
-| Rechenart                                                                 | Zeichen in Java |
+| Type of Operation                                                                 | Symbol in Java |
 |---------------------------------------------------------------------------|-----------------|
 | Plus                                                                      | +               |
 | Minus                                                                     | -               |
-| Mal                                                                       | *               |
-| Geteilt (Wichtig bei int eine Ganzzahldivision die IMMER abgerundet wird) | /               |
+| Multiply                                                                       | *               |
+| Divide (Important: with int, always rounded down) | /               |
 | [Modulo](https://meinstein.ch/math/die-modulo-rechnung-einfach-erklaert/) | %               |
-| Bitweise Linksverschiebung                                                | <<              |
-| Bitweise Rechtsverschiebung                                               | \>>             |
-| Inkrement (Einen hochzählen)                                              | ++              |
-| Dekrement (Einen runterzählen)                                            | --              |
+| Bitwise Left Shift                                                | <<              |
+| Bitwise Right Shift                                               | \>>             |
+| Increment (Increase by one)                                              | ++              |
+| Decrement (Decrease by one)                                            | --              |
 
-Beispiel:
+Example:
 
 ```java
-10 + 5; // Ergibt 15
-10 - 5; // Ergibt 5
-10 * 5; // Ergibt 50
-10 / 4; // Ergibt 2
-10.0 / 2; // Ergibt 5.0
-10 % 3; // Ergibt 1
+10 + 5; // Results in 15
+10 - 5; // Results in 5
+10 * 5; // Results in 50
+10 / 4; // Results in 2
+10.0 / 2; // Results in 5.0
+10 % 3; // Results in 1
 ```
 
 </details>
 
-### Konkatenation von Strings 
+### Concatenation of Strings
 
 <details>
-    <summary>Konkatenieren</summary>
+    <summary>Concatenation</summary>
 
-Konkatenation bedeutet das aneinanderhängen von Strings(Zeichenketten)
+Concatenation means joining strings (character chains) together
 
 ```java
 String name = "Max";
-String begruessung = "Hallo " + name; // Ergibt "Hallo Max"
+String greeting = "Hello " + name; // Results in "Hello Max"
 ```
 
-Es folgt noch eine Effizientere möglichkeit Strings zu konkatenieren
+A more efficient way to concatenate strings will follow
 </details>
 
-### Aufruf von Methoden innerhalb einer Klasse
+### Calling Methods within a Class
 
 <details>
-    <summary>Methoden aufrufen</summary>
+    <summary>Calling Methods</summary>
 
-Methoden sind kleine Codeblöcke die eine bestimmte Aufgabe erfüllen. Diese können wir in Java mit dem Namen der Methode und Klammern aufrufen.
+Methods are small blocks of code that perform a specific task. In Java, we can call them using the method name and parentheses.
 
-Im Folgendem Beispiel rufen wir die Methode `meineMethode` innerhalb der Klasse `MeineKlasse` auf.
+In the following example, we call the method `myMethod` within the class `MyClass`.
 ```java
-public class MeineKlasse {
-    public static void meineMethode() {
-        System.out.println("Hallo Welt");
+public class MyClass {
+    public static void myMethod() {
+        System.out.println("Hello World");
     }
-    
-    public void rufeMeineMethodeAuf(){
-        meineMethode();
+
+    public void callMyMethod(){
+        myMethod();
     }
 }
 ```
 </details>
 
-### Konvertieren von Datentypen
+### Converting Data Types
 <details>
-    <summary>Datentypen konvertieren</summary>
+    <summary>Converting Data Types</summary>
 
-In Java gibt es verschiedene Datentypen. Manchmal ist es nötig einen Datentyp in einen anderen zu konvertieren
+In Java, there are different data types. Sometimes it is necessary to convert one data type into another.
 
-Hierbei herscht eine Hierarchie der Datentypen wenn man nach der Hierarchie geht wird es Automatisch konvertiert wenn man jedoch in die andere Richtung geht muss man es explizit machen dabei können dann werte verloren gehen
+There is a hierarchy of data types. If you convert upwards in the hierarchy, it is done automatically. If you convert downwards, you must do it explicitly, and values may be lost.
 
 ![img.png](../../../../../../resources/img.png)
 
-| Von    | Zu     | Beispiel                               |
+| From   | To     | Example                                |
 |--------|--------|----------------------------------------|
 | int    | double | double d = (double) 5;                 |
 | double | int    | int i = 5.99;                          |
@@ -110,28 +110,28 @@ Hierbei herscht eine Hierarchie der Datentypen wenn man nach der Hierarchie geht
 
 </details>
 
-### Rechenoperationen bei boolean
+### Arithmetic Operations with boolean
 <details>
-    <summary>Rechenoperationen bei boolean</summary>
+    <summary>Arithmetic Operations with boolean</summary>
 
-boolean sind werte die nur wahr(true) oder falsch(false) sein können
+Booleans are values that can only be true or false.
 
-dabei gibt es verschiedene Rechenoperationen
+There are different operations for booleans
 
-| Rechenart | Zeichen in Java |
-|-----------|-----------------|
-| UND       | &&              |
-| ODER      | \|\|            |
-| NICHT     | !               |
-| [XOR](https://www.elektronik-kompendium.de/sites/dig/0205186.htm)   | ^               |
+| Type of Operation                                                 | Symbol in Java |
+|-------------------------------------------------------------------|----------------|
+| AND                                                               | &&             |
+| OR                                                                | \|\|           |
+| NOT                                                               | !              |
+| [XOR](https://www.elektronik-kompendium.de/sites/dig/0205186.htm) | ^              |
 
-Beispiel:
+Example:
 
 ```java
-true && false; // Ergibt false
-true || false; // Ergibt true
-!true; // Ergibt false
-true ^ false; // Ergibt true
+true && false; // Results in false
+true || false; // Results in true
+!true; // Results in false
+true ^ false; // Results in true
 ```
 </details>
 

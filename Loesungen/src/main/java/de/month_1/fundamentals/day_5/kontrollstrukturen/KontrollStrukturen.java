@@ -1,5 +1,9 @@
 package de.month_1.fundamentals.day_5.kontrollstrukturen;
 
+import com.sun.tools.javac.Main;
+import de.helper.utiltiy.MainProvider;
+
+import java.lang.reflect.Method;
 import java.util.List;
 
 public class KontrollStrukturen {
@@ -89,36 +93,17 @@ public class KontrollStrukturen {
 
     public static void main(String[] args) {
         //Muss nicht bearbeitet werden
-        KontrollStrukturen ks = new KontrollStrukturen();
-        String divider = "------------------------------";
+        Method[] methods = KontrollStrukturen.class.getDeclaredMethods();
+        Class<?> clazz = KontrollStrukturen.class;
 
-        System.out.println(divider);
-        System.out.println("gradeToText mit parameter 1:");
-        System.out.println(ks.gradeToText(1));
-
-        System.out.println(divider);
-        System.out.println("dayType mit parameter 1:");
-        System.out.println(ks.dayType(1));
-
-        System.out.println(divider);
-        System.out.println("sumOneToN mit parameter 5:");
-        System.out.println(ks.sumOneToN(5));
-
-        System.out.println(divider);
-        System.out.println("totalLength mit parameter [\"Hallo\", \"Welt\"]:");
-        System.out.println(ks.totalLength(List.of("Hallo", "Welt")));
-
-        System.out.println(divider);
-        System.out.println("doublesUntilAtLeast mit parameter (3, 20):");
-        System.out.println(ks.doublesUntilAtLeast(3, 20));
-
-        System.out.println(divider);
-        System.out.println("firstEven mit parameter [1, 3, 5, 6, 7];");
-        System.out.println(ks.firstEven(List.of(1, 3, 5, 6, 7)));
-
-        System.out.println(divider);
-        System.out.println("sumPositives mit parameter [-1, 2, -3, 4]:");
-        System.out.println(ks.sumPositives(List.of(-1, 2, -3, 4)));
-        System.out.println(divider);
+        MainProvider.printAscii();
+        for (Method method : methods) {
+            if (method.getName().equals("main")) continue;
+            if("gradeToText".equals(method.getName())) MainProvider.exec(method, clazz, 1);
+            if("dayType".equals(method.getName())) MainProvider.exec(method, clazz, 1);
+            if("sumOneToN".equals(method.getName())) MainProvider.exec(method, clazz, 5);
+            if("totalLength".equals(method.getName())) MainProvider.exec(method, clazz, List.of("Hallo", "Welt"));
+            if("doublesUntilAtLeast".equals(method.getName())) MainProvider.exec(method, clazz, 3, 20);
+        }
     }
 }

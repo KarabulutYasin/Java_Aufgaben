@@ -1,5 +1,9 @@
 package de.month_1.fundamentals.day_2.eigeneMethoden;
 
+import de.helper.utiltiy.MainProvider;
+
+import java.lang.reflect.Method;
+
 public class EigeneMethoden {
     //TODO
     // Schreibe Folgende Methoden
@@ -22,26 +26,16 @@ public class EigeneMethoden {
 
     public static void main(String[] args){
         //Muss nicht bearbeitet werden
-        EigeneMethoden em = new EigeneMethoden();
-        Class emClass = em.getClass();
-        try {
-            String divider = "--------------------";
+        Method[] methods = EigeneMethoden.class.getDeclaredMethods();
+        Class<?> cls = EigeneMethoden.class;
 
-            System.out.println(divider);
-            System.out.println("nope:");
-            emClass.getDeclaredMethod("nope");
-
-            System.out.println(divider);
-            System.out.println("mult mit denn Parametern 3 und 4:");
-            System.out.println(emClass.getDeclaredMethod("mult", int.class, int.class).invoke(em,3,4));
-
-            System.out.println(divider);
-            System.out.println("multByTwo mit dem Parameter 5:");
-            System.out.println(emClass.getDeclaredMethod("multByTwo",int.class).invoke(em,5));
-            System.out.println(divider);
-
-        }catch (Exception e){
-            System.out.println(e.getMessage());
+        MainProvider.printAscii();
+        // Falls man etwas mit denn Parametern spielen will das nach "lp" sind die jeweiligen Parameter
+        for (Method method: methods){
+            if (method.getName().equals("main")) continue;
+            if (method.getName().equals("nope")) MainProvider.exec(method,cls);
+            if (method.getName().equals("mult")) MainProvider.exec(method,cls,5,4);
+            if (method.getName().equals("multByTwo")) MainProvider.exec(method,cls,7);
         }
     }
 }

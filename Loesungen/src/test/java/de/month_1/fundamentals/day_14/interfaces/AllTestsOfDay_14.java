@@ -5,8 +5,8 @@ import org.junit.platform.suite.api.Suite;
 
 @Suite
 @SelectClasses({
-        AutoTest.class,
-        FahrzeugTest.class
+        CarTest.class,
+        VehicleTest.class
 })
 public class AllTestsOfDay_14 {
 }

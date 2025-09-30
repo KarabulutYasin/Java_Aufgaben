@@ -1,5 +1,8 @@
 package de.month_1.fundamentals.day_1.lineareProgramme;
 
+import java.lang.reflect.Method;
+import de.helper.utiltiy.MainProvider;
+
 public class LineareProgramme {
 
     public void begruessung() {
@@ -69,36 +72,20 @@ public class LineareProgramme {
 
     public static void main(String[] args) {
         //Muss nicht bearbeitet werden
-        LineareProgramme lp = new LineareProgramme();
-        String divider = "------------------------------";
-        System.out.println(divider);
+        Method [] methods = LineareProgramme.class.getDeclaredMethods();
+        Class<?> lp = LineareProgramme.class;
 
-        System.out.println("Ausgabe von Begrüssung:" );
-        lp.begruessung();
-        System.out.println(divider);
-
-        System.out.println("Ausgabe von zusammenrechnen mit Parameter 10 und 20:" );
-        System.out.println(lp.zusammenRechnen(10,20));
-        System.out.println(divider);
-
-        System.out.println("Ausgabe von kommaZwischen mit Parameter Hi und Moin:" );
-        System.out.println(lp.kommaZwischen("Hi","Moin"));
-        System.out.println(divider);
-
-        System.out.println("Aufruf von aufrufZusammenRechnen:" );
-        lp.aufrufZusammenRechnen();
-        System.out.println(divider);
-
-        System.out.println("Ausgabe von convertToInt mit Parameter \"123\":" );
-        System.out.println(lp.convertToInt("123"));
-        System.out.println(divider);
-
-        System.out.println("Ausgabe von convertToString mit Parameter 123:" );
-        System.out.println(lp.convertToString(123));
-        System.out.println(divider);
-
-        System.out.println("Ausgabe von connectBoolean mit Parameter true und false:" );
-        System.out.println(lp.connectBoolean(true,false));
-        System.out.println(divider);
+        MainProvider.printAscii();
+        // Falls man etwas mit denn Parametern spielen will das nach "lp" sind die jeweiligen Parameter
+        for (Method method: methods){
+            if (method.getName().equals("main")) continue;
+            if (method.getName().equals("begruessung")) MainProvider.exec(method,lp);
+            if (method.getName().equals("zusammenRechnen")) MainProvider.exec(method,lp,10,20);
+            if (method.getName().equals("kommaZwischen")) MainProvider.exec(method,lp,"Hi","Moin");
+            if (method.getName().equals("aufrufZusammenRechnen")) MainProvider.exec(method,lp);
+            if (method.getName().equals("convertToInt")) MainProvider.exec(method,lp,"123");
+            if (method.getName().equals("convertToString")) MainProvider.exec(method,lp,123);
+            if (method.getName().equals("connectBoolean")) MainProvider.exec(method,lp,true,false);
+        }
     }
 }

@@ -1,5 +1,8 @@
 package de.month_1.fundamentals.day_7.arrays;
 
+import de.utiltiy.MainProvider;
+
+import java.lang.reflect.Method;
 import java.util.Arrays;
 
 public class ArrayAufgaben {
@@ -82,63 +85,24 @@ public class ArrayAufgaben {
 
     public static void main(String[] args) {
         //Muss nicht bearbeitet werden
-        ArrayAufgaben aa = new ArrayAufgaben();
-        String divider = "------------------------------";
+        Method[] methods = ArrayAufgaben.class.getDeclaredMethods();
+        Class<?> clazz = ArrayAufgaben.class;
 
-        System.out.println(divider);
-        System.out.println("createSequence mit parameter 10:");
-        System.out.println(Arrays.toString(aa.createSequence(10)));
-
-        System.out.println(divider);
-        System.out.println("findMax mit array {3, 1, 4, 1, 5, 9}:");
-        System.out.println(aa.findMax(new int[]{3, 1, 4, 1, 5, 9}));
-
-        System.out.println(divider);
-        System.out.println("sum mit array {1, 2, 3, 4, 5}:");
-        System.out.println(aa.sum(new int[]{1, 2, 1, 3, 1}));
-
-        System.out.println(divider);
-        System.out.println("countOccurrences von 1 im array {1, 2, 1, 3, 1}:");
-        System.out.println(aa.countOccurrences(new int[]{1, 2, 1, 3, 1}, 1));
-
-        System.out.println(divider);
-        System.out.println("reverse von array {1, 2, 3, 4, 5}:");
-        int[] arrToReverse = {1, 2, 3, 4, 5};
-        aa.reverse(arrToReverse);
-        System.out.println(Arrays.toString(arrToReverse));
-
-        System.out.println(divider);
-        System.out.println("filterEven von array {1, 2, 3, 4, 5, 6}:");
-        int[] evenFiltered = aa.filterEven(new int[]{1, 2, 3, 4, 5, 6});
-        System.out.println(Arrays.toString(evenFiltered));
-
-        System.out.println(divider);
-        System.out.println("isSorted von array {1, 2, 3, 4, 5}:");
-        System.out.println(aa.isSorted(new int[]{1, 2, 3, 4, 5}));
-
-        System.out.println(divider);
-        System.out.println("Index of 3 in array {1, 2, 3, 4, 5}:");
-        System.out.println(aa.indexOf(new int[]{1, 2, 3, 4, 5}, 3));
-
-        System.out.println(divider);
-        System.out.println("multiplyBy 2 in array {1, 2, 3}:");
-        int[] arrToMultiply = {1, 2, 3};
-        aa.multiplyBy(arrToMultiply, 2);
-        System.out.println(Arrays.toString(arrToMultiply));
-
-        System.out.println(divider);
-        System.out.println("concatenate arrays {1, 2} and {3, 4}:");
-        int[] concatenated = aa.concatenate(new int[]{1, 2}, new int[]{3, 4});
-        System.out.println(Arrays.toString(concatenated));
-
-        System.out.println(divider);
-        System.out.println("Average of array {1, 2, 3, 4, 5}:");
-        System.out.println(aa.average(new int[]{1, 2, 3, 4, 5}));
-
-        System.out.println(divider);
-        System.out.println("removeDuplicates from array {1, 2, 2, 3, 3, 4}:");
-        int[] noDuplicates = aa.removeDuplicates(new int[]{1, 2, 2, 3, 3, 4});
-        System.out.println(Arrays.toString(noDuplicates));
-        System.out.println(divider);
+        MainProvider.printAscii();
+        for(Method method: methods){
+            if(method.getName().equals("main")) continue;
+            if ("createSequence".equals(method.getName())) MainProvider.exec(method, clazz, 10);
+            if ("findMax".equals(method.getName())) MainProvider.exec(method, clazz, (Object) new int[]{3, 5, 1, 8, 2});
+            if ("sum".equals(method.getName())) MainProvider.exec(method, clazz, (Object) new int[]{3, 5, 1, 8, 2});
+            if ("countOccurrences".equals(method.getName())) MainProvider.exec(method, clazz, (Object) new int[]{3, 5, 1, 8, 2, 3, 3}, 3);
+            if ("reverse".equals(method.getName())) MainProvider.exec(method, clazz, (Object) new int[]{3, 5, 1, 8, 2});
+            if ("filterEven".equals(method.getName())) MainProvider.exec(method, clazz, (Object) new int[]{3, 5, 1, 8, 2});
+            if ("isSorted".equals(method.getName())) MainProvider.exec(method, clazz, (Object) new int[]{1, 2, 3, 4, 5});
+            if ("indexOf".equals(method.getName())) MainProvider.exec(method, clazz, new int[]{3, 5, 1, 8, 2}, 8);
+            if ("multiplyBy".equals(method.getName())) MainProvider.exec(method, clazz, new int[]{3, 5, 1, 8, 2}, 2);
+            if ("concatenate".equals(method.getName())) MainProvider.exec(method, clazz, new int[]{1,2,3}, new int[]{4,5,6});
+            if ("average".equals(method.getName())) MainProvider.exec(method, clazz, (Object) new int[]{3, 5, 1, 8, 2});
+            if ("removeDuplicates".equals(method.getName())) MainProvider.exec(method, clazz, (Object) new int[]{3, 5, 1, 8, 2, 3, 5, 1});
+        }
     }
 }

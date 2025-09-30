@@ -29,9 +29,16 @@ public class MainProvider {
     public static void exec(Method method,Class<?> clazz, Object... params) {
         try{
             if (params.length == 0) System.out.println("Aufruf von " + method.getName() + ":");
-            else System.out.println("Aufruf von " + method.getName() + " mit Parametern" + Arrays.toString(params) + " :");
+            else System.out.println("Aufruf von " + method.getName() + " mit Parametern" + Arrays.deepToString(params) + " :");
             if (method.getReturnType() == void.class) method.invoke(clazz.getConstructor().newInstance(),params);
-            else System.out.println(method.invoke(clazz.getConstructor().newInstance(),params));
+            else {
+                Object result = method.invoke(clazz.getConstructor().newInstance(),params);
+                if (result != null && result.getClass().isArray()) {
+                    System.out.println(Arrays.deepToString(new Object[]{result}));
+                } else {
+                    System.out.println(result);
+                }
+            }
             System.out.println(divider);
         }catch (InvocationTargetException e) {
             throw new RuntimeException(e);

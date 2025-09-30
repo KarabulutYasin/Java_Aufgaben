@@ -1,5 +1,9 @@
 package de.month_1.fundamentals.day_3.typkonversionen;
 
+import de.utiltiy.MainProvider;
+
+import java.lang.reflect.Method;
+
 public class Typkonversion {
 
     public int convertShortToInt(short x){
@@ -53,36 +57,19 @@ public class Typkonversion {
 
     public static void main(String[] args) {
         //Muss nicht bearbeitet werden
-        Typkonversion tk = new Typkonversion();
-        String divider = "------------------------------";
+        Method[] methods = Typkonversion.class.getDeclaredMethods();
+        Class<?> tkc = Typkonversion.class;
 
-        System.out.println(divider);
-        System.out.println("ConvertShortToInt mit dem short 12345");
-        System.out.println(tk.convertShortToInt((short) 12345));
-
-        System.out.println(divider);
-        System.out.println("ConvertDoubleToInt mit dem double 123.456");
-        System.out.println(tk.convertDoubleToInt(123.456));
-
-        System.out.println(divider);
-        System.out.println("ConvertIntToLong mit dem int 123456789");
-        System.out.println(tk.convertIntToLong(123456789));
-
-        System.out.println(divider);
-        System.out.println("ConvertIntToFloat mit dem int 123456789");
-        System.out.println(tk.convertIntToFloat(123456789));
-
-        System.out.println(divider);
-        System.out.println("ConvertFloatToDouble mit dem float 123.456f");
-        System.out.println(tk.convertFloatToDouble(123.456f));
-
-        System.out.println(divider);
-        System.out.println("ConvertIntToByte mit dem int 130");
-        System.out.println(tk.convertIntToByte(130));
-
-        System.out.println(divider);
-        System.out.println("ConvertIntToChar mit dem int 65");
-        System.out.println(tk.convertIntToChar(65));
-        System.out.println(divider);
+        MainProvider.printAscii();
+        for(Method method: methods){
+            if ("main".equals(method.getName())) continue;
+            if ("convertShortToInt".equals(method.getName())) MainProvider.exec(method,tkc, (short) 12345);
+            if ("convertDoubleToInt".equals(method.getName())) MainProvider.exec(method,tkc, 12345.67);
+            if ("convertIntToLong".equals(method.getName())) MainProvider.exec(method,tkc, 123456789);
+            if ("convertIntToFloat".equals(method.getName())) MainProvider.exec(method,tkc, 123456789);
+            if ("convertFloatToDouble".equals(method.getName())) MainProvider.exec(method,tkc, 12345.67f);
+            if ("convertIntToByte".equals(method.getName())) MainProvider.exec(method,tkc, 123456);
+            if ("convertIntToChar".equals(method.getName())) MainProvider.exec(method,tkc, 65);
+        }
     }
 }

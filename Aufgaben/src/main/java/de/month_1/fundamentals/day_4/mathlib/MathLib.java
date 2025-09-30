@@ -1,5 +1,9 @@
 package de.month_1.fundamentals.day_4.mathlib;
 
+import de.utiltiy.MainProvider;
+
+import java.lang.reflect.Method;
+
 public class MathLib {
 
     //TODO
@@ -50,36 +54,19 @@ public class MathLib {
 
     public static void main(String[] args) {
         //Muss nicht bearbeitet werden
-        MathLib mathLib = new MathLib();
-        String divider = "------------------------------";
+        Method[] methods = MathLib.class.getDeclaredMethods();
+        Class<?> mathLibClass = MathLib.class;
 
-        System.out.println(divider);
-        System.out.println("sqrt mit parameter 16: ");
-        System.out.println(mathLib.sqrt(16));
-
-        System.out.println(divider);
-        System.out.println("pow mit parameter 2, 3: ");
-        System.out.println(mathLib.pow(2, 3));
-
-        System.out.println(divider);
-        System.out.println("round mit parameter 4.6: ");
-        System.out.println(mathLib.round(4.6));
-
-        System.out.println(divider);
-        System.out.println("absInt mit parameter -5: ");
-        System.out.println(mathLib.absInt(-5));
-
-        System.out.println(divider);
-        System.out.println("sin mit parameter Math.PI / 2: ");
-        System.out.println(mathLib.sin(Math.PI / 2));
-
-        System.out.println(divider);
-        System.out.println("random01: ");
-        System.out.println(mathLib.random01());
-
-        System.out.println(divider);
-        System.out.println("randomInt mit parameter 1, 10: ");
-        System.out.println(mathLib.randomInt(1, 10));
-        System.out.println(divider);
+        MainProvider.printAscii();
+        for(Method method : methods) {
+            if("main".equals(method.getName())) continue;
+            if("sqrt".equals(method.getName())) MainProvider.exec(method, mathLibClass, 16);
+            if("pow".equals(method.getName())) MainProvider.exec(method, mathLibClass, 2, 3);
+            if("round".equals(method.getName())) MainProvider.exec(method, mathLibClass, 3.6);
+            if("absInt".equals(method.getName())) MainProvider.exec(method, mathLibClass, -5);
+            if("sin".equals(method.getName())) MainProvider.exec(method, mathLibClass, Math.PI / 2);
+            if("random01".equals(method.getName())) MainProvider.exec(method, mathLibClass);
+            if("randomInt".equals(method.getName())) MainProvider.exec(method, mathLibClass, 5, 15);
+        }
     }
 }

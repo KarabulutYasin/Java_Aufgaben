@@ -3,8 +3,6 @@ package de.month_1.fundamentals.day_15.vererbung;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import java.lang.reflect.Modifier;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 class VogelTest {

@@ -69,4 +69,9 @@ class KontrollStrukturenTest {
         assertEquals(6, sut.sumPositives(List.of(-2, 1, 0, 5)));
         // Stolperfalle: Code nach "continue" wird übersprungen -> sum += n MUSS hinter der Bedingung stehen
     }
+
+    @Test
+    void main_does_not_throw() {
+        KontrollStrukturen.main(new String[]{});
+    }
 }

@@ -34,7 +34,7 @@ class EigeneExceptionTest {
     @Test
     void throwsOwnException(){
         try {
-            Class clazz = Class.forName("de.a.fundamentals.g.fehlerbehandlung.exception.OwnException");
+            Class clazz = Class.forName("de.month_1.fundamentals.day_12.fehlerbehandlung.exception.OwnException");
             assertThrows(clazz, () -> objectUnderTest.throwsOwnException(),"OwnException was not thrown");
         }catch (ClassNotFoundException e){
             fail("OwnRuntimeException class was not found");
@@ -44,7 +44,7 @@ class EigeneExceptionTest {
     @Test
     void throwsOwnRuntimeException(){
         try {
-            Class clazz = Class.forName("de.a.fundamentals.g.fehlerbehandlung.exception.OwnRuntimeException");
+            Class clazz = Class.forName("de.month_1.fundamentals.day_12.fehlerbehandlung.exception.OwnRuntimeException");
             assertThrows(clazz,() -> objectUnderTest.throwsOwnRuntimeException(),"OwnRuntimeException was not thrown");
         }catch (ClassNotFoundException e){
             fail("OwnRuntimeException class was not found");
@@ -65,7 +65,7 @@ class EigeneExceptionTest {
     })
     void div_with_invalid_input_throws_ZeroDivisionException(int x, int y){
         try {
-            Class clazz = Class.forName("de.a.fundamentals.g.fehlerbehandlung.exception.ZeroDivisionException");
+            Class clazz = Class.forName("de.month_1.fundamentals.day_12.fehlerbehandlung.exception.ZeroDivisionException");
             assertThrows(clazz,() -> objectUnderTest.div(x,y));
         }catch (ClassNotFoundException e){
             fail("ZeroDivisionException class was not found");

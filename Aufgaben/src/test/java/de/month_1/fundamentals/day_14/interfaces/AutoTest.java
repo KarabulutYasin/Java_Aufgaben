@@ -31,7 +31,7 @@ public class AutoTest {
     @Test
     void Auto_is_instance_of_Fahrzeug() {
         assertDoesNotThrow(() -> {
-            assertInstanceOf(Class.forName("de.month_1.fundamentals.day_14.interfaces.Fahrzeug"), autoClass.getDeclaredConstructor().newInstance(), "Auto should implement Fahrzeug interface");
+            assertInstanceOf(Class.forName("de.month_1.fundamentals.day_14.interfaces.Fahrzeug"), autoClass.getDeclaredConstructor().newInstance(), "Auto should implement Fahrzeug interface\nIS the Fahrzeug Class in de.month_1.fundamentals.day_14.interfaces.Fahrzeug?");
         });
     }
 

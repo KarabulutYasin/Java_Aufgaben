@@ -1,6 +1,5 @@
 package de.month_1.fundamentals.day_4.mathlib;
 
-
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -68,5 +67,10 @@ class MathLibTest {
     @Test
     void randomInt_minGreaterThanMax_throws() {
         assertThrows(IllegalArgumentException.class, () -> objectUnderTest.randomInt(10, 5));
+    }
+
+    @Test
+    void main_does_not_throw() {
+        assertDoesNotThrow(() -> MathLib.main(new String[]{}));
     }
 }

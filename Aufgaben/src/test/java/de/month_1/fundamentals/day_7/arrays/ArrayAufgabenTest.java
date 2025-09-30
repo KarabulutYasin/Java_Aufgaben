@@ -192,4 +192,9 @@ class ArrayAufgabenTest {
         }
         return numbers;
     }
+
+    @Test
+    void main_does_not_throw() {
+        assertDoesNotThrow(() -> ArrayAufgaben.main(new String[]{}));
+    }
 }

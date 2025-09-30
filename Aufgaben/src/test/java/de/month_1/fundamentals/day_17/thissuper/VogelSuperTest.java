@@ -2,7 +2,7 @@ package de.month_1.fundamentals.day_17.thissuper;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class VogelSuperTest {
 

@@ -7,6 +7,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class VogelTest {
 
+
     Class vogelClass;
     Class kannFliegenClass;
 

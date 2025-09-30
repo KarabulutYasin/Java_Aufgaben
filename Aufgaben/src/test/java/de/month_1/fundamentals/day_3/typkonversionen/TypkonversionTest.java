@@ -1,8 +1,10 @@
 package de.month_1.fundamentals.day_3.typkonversionen;
 
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
+import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class TypkonversionTest {
@@ -51,5 +53,8 @@ class TypkonversionTest {
         assertEquals((char) x, new Typkonversion().convertIntToChar(x));
     }
 
-
+    @Test
+    void main_does_not_throw_exception() {
+        assertDoesNotThrow(() -> Typkonversion.main(new String[]{}));
+    }
 }

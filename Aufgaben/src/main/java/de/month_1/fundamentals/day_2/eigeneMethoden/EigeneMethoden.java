@@ -1,4 +1,4 @@
-package de.month_1.fundamentals.day_2.EigeneMethoden;
+package de.month_1.fundamentals.day_2.eigeneMethoden;
 
 import de.utiltiy.MainProvider;
 

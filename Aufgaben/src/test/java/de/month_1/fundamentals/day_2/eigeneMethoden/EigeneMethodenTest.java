@@ -1,6 +1,6 @@
 package de.month_1.fundamentals.day_2.eigeneMethoden;
 
-import de.month_1.fundamentals.day_2.EigeneMethoden.EigeneMethoden;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.CsvSource;
@@ -65,5 +65,10 @@ public class EigeneMethodenTest {
 
             assertEquals(x*2, result);
         });
+    }
+
+    @Test
+    void main_does_not_throw_exception() {
+        assertDoesNotThrow(() -> {EigeneMethoden.main(new String[]{});});
     }
 }

@@ -24,7 +24,7 @@ class ListAufgabenTest {
 
     @Test
     void returnInstanceOfList() {
-        assertInstanceOf(java.util.List.class, objectUnderTest.returnInstanceOfList());
+        assertInstanceOf(List.class, objectUnderTest.returnInstanceOfList());
     }
 
     @Test

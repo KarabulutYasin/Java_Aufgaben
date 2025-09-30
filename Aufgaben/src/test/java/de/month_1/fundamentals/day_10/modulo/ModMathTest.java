@@ -2,7 +2,8 @@ package de.month_1.fundamentals.day_10.modulo;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 class ModMathTest {
 
@@ -20,7 +21,7 @@ class ModMathTest {
         assertThrows(IllegalArgumentException.class, () -> sut.normalizeMod(5, 0));
         assertThrows(IllegalArgumentException.class, () -> sut.normalizeMod(5, -7));
     }
-    
+
     @Test
     void addHours12_wrapsAroundCorrectly() {
         assertEquals(1, sut.addHours12(12, 1));     // 12 + 1 -> 1

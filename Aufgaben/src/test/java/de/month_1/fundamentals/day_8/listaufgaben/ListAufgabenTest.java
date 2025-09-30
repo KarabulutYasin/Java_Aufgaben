@@ -11,8 +11,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.stream.Stream;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertInstanceOf;
+import static org.junit.jupiter.api.Assertions.*;
 
 class ListAufgabenTest {
 
@@ -91,5 +90,10 @@ class ListAufgabenTest {
                 Arguments.of(new LinkedList<>(List.of(4, 4, 4)), new LinkedList<>(List.of(4, 4, 4))),
                 Arguments.of((Object) null, null)
         );
+    }
+
+    @Test
+    void main_does_not_throw() {
+        assertDoesNotThrow(() -> ListAufgaben.main(new String[]{}));
     }
 }

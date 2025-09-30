@@ -74,7 +74,7 @@ class StaticDemoTest {
     @Test
     void testMaxFromList() throws Exception {
         Object result = staticDemoClass
-                .getDeclaredMethod("maxFromList", java.util.List.class)
+                .getDeclaredMethod("maxFromList", List.class)
                 .invoke(null, Arrays.asList(3, 7, 1, 9, 2));
 
         assertEquals(9, result, "Die Methode maxFromList() liefert nicht das erwartete Maximum.");
@@ -82,9 +82,9 @@ class StaticDemoTest {
 
     @Test
     void testMaxFromListThrowsOnEmptyList() throws Exception {
-        var method = staticDemoClass.getDeclaredMethod("maxFromList", java.util.List.class);
+        var method = staticDemoClass.getDeclaredMethod("maxFromList", List.class);
         assertThrows(
-                java.lang.reflect.InvocationTargetException.class,
+                InvocationTargetException.class,
                 () -> method.invoke(null, Arrays.asList()),
                 "Die Methode maxFromList() sollte bei leerer Liste eine Exception werfen."
         );
@@ -92,10 +92,10 @@ class StaticDemoTest {
 
     static Stream<Arguments> maxProvider() {
         return Stream.of(
-                org.junit.jupiter.params.provider.Arguments.of(List.of(1, 2, 3), 3),
-                org.junit.jupiter.params.provider.Arguments.of(List.of(10, 5, 7, 2), 10),
-                org.junit.jupiter.params.provider.Arguments.of(List.of(-5, -2, -9), -2),
-                org.junit.jupiter.params.provider.Arguments.of(List.of(42), 42)
+                Arguments.of(List.of(1, 2, 3), 3),
+                Arguments.of(List.of(10, 5, 7, 2), 10),
+                Arguments.of(List.of(-5, -2, -9), -2),
+                Arguments.of(List.of(42), 42)
         );
     }
 

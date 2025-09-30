@@ -1,7 +1,7 @@
 package de.month_1.fundamentals.day_14.interfaces;
 
-import de.month_1.fundamentals.day_6.klassen.Person;
-import org.junit.jupiter.api.*;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.CsvSource;
@@ -31,7 +31,7 @@ public class AutoTest {
     @Test
     void Auto_is_instance_of_Fahrzeug() {
         assertDoesNotThrow(() -> {
-            assertInstanceOf(Fahrzeug.class, autoClass.getDeclaredConstructor().newInstance(), "Auto should implement Fahrzeug interface");
+            assertInstanceOf(Class.forName("de.month_1.fundamentals.day_14.interfaces.Fahrzeug"), autoClass.getDeclaredConstructor().newInstance(), "Auto should implement Fahrzeug interface\nIS the Fahrzeug Class in de.month_1.fundamentals.day_14.interfaces.Fahrzeug?");
         });
     }
 

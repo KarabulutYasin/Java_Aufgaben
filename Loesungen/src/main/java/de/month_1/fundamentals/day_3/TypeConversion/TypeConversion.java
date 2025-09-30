@@ -8,60 +8,60 @@ public class TypeConversion {
 
     public int convertShortToInt(short x){
         //TODO
-        // Konvertiere short x zu int und gebe es zurück
+        // Convert short x to int and return it
 
-        // Automatische Konversion, kein Cast nötig
+        // Automatic conversion, no cast needed
         return x;
     }
 
     public int convertDoubleToInt(double x){
         //TODO
-        // Konvertiere denn double x in ein int
+        // Convert double x to int
 
-        //Man beachte kommazahlen werden immer abgerundet
+        // Note: decimal numbers are always rounded down
         return (int) x;
     }
 
     public long convertIntToLong(int x){
         //TODO
-        // Konvertiere int x zu long und gebe es zurück
+        // Convert int x to long and return it
 
-        // Automatische Konversion, kein Cast nötig
+        // Automatic conversion, no cast needed
         return x;
     }
 
     public float convertIntToFloat(int x){
         //TODO
-        // Konvertiere int x zu float und gebe es zurück
+        // Convert int x to float and return it
 
-        // Automatische Konversion, kein Cast nötig
+        // Automatic conversion, no cast needed
         return x;
     }
 
     public double convertFloatToDouble(float x){
         //TODO
-        // Konvertiere float x zu double und gebe es zurück
+        // Convert float x to double and return it
 
-        // Automatische Konversion, kein Cast nötig
+        // Automatic conversion, no cast needed
         return x;
     }
 
     public byte convertIntToByte(int x){
         //TODO
-        // Konvertiere int x zu byte und gebe es zurück
+        // Convert int x to byte and return it
 
         return (byte) x;
     }
 
     public char convertIntToChar(int x){
         //TODO
-        // Konvertiere int x zu char und gebe es zurück
+        // Convert int x to char and return it
 
         return (char) x;
     }
 
     public static void main(String[] args) {
-        //Muss nicht bearbeitet werden
+        //No need to edit
         Method[] methods = TypeConversion.class.getDeclaredMethods();
         Class<?> tkc = TypeConversion.class;
 

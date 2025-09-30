@@ -19,7 +19,7 @@ public class LinearProgramsTest {
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
         System.setOut(new PrintStream(outContent));
 
-        new LinearPrograms().begruessung();
+        new LinearPrograms().greeting();
 
         assertTrue(outContent.toString().contains("Hello World"),"begruessung doesnt contain Hello World");
     }
@@ -27,7 +27,7 @@ public class LinearProgramsTest {
     @ParameterizedTest
     @CsvSource({"5,3", "0,0", "-5,5", "-3,-7"})
     public void zusammenRechnen_has_add_up(int x, int y){
-        int result = new LinearPrograms().zusammenRechnen(x,y);
+        int result = new LinearPrograms().add(x,y);
 
         assertEquals(x+y,result,"Result of \"zusammenRechnen\" is not correct \nExpected was: "+ (x + y) +"\nBut was: "+result);
     }
@@ -35,7 +35,7 @@ public class LinearProgramsTest {
     @ParameterizedTest
     @CsvSource({"HI,MOIN", "A,B", "123,456", "a,''"})
     public void kommaZwischen_got_string_with_komma(String w1, String w2){
-       String result =  new LinearPrograms().kommaZwischen(w1,w2);
+       String result =  new LinearPrograms().commaBetween(w1,w2);
 
        assertEquals(w1 + "," + w2 ,result, "Result of \"kommaZwischen\" is not correct \nExpected was: "+ (w1 + "," + w2) +"\nBut was: "+result);
     }
@@ -44,9 +44,9 @@ public class LinearProgramsTest {
     public void aufrufZusammenRechnen_called_ZusammenRechnen(){
         LinearPrograms linearPrograms = spy(new LinearPrograms());
 
-        linearPrograms.aufrufZusammenRechnen();
+        linearPrograms.callAdd();
 
-        verify(linearPrograms).zusammenRechnen(3, 5);
+        verify(linearPrograms).add(3, 5);
     }
 
     @ParameterizedTest

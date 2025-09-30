@@ -20,13 +20,13 @@ class MathLibTest {
     @ParameterizedTest
     @CsvSource({"5.25","0","1","-12.3"})
     void sqrt_returnsCorrectResult(double x){
-        assertEquals(Math.sqrt(x),objectUnderTest.sqrt(x));
+        assertEquals(Math.sqrt(x),objectUnderTest.squareRoot(x));
     }
 
     @ParameterizedTest
     @CsvSource({"5.25,2","0,10","1,20","-12.3,12"})
     void pow_returnsCorrectResult(double x, double y) {
-        assertEquals(Math.pow(x,y),objectUnderTest.pow(x,y));
+        assertEquals(Math.pow(x,y),objectUnderTest.power(x,y));
     }
 
 
@@ -39,19 +39,19 @@ class MathLibTest {
     @ParameterizedTest
     @CsvSource({"5","0","-1","-12"})
     void absInt_returnsNonNegative(int x) {
-        assertEquals(Math.abs(x),objectUnderTest.absInt(x));
+        assertEquals(Math.abs(x),objectUnderTest.absoluteInt(x));
     }
 
     @ParameterizedTest
     @CsvSource({"5.25","0","1","-12.3"})
     void sin_returnsExpectedValue(double x) {
-        assertEquals(Math.sin(x),objectUnderTest.sin(x));
+        assertEquals(Math.sin(x),objectUnderTest.sine(x));
     }
 
     @Test
     void random01_inRange() {
         for (int i = 0; i < 1000; i++) {
-            double r = objectUnderTest.random01();
+            double r = objectUnderTest.randomZeroToOne();
             assertTrue(r >= 0.0 && r < 1.0);
         }
     }

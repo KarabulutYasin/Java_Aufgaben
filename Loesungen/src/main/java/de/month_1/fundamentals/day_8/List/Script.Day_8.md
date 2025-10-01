@@ -1,60 +1,60 @@
-# Skript Listen und eigene Exception
+# Script Lists and Custom Exception
 
-## Inhaltsverzeichnis
-- [Was sind Listen?](#was-sind-listen)
-- [Listen erstellen und verwenden](#listen-erstellen-und-verwenden)
-- [Elemente hinzufügen und entfernen](#elemente-hinzufügen-und-entfernen)
-- [Listen sortieren](#listen-sortieren)
-- [Listen in Strings umwandeln](#listen-in-strings-umwandeln)
+## Table of Contents
+- [What are Lists?](#what-are-lists)
+- [Creating and Using Lists](#creating-and-using-lists)
+- [Adding and Removing Elements](#adding-and-removing-elements)
+- [Sorting Lists](#sorting-lists)
+- [Converting Lists to Strings](#converting-lists-to-strings)
 
-### Was sind Listen?
+### What are Lists?
 <details>
     <summary>Definition</summary>
-    Listen sind dynamische Datenstrukturen, die mehrere Werte speichern können. Sie sind flexibler als Arrays und können beliebig wachsen.
+    Lists are dynamic data structures that can store multiple values. They are more flexible than arrays and can grow as needed.
 </details>
 
-### Listen erstellen und verwenden
+### Creating and Using Lists
 <details>
-    <summary>List erstellen</summary>
-    In Java gibt es verschiedene List-Typen, z.B. `ArrayList`.
+    <summary>Create List</summary>
+    In Java, there are different list types, e.g. `ArrayList`.
 
-Beispiel um eine liste zu erstellen in der nur Strings gespeichert werden können:
+Example of how to create a list that can only store strings:
 ```java
-List<String> namen = new ArrayList<>();
+List<String> names = new ArrayList<>();
 ```
 </details>
 
-### Elemente hinzufügen und entfernen
+### Adding and Removing Elements
 <details>
-    <summary>Elemente hinzufügen/entfernen</summary>
+    <summary>Adding/Removing Elements</summary>
 
-Mit `add()` fügst du Elemente hinzu, mit `remove()` entfernst du sie.
+With `add()` you add elements, with `remove()` you remove them.
 ```java
-namen.add("Max");
-namen.remove("Max");
+names.add("Max");
+names.remove("Max");
 ```
 </details>
 
-### Listen sortieren
+### Sorting Lists
 <details>
-    <summary>Listen sortieren</summary>
+    <summary>Sorting Lists</summary>
 
-Listen kannst du mit `Collections.sort()` sortieren.
+You can sort lists using `Collections.sort()`.
 
 ```java
-Collections.sort(namen);
+Collections.sort(names);
 ```
 
 </details>
 
-### Listen in Strings umwandeln
+### Converting Lists to Strings
 <details>
-    <summary>Listen in Strings umwandeln</summary>
+    <summary>Converting Lists to Strings</summary>
 
-Du kannst eine Liste in einen String umwandeln, indem du die Elemente mit einem Trennzeichen verbindest.    
+You can convert a list to a string by joining the elements with a delimiter.
 ```java
-//Wir haben eine Liste "namen" in der die Namen "Max", "Anna" und "Tom" gespeichert sind
-//Folgenden befehle haben unterschiedliche ausgaben 
+//We have a list "namen" in which the names "Max", "Anna" and "Tom" are stored
+//The following commands have different outputs 
 
 System.out.println(namen.toString()); // [Max, Anna, Tom]
 

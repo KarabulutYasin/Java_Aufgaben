@@ -2,81 +2,81 @@ package de.month_1.fundamentals.day_9.Calculator;
 
 public class Calculator {
     //TODO
-    // Es soll ein Taschenrechner erstellt werden, der die Grundrechenarten beherrscht.
-    // Der Taschenrechner bekommt ein bestimmtes Pattern soll dieses verarbeiten und das Ergebnis zurückgeben
-    // Dabei sollen die 4 Rechenarten Plus Minus Mal Geteilt berücksichtigt werden
-    // Wenn es zu fehlern kommt, soll eine entsprechende Fehlermeldung ausgegeben werden.
-    // Man kann sich x beliebige Attribute Hilfsmethoden und Hilfsklassen erstellen um bessere übersicht zu behalten.
+    // A calculator should be created that can handle the basic arithmetic operations.
+    // The calculator receives a specific pattern, should process it and return the result.
+    // The 4 operations plus, minus, multiply, divide should be considered.
+    // If errors occur, an appropriate error message should be output.
+    // You can create any number of attributes, helper methods, and helper classes to keep things clear.
 
-    // Das Pattern ist wie folgt:
-    // <Zahl1> <Leerzeichen> <Rechenart> <Leerzeichen> <Zahl2>
-    // Beispiel: 5 + 3 -> 8
-    // Beispiel: 10 / 2 -> 5
-    // Beispiel: 7* 4 -> Fehler "Ungültiges Pattern"
-    // Beispiel: 9 -3 -> Fehler "Ungültiges Pattern"
-    // Beispiel: 8 / 0 -> Fehler "Division durch Null nicht möglich"
-    // Beispiel: 6 ^ 2 -> Fehler "Ungültige Rechenart"
-    // Beispiel: 4 + a -> Fehler "Ungültige Zahl"
+    // The pattern is as follows:
+    // <number1> <space> <operator> <space> <number2>
+    // Example: 5 + 3 -> 8
+    // Example: 10 / 2 -> 5
+    // Example: 7* 4 -> Error "Invalid pattern"
+    // Example: 9 -3 -> Error "Invalid pattern"
+    // Example: 8 / 0 -> Error "Division by zero not possible"
+    // Example: 6 ^ 2 -> Error "Invalid operator"
+    // Example: 4 + a -> Error "Invalid number"
     // etc.
 
-    private double zahl1;
-    private double zahl2;
-    private String rechenzeichen;
+    private double number1;
+    private double number2;
+    private String operator;
 
-    // Es ist so möglich sollte aber nicht so gemacht werden im verlauf sehen wir noch wie es besser geht mit design pattern
+    // It is possible like this but should not be done this way, later we will see how to do it better with design patterns
 
-    public double berechne(String pattern) {
+    public double calculate(String pattern) {
         //TODO
-        String[] patternParts = dividePattern(pattern);
-        setupAttributes(patternParts);
-        return calculate();
+        String[] patternParts = splitPattern(pattern);
+        setAttributes(patternParts);
+        return compute();
     }
 
-    public String[] dividePattern(String pattern) {
+    public String[] splitPattern(String pattern) {
         String[] result = pattern.split(" ");
         if (result.length ==3)return result;
-        else throw new RuntimeException("Ungültiges Pattern");
+        else throw new RuntimeException("Invalid pattern");
     }
 
-    public void setupAttributes(String[] patternParts) {
+    public void setAttributes(String[] patternParts) {
         try {
-            zahl1 = Double.parseDouble(patternParts[0]);
-            rechenzeichen = patternParts[1];
-            zahl2 = Double.parseDouble(patternParts[2]);
+            number1 = Double.parseDouble(patternParts[0]);
+            operator = patternParts[1];
+            number2 = Double.parseDouble(patternParts[2]);
         }catch (NumberFormatException e) {
-            throw new RuntimeException("Ungültige Zahl");
+            throw new RuntimeException("Invalid number");
         }
     }
 
-    public double calculate() {
-        switch (rechenzeichen) {
+    public double compute() {
+        switch (operator) {
             case "+":
-                return zahl1 + zahl2;
+                return number1 + number2;
             case "-":
-                return zahl1 - zahl2;
+                return number1 - number2;
             case "*":
-                return zahl1 * zahl2;
+                return number1 * number2;
             case "/":
-                if (zahl2 == 0) throw new RuntimeException("Division durch Null nicht möglich");
-                return zahl1 / zahl2;
+                if (number2 == 0) throw new RuntimeException("Division by zero not possible");
+                return number1 / number2;
             default:
-                throw new RuntimeException("Ungültige Rechenart");
+                throw new RuntimeException("Invalid operator");
         }
     }
 
     public static void main(String[] args){
-        // Muss nicht bearbeitet werden
-        Calculator tr = new Calculator();
+        // Does not need to be edited
+        Calculator calc = new Calculator();
         String divider = "---------------------";
         String[] equations = {"5 + 3", "10 / 2", "7* 4", "9 -3", "8 / 0", "6 ^ 2", "4 + a"};
 
         for (String equation : equations) {
             System.out.println(divider);
             try {
-                System.out.println("berechne mit string: " + equation+ ":");
-                System.out.println(tr.berechne(equation));
+                System.out.println("calculate with string: " + equation + ":");
+                System.out.println(calc.calculate(equation));
             } catch (RuntimeException e) {
-                System.out.println(equation + " -> Fehler: " + e.getMessage());
+                System.out.println(equation + " -> Error: " + e.getMessage());
             }
         }
         System.out.println(divider);

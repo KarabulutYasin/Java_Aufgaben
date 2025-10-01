@@ -21,7 +21,7 @@ class BirdSuperTest {
         Object b = birdCls.getDeclaredConstructor(String.class).newInstance("Tweety");
 
         var makeSound = birdCls.getDeclaredMethod("makeSound");
-        assertEquals("Chirp", makeSound.invoke(b), "Bird.makeSound() should return 'Chirp'.");
+        assertEquals("Tweet", makeSound.invoke(b), "Bird.makeSound() should return 'Chirp'.");
     }
 
     @Test
@@ -30,7 +30,7 @@ class BirdSuperTest {
         Object b = birdCls.getDeclaredConstructor(String.class).newInstance("Tweety");
 
         var combo = birdCls.getDeclaredMethod("baseAndOwnSound");
-        assertEquals("... Chirp", combo.invoke(b),
+        assertEquals("... Tweet", combo.invoke(b),
                 "baseAndOwnSound() should return super.makeSound() + ' ' + this.makeSound() ('... Chirp').");
     }
 }

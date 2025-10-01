@@ -8,38 +8,38 @@ import java.util.List;
 public class ControlStructures {
 
     //TODO
-    // Wenn eine Aufgabe mit mehreren Möglichkeiten Lösbar ist
-    // mach es mit mehreren möglichkeiten zur übungszwecke
+    // If a task can be solved in several ways,
+    // do it in several ways for practice purposes
     // (for while for each do while)
     // (switch if else)
 
     //TODO
-    // Note als Text zurückgeben (1..5 -> "Sehr gut".. "Mangelhaft", sonst "Ungültig")
+    // Return grade as text (1..5 -> "Very good".. "Poor", else "Invalid")
     public String gradeToText(int grade) {
-        if (grade == 1) return "Sehr gut";
-        else if (grade == 2) return "Gut";
-        else if (grade == 3) return "Befriedigend";
-        else if (grade == 4) return "Ausreichend";
-        else if (grade == 5) return "Mangelhaft";
-        else return "Ungueltig";
+        if (grade == 1) return "Very good";
+        else if (grade == 2) return "Good";
+        else if (grade == 3) return "Satisfactory";
+        else if (grade == 4) return "Sufficient";
+        else if (grade == 5) return "Poor";
+        else return "Invalid";
     }
 
     //TODO
-    // Wochentagsnummer (1=Mo..7=So) -> "Werktag"/"Wochenende"
-    // Wenn eine Zahl außerhalb von 1..7 ist -> "Ungültig"
+    // Day of week number (1=Mon..7=Sun) -> "Weekday"/"Weekend"
+    // If a number is outside 1..7 -> "Invalid"
     public String dayType(int day) {
         switch (day) {
             case 1, 2, 3, 4, 5:
-                return "Werktag";
+                return "Weekday";
             case 6, 7:
-                return "Wochenende";
+                return "Weekend";
             default:
-                return "Ungueltig";
+                return "Invalid";
         }
     }
 
     //TODO
-    // Summiere 1...n (inklusive von 1 und n)
+    // Sum 1...n (inclusive of 1 and n)
     public int sumOneToN(int n) {
         int sum = 0;
         for (int i = 1; i <= n; i++) {
@@ -49,7 +49,7 @@ public class ControlStructures {
     }
 
     //TODO
-    // Länge aller Strings addieren (ohne die Liste zu modifizieren!)
+    // Add up the length of all strings (without modifying the list!)
     public int totalLength(List<String> items) {
         int total = 0;
         for (String s : items) {
@@ -59,7 +59,7 @@ public class ControlStructures {
     }
 
     //TODO
-    // Zähle, wie oft x verdoppelt werden muss, um >= limit zu erreichen.
+    // Count how many times x must be doubled to reach >= limit.
     public int doublesUntilAtLeast(int start, int limit) {
         int x = start;
         int steps = 0;
@@ -71,7 +71,7 @@ public class ControlStructures {
     }
 
     //TODO
-    // Ersten geraden Wert in der Liste finden, wenn es keinen gibt -1 zurückgeben
+    // Find the first even value in the list, if there is none return -1
     public int firstEven(List<Integer> nums) {
         for (int n : nums) {
             if (n % 2 == 0) return n;
@@ -80,7 +80,7 @@ public class ControlStructures {
     }
 
     //TODO
-    // Summe nur der positiven Zahlen bilden (Negative überspringen)
+    // Sum only the positive numbers (skip negatives)
     public int sumPositives(List<Integer> nums) {
         int sum = 0;
         for (int n : nums) {
@@ -91,7 +91,7 @@ public class ControlStructures {
     }
 
     public static void main(String[] args) {
-        //Muss nicht bearbeitet werden
+        //No need to edit
         Method[] methods = ControlStructures.class.getDeclaredMethods();
         Class<?> clazz = ControlStructures.class;
 
@@ -101,7 +101,7 @@ public class ControlStructures {
             if("gradeToText".equals(method.getName())) MainProvider.exec(method, clazz, 1);
             if("dayType".equals(method.getName())) MainProvider.exec(method, clazz, 1);
             if("sumOneToN".equals(method.getName())) MainProvider.exec(method, clazz, 5);
-            if("totalLength".equals(method.getName())) MainProvider.exec(method, clazz, List.of("Hallo", "Welt"));
+            if("totalLength".equals(method.getName())) MainProvider.exec(method, clazz, List.of("Hello", "World"));
             if("doublesUntilAtLeast".equals(method.getName())) MainProvider.exec(method, clazz, 3, 20);
         }
     }

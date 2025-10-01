@@ -4,7 +4,7 @@ import java.util.Objects;
 
 public abstract class Animal {
     private final String name;
-    public String art = "Tier";
+    public String species = "Animal";
 
     public Animal(String name) {
         if (name == null || name.isBlank()) throw new IllegalArgumentException("name");
@@ -13,14 +13,14 @@ public abstract class Animal {
 
     public String getName() { return name; }
 
-    public String basisLaut() { return "..."; }
+    public String basicSound() { return "..."; }
 
-    public abstract String lautGeben();
+    public abstract String makeSound();
 
     @Override
     public final boolean equals(Object o) {
         if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false; // Schaut nach ob die Klasse gleich ist
+        if (o == null || getClass() != o.getClass()) return false; // Checks if the class is the same
         Animal animal = (Animal) o;
         return Objects.equals(name, animal.name);
     }

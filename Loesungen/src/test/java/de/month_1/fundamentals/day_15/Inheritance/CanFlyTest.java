@@ -9,23 +9,23 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class CanFlyTest {
 
-    Class<?> interfaceKannFliegen;
-
+    Class<?> interfaceCanFly;
     @BeforeEach
     void setup() {
         try {
-            interfaceKannFliegen = Class.forName("de.month_1.fundamentals.day_15.Inheritance.CanFly");
+            interfaceCanFly = Class.forName("de.month_1.fundamentals.day_15.Inheritance.CanFly");
         } catch (ClassNotFoundException e) {
-            fail("Vogel class not found");
+            fail("CanFly class not found");
         }
     }
 
     @Test
-    void testKannFliegenInterface() {
-        assertTrue(interfaceKannFliegen.isInterface(), "Class \"KannFliegen\" isn't an interface");
+    void testCanFlyInterface() {
+        assertTrue(interfaceCanFly.isInterface(), "Class \"CanFly\" isn't an interface");
         assertDoesNotThrow(() -> {
-            Method fliegenMethod = interfaceKannFliegen.getDeclaredMethod("fliegen");
-            assertEquals(String.class, fliegenMethod.getReturnType(), "Method \"fliegen\" has wrong return type");
-        }, "Method \"fliegen\" not found");
+            Method flyMethod = interfaceCanFly.getDeclaredMethod("fly");
+            assertEquals(String.class, flyMethod.getReturnType(), "Method \"fly\" has wrong return type");
+        }, "Method \"fly\" not found");
+    }
     }
 }

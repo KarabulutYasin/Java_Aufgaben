@@ -1,4 +1,4 @@
-package de.month_1.fundamentals.day_12.OwnException;
+package de.month_1.fundamentals.day_12.CustomException;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -34,7 +34,7 @@ class OwnExceptionTest {
     @Test
     void throwsOwnException(){
         try {
-            Class clazz = Class.forName("de.month_1.fundamentals.day_12.OwnException.exception.OwnException");
+            Class clazz = Class.forName("de.month_1.fundamentals.day_12.CustomException.exception.OwnException");
             assertThrows(clazz, () -> objectUnderTest.throwsOwnException(),"OwnException was not thrown");
         }catch (ClassNotFoundException e){
             fail("OwnRuntimeException class was not found");
@@ -44,7 +44,7 @@ class OwnExceptionTest {
     @Test
     void throwsOwnRuntimeException(){
         try {
-            Class clazz = Class.forName("de.month_1.fundamentals.day_12.OwnException.exception.OwnRuntimeException");
+            Class clazz = Class.forName("de.month_1.fundamentals.day_12.CustomException.exception.OwnRuntimeException");
             assertThrows(clazz,() -> objectUnderTest.throwsOwnRuntimeException(),"OwnRuntimeException was not thrown");
         }catch (ClassNotFoundException e){
             fail("OwnRuntimeException class was not found");
@@ -65,7 +65,7 @@ class OwnExceptionTest {
     })
     void div_with_invalid_input_throws_ZeroDivisionException(int x, int y){
         try {
-            Class clazz = Class.forName("de.month_1.fundamentals.day_12.OwnException.exception.ZeroDivisionException");
+            Class clazz = Class.forName("de.month_1.fundamentals.day_12.CustomException.exception.ZeroDivisionException");
             assertThrows(clazz,() -> objectUnderTest.div(x,y));
         }catch (ClassNotFoundException e){
             fail("ZeroDivisionException class was not found");

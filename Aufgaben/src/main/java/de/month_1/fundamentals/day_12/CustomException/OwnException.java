@@ -1,4 +1,4 @@
-package de.month_1.fundamentals.day_12.OwnException;
+package de.month_1.fundamentals.day_12.CustomException;
 
 public class OwnException {
 

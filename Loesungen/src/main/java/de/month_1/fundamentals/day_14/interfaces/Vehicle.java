@@ -2,11 +2,11 @@ package de.month_1.fundamentals.day_14.interfaces;
 
 public interface Vehicle {
 
-    void starten();
+    void start();
 
-    void stoppen();
+    void stop();
 
-    int getGeschwindigkeit();
+    int getSpeed();
 
-    void setGeschwindigkeit(int wert);
+    void setSpeed(int value);
 }

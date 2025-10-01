@@ -8,55 +8,55 @@ public class TypeConversion {
 
     public int convertShortToInt(short x){
         //TODO
-        // Konvertiere short x zu int und gebe es zurück
+        // Convert short x to int and return it
 
         return -1;
     }
 
     public int convertDoubleToInt(double x){
         //TODO
-        // Konvertiere denn double x in ein int
+        // Convert double x to int
 
         return -1;
     }
 
     public long convertIntToLong(int x){
         //TODO
-        // Konvertiere int x zu long und gebe es zurück
+        // Convert int x to long and return it
 
         return -1;
     }
 
     public float convertIntToFloat(int x){
         //TODO
-        // Konvertiere int x zu float und gebe es zurück
+        // Convert int x to float and return it
 
         return -1;
     }
 
     public double convertFloatToDouble(float x){
         //TODO
-        // Konvertiere float x zu double und gebe es zurück
+        // Convert float x to double and return it
 
         return -1;
     }
 
     public byte convertIntToByte(int x){
         //TODO
-        // Konvertiere int x zu byte und gebe es zurück
+        // Convert int x to byte and return it
 
         return -1;
     }
 
     public char convertIntToChar(int x){
         //TODO
-        // Konvertiere int x zu char und gebe es zurück
+        // Convert int x to char and return it
 
         return 0;
     }
 
     public static void main(String[] args) {
-        //Muss nicht bearbeitet werden
+        //No need to edit
         Method[] methods = TypeConversion.class.getDeclaredMethods();
         Class<?> tkc = TypeConversion.class;
 

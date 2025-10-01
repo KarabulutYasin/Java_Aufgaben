@@ -2,15 +2,15 @@ package de.month_1.fundamentals.day_11.point;
 
 public final class Point {
 
-    // TIPP denk an Libs die du vielleicht schon gelernt hast und hier benutzen könntest
+    // TIP: Think of libraries you may have already learned and could use here
 
     //TODO
-    // 1. Schreibe eine Klasse Point mit den Instanzvariablen (Attributen) x und y (beide int).
-    // 2. Schreibe einen Konstruktor der beide Variablen initialisiert.
-    // 3. Schreibe Getter für beide Variablen.
-    // 4. Schreibe eine Methode distanceTo(Point other), die die Distanz berechnet zwischen diesem Punkt und einem anderen Punkt.
-    // 5. schreibe eine equals-Methode, die zwei Punkte als gleich betrachtet, wenn ihre x- und y-Koordinaten gleich sind.
-    // 6. Schreibe eine toString-Methode, die einen Punkt in der Form "Point(x,y)" darstellt.
+    // 1. Write a class Point with the instance variables (attributes) x and y (both int).
+    // 2. Write a constructor that initializes both variables.
+    // 3. Write getters for both variables.
+    // 4. Write a method distanceTo(Point other) that calculates the distance between this point and another point.
+    // 5. Write an equals method that considers two points equal if their x and y coordinates are equal.
+    // 6. Write a toString method that represents a point in the form "Point(x,y)".
 
     private  int x;
     private  int y;

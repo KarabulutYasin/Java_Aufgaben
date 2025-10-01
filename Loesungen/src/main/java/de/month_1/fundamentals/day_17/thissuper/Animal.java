@@ -7,7 +7,7 @@ public class Animal {
          this.name = name;
     }
 
-    public String lautGeben() {
+    public String makeSound() {
          return "...";
     }
 

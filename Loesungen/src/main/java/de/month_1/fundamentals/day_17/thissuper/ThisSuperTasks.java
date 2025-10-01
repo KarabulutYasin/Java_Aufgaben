@@ -3,39 +3,39 @@ package de.month_1.fundamentals.day_17.thissuper;
 public class ThisSuperTasks {
 
     //TODO:
-    // Zwei Felder a und b (int)
+    // Two fields x and y (int)
 
-    private int a;
-    private int b;
+    private int x;
+    private int y;
 
     //TODO
-    // Default-Konstruktor – rufe den 2-Arg-Konstruktor mit this(1, 2)
+    // Default constructor – call the 2-arg constructor with this(1, 2)
 
     public ThisSuperTasks() {
          this(1, 2);
     }
 
     //TODO
-    // 2-Arg-Konstruktor – setze Felder via this
+    // 2-arg constructor – set fields via this
 
-    public ThisSuperTasks(int a, int b) {
-         this.a = a;
-         this.b = b;
+    public ThisSuperTasks(int x, int y) {
+        this.x = x;
+        this.y = y;
     }
 
     //TODO
-    // Gebe die Summe von a und b zurück
+    // Return the sum of x and y
 
     public int sum() {
-         return a + b;
+        return x + y;
     }
 
     //TODO
-    // Addiere auf x auf a und y auf b
-    // Gebe danach das Objekt zurück
+    // Add dx to x and dy to y
+    // Then return the object
 
-    public ThisSuperTasks add(int x, int y) {
-         this.a += x; this.b += y;
+    public ThisSuperTasks add(int dx, int dy) {
+        this.x += dx; this.y += dy;
          return this;
     }
 }

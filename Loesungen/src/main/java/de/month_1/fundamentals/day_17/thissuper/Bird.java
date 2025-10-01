@@ -3,24 +3,24 @@ package de.month_1.fundamentals.day_17.thissuper;
 public class Bird extends Animal {
 
     //TODO
-    // Konstruktor Vogel(String name) – rufe den Super-Konstruktor auf
+    // Constructor Bird(String name) – call the super constructor
 
     public Bird(String name) {
          super(name);
     }
 
     //TODO
-    // Überschreibe lautGeben(): gib "Piep" zurück
+    // Override makeSound(): return "Tweet"
 
     @Override
-    public String lautGeben() {
-         return "Piep";
+    public String makeSound() {
+        return "Tweet";
     }
 
     //TODO
-    // Methode basisUndEigenLaut(): kombiniere super.lautGeben() + " " + this.lautGeben()
+    // Method baseAndOwnSound(): combine super.makeSound() + " " + this.makeSound()
 
-    public String basisUndEigenLaut() {
-         return super.lautGeben() + " " + this.lautGeben();
+    public String baseAndOwnSound() {
+        return super.makeSound() + " " + this.makeSound();
     }
 }

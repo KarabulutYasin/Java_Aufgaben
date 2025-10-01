@@ -118,7 +118,6 @@ class ArrayTasksTest {
         );
     }
 
-    // ----- Filterung -----
     @ParameterizedTest
     @MethodSource("provide_filterEven_returnsOnlyEvenNumbers")
     void filterEven_returnsOnlyEvenNumbers(int[] input, int[] expected) {
@@ -144,10 +143,10 @@ class ArrayTasksTest {
         return Stream.of(
                 Arguments.of(new int[]{1, 2, 3, 4, 5}, true),
                 Arguments.of(new int[]{1, 3, 2, 4, 5}, false),
-                Arguments.of(new int[]{2, 2, 2, 2}, true), // gleiche Werte sind erlaubt
+                Arguments.of(new int[]{2, 2, 2, 2}, true),
                 Arguments.of(new int[]{5}, true),
                 Arguments.of(new int[]{}, true),
-                Arguments.of(new int[]{5, 4, 3, 2, 1}, false) // absteigend ist nicht sortiert
+                Arguments.of(new int[]{5, 4, 3, 2, 1}, false)
         );
     }
 
@@ -183,7 +182,6 @@ class ArrayTasksTest {
         );
     }
 
-    // ----- Hilfsmethode -----
     private int[] parseNumbers(String numbersStr) {
         String[] parts = numbersStr.split(",");
         int[] numbers = new int[parts.length];

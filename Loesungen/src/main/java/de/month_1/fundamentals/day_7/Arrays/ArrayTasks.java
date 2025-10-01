@@ -7,11 +7,11 @@ import java.lang.reflect.Method;
 public class ArrayTasks {
 
     //TODO
-    // Arbeite mit Arrays um die folgenden Aufgaben zu lösen
-    // Nutze sowohl for-Schleifen als auch for-each Schleifen zur Übung
+    // Work with arrays to solve the following tasks
+    // Use both for-loops and for-each loops for practice
 
     //TODO
-    // Erstelle ein int Array der Größe n und fülle es mit den Zahlen 1 bis n
+    // Create an int array of size n and fill it with the numbers 1 to n
     public int[] createSequence(int n) {
         int[] result = new int[n];
         for (int i = 0; i < n; i++) {
@@ -21,9 +21,9 @@ public class ArrayTasks {
     }
 
     //TODO
-    // Finde das Maximum in einem Array
+    // Find the maximum in an array
     public int findMax(int[] numbers) {
-        if (numbers.length == 0) throw new IllegalArgumentException("Array darf nicht leer sein");
+        if (numbers.length == 0) throw new IllegalArgumentException("Array must not be empty");
 
         int max = numbers[0];
         for (int num : numbers) {
@@ -35,7 +35,7 @@ public class ArrayTasks {
     }
 
     //TODO
-    // Berechne die Summe aller Elemente im Array
+    // Calculate the sum of all elements in the array
     public int sum(int[] numbers) {
         int total = 0;
         for (int num : numbers) {
@@ -45,7 +45,7 @@ public class ArrayTasks {
     }
 
     //TODO
-    // Zähle, wie oft ein bestimmter Wert im Array vorkommt
+    // Count how often a certain value occurs in the array
     public int countOccurrences(int[] numbers, int value) {
         int count = 0;
         for (int num : numbers) {
@@ -57,7 +57,7 @@ public class ArrayTasks {
     }
 
     //TODO
-    // Kehre die Reihenfolge der Elemente um (Array wird modifiziert!)
+    // Reverse the order of the elements (array is modified!)
     public void reverse(int[] numbers) {
         for (int i = 0; i < numbers.length / 2; i++) {
             int temp = numbers[i];
@@ -67,9 +67,9 @@ public class ArrayTasks {
     }
 
     //TODO
-    // Erstelle eine Kopie des Arrays nur mit den geraden Zahlen
+    // Create a copy of the array with only the even numbers
     public int[] filterEven(int[] numbers) {
-        // Erst zählen wie viele gerade Zahlen es gibt
+        // First count how many even numbers there are
         int evenCount = 0;
         for (int num : numbers) {
             if (num % 2 == 0) {
@@ -77,7 +77,7 @@ public class ArrayTasks {
             }
         }
 
-        // Neues Array erstellen und füllen
+        // Create and fill new array
         int[] evenNumbers = new int[evenCount];
         int index = 0;
         for (int num : numbers) {
@@ -90,7 +90,7 @@ public class ArrayTasks {
     }
 
     //TODO
-    // Prüfe, ob das Array sortiert ist (aufsteigend)
+    // Check if the array is sorted (ascending)
     public boolean isSorted(int[] numbers) {
         if (numbers.length <= 1) return true;
 
@@ -103,7 +103,7 @@ public class ArrayTasks {
     }
 
     //TODO
-    // Finde den Index des ersten Vorkommens von value, -1 wenn nicht gefunden
+    // Find the index of the first occurrence of value, -1 if not found
     public int indexOf(int[] numbers, int value) {
         for (int i = 0; i < numbers.length; i++) {
             if (numbers[i] == value) {
@@ -114,7 +114,7 @@ public class ArrayTasks {
     }
 
     //TODO
-    // Multipliziere jedes Element mit dem Faktor (Array wird modifiziert!)
+    // Multiply each element by the factor (array is modified!)
     public void multiplyBy(int[] numbers, int factor) {
         for (int i = 0; i < numbers.length; i++) {
             numbers[i] *= factor;
@@ -122,16 +122,16 @@ public class ArrayTasks {
     }
 
     //TODO
-    // Erstelle ein neues Array durch Zusammenfügen zweier Arrays
+    // Create a new array by concatenating two arrays
     public int[] concatenate(int[] first, int[] second) {
         int[] result = new int[first.length + second.length];
 
-        // Erstes Array kopieren
+        // Copy first array
         for (int i = 0; i < first.length; i++) {
             result[i] = first[i];
         }
 
-        // Zweites Array anhängen
+        // Append second array
         for (int i = 0; i < second.length; i++) {
             result[first.length + i] = second[i];
         }
@@ -140,20 +140,20 @@ public class ArrayTasks {
     }
 
     //TODO
-    // Berechne den Durchschnitt aller Werte (als double)
+    // Calculate the average of all values (as double)
     public double average(int[] numbers) {
-        if (numbers.length == 0) throw new IllegalArgumentException("Array darf nicht leer sein");
+        if (numbers.length == 0) throw new IllegalArgumentException("Array must not be empty");
 
         return (double) sum(numbers) / numbers.length;
     }
 
     //TODO
-    // Entferne alle Duplikate und gebe ein neues Array zurück
-    // TIPP: Verwende ein temporäres Array und zähle eindeutige Elemente
+    // Remove all duplicates and return a new array
+    // TIP: Use a temporary array and count unique elements
     public int[] removeDuplicates(int[] numbers) {
         if (numbers.length == 0) return new int[0];
 
-        // Temporäres Array für eindeutige Werte
+        // Temporary array for unique values
         int[] temp = new int[numbers.length];
         int uniqueCount = 0;
 
@@ -171,7 +171,7 @@ public class ArrayTasks {
             }
         }
 
-        // Endgültiges Array mit der richtigen Größe
+        // Final array with correct size
         int[] result = new int[uniqueCount];
         for (int i = 0; i < uniqueCount; i++) {
             result[i] = temp[i];
@@ -181,7 +181,7 @@ public class ArrayTasks {
     }
 
     public static void main(String[] args) {
-        //Muss nicht bearbeitet werden
+        //No need to edit
         Method[] methods = ArrayTasks.class.getDeclaredMethods();
         Class<?> clazz = ArrayTasks.class;
 

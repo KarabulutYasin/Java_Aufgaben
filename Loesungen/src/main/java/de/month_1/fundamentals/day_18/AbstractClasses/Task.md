@@ -1,12 +1,12 @@
-# Abstrakte Klassen
+# Abstract Classes
 
-## Schreibe eine Abstrakte Klasse "Lebewesen" mit den folgenden Eigenschaften und Methoden:
+## Write an abstract class "LivingBeing" with the following properties and methods:
 
-- Attribute:
-  - Name (String)
-  - Alter (int)
-  - Gewicht (double)
-- Methoden:
-  - abstrakte Methode "bewegen()" (void)
-  - Methode "essen()" (void), die eine Nachricht ausgibt, dass das Lebewesen isst.
-  - Methode "schlafen()" (void), die eine Nachricht ausgibt, dass das Lebewesen schläft.
+- Attributes:
+  - name (String)
+  - age (int)
+  - weight (double)
+- Methods:
+  - abstract method "move()" (void)
+  - method "eat()" (void), which outputs a message that the living being is eating.
+  - method "sleep()" (void), which outputs a message that the living being is sleeping.

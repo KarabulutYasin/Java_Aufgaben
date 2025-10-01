@@ -1,103 +1,103 @@
-# Skript Klassen und die Person-Klasse
+# Script Classes and the Person Class
 
-## Inhaltsverzeichnis
-- [Was sind Klassen?](#was-sind-klassen)
-- [Attribute und Methoden](#attribute-und-methoden)
-- [Konstruktoren](#konstruktoren)
-- [Getter und Setter](#getter-und-setter)
-- [toString-Methode](#tostring-methode)
-- [Eigene Exceptions](#eigene-exceptions)
-- [Beispiel: Person-Klasse](#beispiel-person-klasse)
+## Table of Contents
+- [What are Classes?](#what-are-classes)
+- [Attributes and Methods](#attributes-and-methods)
+- [Constructors](#constructors)
+- [Getters and Setters](#getters-and-setters)
+- [toString Method](#tostring-method)
+- [Custom Exceptions](#custom-exceptions)
+- [Example: Person Class](#example-person-class)
 
-### Was sind Klassen?
+### What are Classes?
 <details>
     <summary>Definition</summary>
     
-Klassen sind Baupläne für Objekte. Sie bündeln Attribute (Eigenschaften) und Methoden (Funktionen).
+Classes are blueprints for objects. They bundle attributes (properties) and methods (functions).
 
-Man kann sich also vorstellen das eine Klasse ein Bauplan für ein Auto ist und die instanz der Klasse also das Objekt das Auto in der realität ist welches nach dem Bauplan gebaut wurde.
+You can imagine a class as a blueprint for a car, and the instance of the class, i.e. the object, is the car in reality, which was built according to the blueprint.
 </details>
 
-### Attribute und Methoden
+### Attributes and Methods
 <details>
-    <summary>Attribute und Methoden</summary>
-    Attribute speichern den Zustand eines Objekts. Methoden bestimmen das Verhalten.
+    <summary>Attributes and Methods</summary>
+    Attributes store the state of an object. Methods determine the behavior.
 
 ```java
-    Beispiel:
-    public class Auto {
-        // marke und baujahr sind Attribute
-        private String marke;
-        private int baujahr;
+    Example:
+    public class Car {
+        // brand and yearOfManufacture are attributes
+        private String brand;
+        private int yearOfManufacture;
 
-        // fahren ist eine Methode
-        public void fahren() {
-            System.out.println("Das Auto fährt.");
+        // drive is a method
+        public void drive() {
+            System.out.println("The car is driving.");
         }
     }
 ```
 
 </details>
 
-### Konstruktoren
+### Constructors
 <details>
-    <summary>Konstruktoren</summary>
+    <summary>Constructors</summary>
  
-Konstruktoren initialisieren die Attribute beim Erzeugen eines Objekts.
+Constructors initialize the attributes when creating an object.
 
- Beim Konstruktoraufruf wird das Objekt nach dem Bauplan der Klasse erstellt.
+When the constructor is called, the object is created according to the blueprint of the class.
 
 ```java
-    Beispiel:
-    public Auto(String marke, int baujahr) {
-        this.marke = marke;
-        this.baujahr = baujahr;
+    Example:
+    public Car(String brand, int yearOfManufacture) {
+        this.brand = brand;
+        this.yearOfManufacture = yearOfManufacture;
     }
 ```
 </details>
 
-### Getter und Setter
+### Getters and Setters
 <details>
-    <summary>Getter und Setter</summary>
-    Getter geben den Wert eines Attributs zurück. Setter setzen den Wert und können prüfen, ob der Wert gültig ist dadurch hat man dann eine zentrale Prüfung.
+    <summary>Getters and Setters</summary>
+    Getters return the value of an attribute. Setters set the value and can check if the value is valid, providing a central validation point.
 
 ```java
-    Beispiel:
-    public String getMarke() {
-        return marke;
+    Example:
+    public String getBrand() {
+        return brand;
     }
 
-    public void setMarke(String marke) {
-        this.marke = marke;
+    public void setBrand(String brand) {
+        this.brand = brand;
     }
 ```
 
 </details>
 
-### toString-Methode
+### toString Method
 <details>
-    <summary>toString-Methode</summary>
-    Die `toString`-Methode gibt eine lesbare Beschreibung des Objekts zurück.
+    <summary>toString Method</summary>
+    The `toString` method returns a readable description of the object.
 
 ```java
-    Beispiel:
+    Example:
     @Override
     public String toString() {
-        return "Marke: " + marke + ", Baujahr: " + baujahr;
+        return "Brand: " + brand + ", Year of Manufacture: " + yearOfManufacture;
     }
 ```
 </details>
 
-### Eigene Exceptions
+### Custom Exceptions
 <details>
-    <summary>Eigene Exceptions</summary>
-    Eigene Exceptions werden verwendet, um spezielle Fehlerfälle zu behandeln.
-    Wird im folgenden noch weiter vertieft
+    <summary>Custom Exceptions</summary>
+    Custom exceptions are used to handle special error cases.
+    This will be explained in more detail below.
 
 ```java
-    Beispiel für eine eigene Exception:
-    public class AlterNegativException extends RuntimeException {
-        public AlterNegativException(String message) {
+    Example of a custom exception:
+    public class AgeNegativeException extends RuntimeException {
+        public AgeNegativeException(String message) {
             super(message);
         }
     }

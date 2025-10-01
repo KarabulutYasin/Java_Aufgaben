@@ -1,3 +1,3 @@
-## Lösung zu [Fahrzeug](Fahrzeug.java)
+## Solution to [Vehicle](Vehicle.java)
 
-## Lösung zu [Auto](Auto.java)
+## Solution to [Car](Car.java)

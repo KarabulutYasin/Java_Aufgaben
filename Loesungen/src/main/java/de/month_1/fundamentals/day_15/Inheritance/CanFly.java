@@ -1,6 +1,6 @@
 package de.month_1.fundamentals.day_15.Inheritance;
 
+// Nothing to change
 public interface CanFly {
-    // Nichts zu ändern
-    String fliegen();
+    String fly();
 }

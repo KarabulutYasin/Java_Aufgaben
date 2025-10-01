@@ -13,12 +13,12 @@ class ThisSuperTasksTest {
     @Test
     void testFieldsExist() throws Exception {
         Class<?> cls = Class.forName("de.month_1.fundamentals.day_17.thissuper.ThisSuperTasks");
-        Field a = cls.getDeclaredField("a");
-        Field b = cls.getDeclaredField("b");
-        assertEquals(int.class, a.getType(), "Feld 'a' muss vom Typ int sein.");
-        assertEquals(int.class, b.getType(), "Feld 'b' muss vom Typ int sein.");
-        assertTrue(Modifier.isPrivate(a.getModifiers()), "Feld 'a' muss private sein.");
-        assertTrue(Modifier.isPrivate(b.getModifiers()), "Feld 'b' muss private sein.");
+        Field x = cls.getDeclaredField("x");
+        Field y = cls.getDeclaredField("y");
+        assertEquals(int.class, x.getType(), "Field 'x' must be of type int.");
+        assertEquals(int.class, y.getType(), "Field 'y' must be of type int.");
+        assertTrue(Modifier.isPrivate(x.getModifiers()), "Field 'x' must be private.");
+        assertTrue(Modifier.isPrivate(y.getModifiers()), "Field 'y' must be private.");
     }
 
     @Test
@@ -26,7 +26,7 @@ class ThisSuperTasksTest {
         Class<?> cls = Class.forName("de.month_1.fundamentals.day_17.thissuper.ThisSuperTasks");
         Object obj = cls.getDeclaredConstructor().newInstance();
         int sum = (int) cls.getDeclaredMethod("sum").invoke(obj);
-        assertEquals(3, sum, "Default-Konstruktor sollte via this(1,2) initialisieren (sum() == 3).");
+        assertEquals(3, sum, "Default constructor should initialize via this(1,2) (sum() == 3).");
     }
 
     @Test
@@ -35,7 +35,7 @@ class ThisSuperTasksTest {
         Constructor<?> c = cls.getDeclaredConstructor(int.class, int.class);
         Object obj = c.newInstance(5, 7);
         int sum = (int) cls.getDeclaredMethod("sum").invoke(obj);
-        assertEquals(12, sum, "2-Arg-Konstruktor sollte Felder korrekt setzen (sum() == 12).");
+        assertEquals(12, sum, "2-arg constructor should set fields correctly (sum() == 12).");
     }
 
     @Test
@@ -44,13 +44,13 @@ class ThisSuperTasksTest {
         Object obj = cls.getDeclaredConstructor(int.class, int.class).newInstance(1, 1);
 
         Object after1 = cls.getDeclaredMethod("add", int.class, int.class).invoke(obj, 2, 3);
-        assertSame(obj, after1, "add(...) sollte this zurückgeben (Fluent API).");
+        assertSame(obj, after1, "add(...) should return this (Fluent API).");
 
         Object after2 = cls.getDeclaredMethod("add", int.class, int.class).invoke(obj, 4, 5);
-        assertSame(obj, after2, "add(...) sollte weiterhin this zurückgeben.");
+        assertSame(obj, after2, "add(...) should still return this.");
 
         int sum = (int) cls.getDeclaredMethod("sum").invoke(obj);
         // Start (1,1) + (2,3) + (4,5) => (7,9) => sum=16
-        assertEquals(16, sum, "add(...) sollte korrekt akkumulieren (erwartet sum() == 16).");
+        assertEquals(16, sum, "add(...) should accumulate correctly (expected sum() == 16).");
     }
 }

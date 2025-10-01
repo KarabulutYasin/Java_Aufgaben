@@ -6,7 +6,7 @@ import org.junit.platform.suite.api.Suite;
 @Suite
 @SelectClasses({
         ThisSuperTasksTest.class,
-        VogelSuperTest.class
+        BirdSuperTest.class
 })
 public class AllTestsOfDay_17 {
 }

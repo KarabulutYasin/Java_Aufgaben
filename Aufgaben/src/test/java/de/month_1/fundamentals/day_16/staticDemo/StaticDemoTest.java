@@ -23,16 +23,16 @@ class StaticDemoTest {
         try {
             staticDemoClass = Class.forName("de.month_1.fundamentals.day_16.staticDemo.StaticDemo");
         } catch (ClassNotFoundException e) {
-            fail("Die Klasse StaticDemo existiert nicht. Hast du sie richtig benannt und im richtigen Package de.month_1.fundamentals.day_16.staticDemo erstellt?");
+            fail("The class StaticDemo does not exist. Did you name it correctly and put it in the correct package de.month_1.fundamentals.day_16.staticDemo?");
         }
     }
 
     @Test
     void testMyPiExistsAndValue() throws Exception {
         var field = staticDemoClass.getDeclaredField("MY_PI");
-        assertTrue(Modifier.isStatic(field.getModifiers()), "MY_PI muss static sein.");
-        assertTrue(Modifier.isFinal(field.getModifiers()), "MY_PI muss final sein.");
-        assertEquals(3.14159, field.getDouble(null), 1e-9, "MY_PI hat nicht den erwarteten Wert.");
+        assertTrue(Modifier.isStatic(field.getModifiers()), "MY_PI must be static.");
+        assertTrue(Modifier.isFinal(field.getModifiers()), "MY_PI must be final.");
+        assertEquals(3.14159, field.getDouble(null), 1e-9, "MY_PI does not have the expected value.");
     }
 
     @Test
@@ -40,7 +40,7 @@ class StaticDemoTest {
         assertEquals(
                 3.14159,
                 staticDemoClass.getDeclaredMethod("getMyPi").invoke(null),
-                "Die Methode getMyPi() gibt nicht den erwarteten Wert zurück."
+                "The method getMyPi() does not return the expected value."
         );
     }
 
@@ -49,16 +49,16 @@ class StaticDemoTest {
         assertEquals(
                 20,
                 staticDemoClass.getDeclaredMethod("multiply", int.class, int.class).invoke(null, 4, 5),
-                "Die Methode multiply(int, int) liefert nicht das richtige Ergebnis."
+                "The method multiply(int, int) does not return the correct result."
         );
     }
 
     @Test
     void testInstanceCounter() throws Exception {
-        // Counter vorher merken
+        // Remember counter before
         int before = (int) staticDemoClass.getDeclaredMethod("getInstanceCount").invoke(null);
 
-        // Zwei neue Instanzen erzeugen
+        // Create two new instances
         staticDemoClass.getDeclaredConstructor().newInstance();
         staticDemoClass.getDeclaredConstructor().newInstance();
 
@@ -67,7 +67,7 @@ class StaticDemoTest {
         assertEquals(
                 before + 2,
                 after,
-                "Der InstanceCounter wurde nicht korrekt hochgezählt."
+                "The instanceCounter was not incremented correctly."
         );
     }
 
@@ -77,7 +77,7 @@ class StaticDemoTest {
                 .getDeclaredMethod("maxFromList", List.class)
                 .invoke(null, Arrays.asList(3, 7, 1, 9, 2));
 
-        assertEquals(9, result, "Die Methode maxFromList() liefert nicht das erwartete Maximum.");
+        assertEquals(9, result, "The method maxFromList() does not return the expected maximum.");
     }
 
     @Test
@@ -86,7 +86,7 @@ class StaticDemoTest {
         assertThrows(
                 InvocationTargetException.class,
                 () -> method.invoke(null, Arrays.asList()),
-                "Die Methode maxFromList() sollte bei leerer Liste eine Exception werfen."
+                "The method maxFromList() should throw an exception for an empty list."
         );
     }
 
@@ -106,7 +106,7 @@ class StaticDemoTest {
             assertEquals(
                     expected,
                     staticDemoClass.getDeclaredMethod("getMaxFromList", List.class).invoke(staticDemoClass.getDeclaredConstructor().newInstance(), input),
-                    "Die Methode getMaxFromList() liefert nicht das erwartete Maximum für Eingabe: " + input
+                    "The method getMaxFromList() does not return the expected maximum for input: " + input
             );
 
         } catch (InvocationTargetException | IllegalAccessException | NoSuchMethodException | InstantiationException e) {

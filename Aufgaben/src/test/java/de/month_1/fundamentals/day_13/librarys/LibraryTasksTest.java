@@ -23,7 +23,7 @@ class LibraryTasksTest {
     @Test
     void writeAndReadLines_roundTrip() throws IOException {
         Path temp = Files.createTempFile("test", ".txt");
-        List<String> lines = List.of("Hallo", "Welt");
+        List<String> lines = List.of("Hello", "World");
         sut.writeLinesToFile(lines, temp);
         assertEquals(lines, sut.readLinesFromFile(temp));
     }
@@ -31,10 +31,9 @@ class LibraryTasksTest {
     @Test
     void countWords_countsProperly() throws IOException {
         Path temp = Files.createTempFile("words", ".txt");
-        Files.write(temp, List.of("Hi du", "Wie gehts"));
-        assertEquals(4, sut.countWordsInFile(temp));
+        Files.write(temp, List.of("Hi you", "How are you"));
+        assertEquals(5, sut.countWordsInFile(temp));
     }
-
 
     @Test
     void sumIntegerList_sumsCorrectly() {

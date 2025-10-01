@@ -6,71 +6,71 @@ import java.lang.reflect.Method;
 
 public class LinearPrograms {
 
-    public void begruessung() {
+    public void greeting() {
         //TODO
-        // Schreibe eine Funktion die "Hello World" auf der Konsole ausgibt
+        // Write a function that prints Hello World to the console
 
     }
 
-    public int zusammenRechnen(int a, int b){
+    public int add(int a, int b){
         //TODO
-        // Gebe das Ergebnis der Addition zurück von denn Parametern a und b
+        // Return the result of adding the parameters a and b
 
         return 0;
     }
 
-    public String kommaZwischen(String wort1, String wort2){
+    public String commaBetween(String word1, String word2){
         //TODO
-        // Gebe ein String zurück der die Wörter wort1 und wort2
-        // konkateniert mit einem Komme dazwischen
-        // man kann davon ausgehen das kein String null ist
+        // Return a string that concatenates the words word1 and word2
+        // with a comma in between
+        // You can assume that neither string is null
 
-        // Beispiel HI und Moin => HI,Moin
+        // Example HI and Moin => HI,Moin
 
         return null;
     }
 
-    public void aufrufZusammenRechnen(){
+    public void callAdd(){
         //TODO
-        // Rufe zusammenRechen mit denn Übergabewerten 3 und 5 auf
+        // Call add with the values 3 and 5
     }
 
     public int convertToInt(String s){
         //TODO
-        // Konvertiere Denn String in int
-        // Falls es aber nicht konvertierbar ist wirf eine
-        // MeinFehlerException erstelle dafür eine Klasse
+        // Convert the string to int
+        // If it cannot be converted, throw a MyException
+        // Create a class for this exception
 
         return 0;
     }
 
     public String convertToString(int i){
         //TODO
-        // Gebe i als String zurück
+        // Return i as a string
 
         return null;
     }
 
     public boolean connectBoolean(boolean a, boolean b) {
         //TODO
-        // Gebe true zurück wenn a oder b true sind (auch wenn beide true sind)
+        // Return true if a or b is true (also if both are true)
 
         return false;
     }
 
     public static void main(String[] args) {
-        //Muss nicht bearbeitet werden
-        Method[] methods = LinearPrograms.class.getDeclaredMethods();
+        //No need to edit
+        Method [] methods = LinearPrograms.class.getDeclaredMethods();
         Class<?> lp = LinearPrograms.class;
 
         MainProvider.printAscii();
-        // Falls man etwas mit denn Parametern spielen will das nach "lp" sind die jeweiligen Parameter
+        // If you want to play with the parameters, after "lp" are the respective parameters
         for (Method method: methods){
             if (method.getName().equals("main")) continue;
-            if (method.getName().equals("begruessung")) MainProvider.exec(method,lp);
-            if (method.getName().equals("zusammenRechnen")) MainProvider.exec(method,lp,10,20);
-            if (method.getName().equals("kommaZwischen")) MainProvider.exec(method,lp,"Hi","Moin");
-            if (method.getName().equals("aufrufZusammenRechnen")) MainProvider.exec(method,lp);
+            if (method.getName().equals("greeting")) MainProvider.exec(method,lp);
+            if (method.getName().equals("add")) MainProvider.exec(method,lp,10,20);
+            if (method.getName().equals("commaBetween")) MainProvider.exec(method,lp,"Hi","Moin");
+            if (method.getName().equals("callAdd")) MainProvider.exec(method,lp);
             if (method.getName().equals("convertToInt")) MainProvider.exec(method,lp,"123");
             if (method.getName().equals("convertToString")) MainProvider.exec(method,lp,123);
             if (method.getName().equals("connectBoolean")) MainProvider.exec(method,lp,true,false);

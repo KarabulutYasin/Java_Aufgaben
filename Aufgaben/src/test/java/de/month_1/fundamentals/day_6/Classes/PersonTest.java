@@ -84,7 +84,7 @@ class PersonTest {
     @CsvSource({"Ali,21", "Max,17"})
     void person_toString_format(String name, int alter) {
         Person person = getPerson(name,alter);
-        assertTrue(person.toString().contains("Name: "+name+", Alter: "+ alter),"Expected Format was: Name: Max, Alter: 21\nBut was: "+person);
+        assertTrue(person.toString().contains("Name: "+name+", Age: "+ alter),"Expected Format was: Name: Max, Age: 21\nBut was: "+person);
     }
 
     @ParameterizedTest
@@ -97,7 +97,7 @@ class PersonTest {
             Person person = getPerson("Mustafa",10);
             getSpecificMethod("setName",new Class<?>[]{String.class}).invoke(person,name);
             getSpecificMethod("setAge",new Class<?>[]{int.class}).invoke(person,age);
-            assertEquals("Name: "+ name +", Alter: "+age, person.toString(),"Expected was \"Name: "+name+", Alter: "+age+"\n but was: "+person.toString());
+            assertEquals("Name: "+ name +", Age: "+age, person.toString(),"Expected was \"Name: "+name+", Age: "+age+"\n but was: "+person.toString());
         },"Constructor setter or toString is missing");
     }
 }

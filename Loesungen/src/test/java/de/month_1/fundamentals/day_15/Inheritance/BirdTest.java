@@ -7,76 +7,75 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class BirdTest {
 
-
-    Class vogelClass;
-    Class kannFliegenClass;
+    Class birdClass;
+    Class canFlyClass;
 
     @BeforeEach
-    void setUpVogelClass() {
+    void setUpBirdClass() {
         try {
-            vogelClass = Class.forName("de.month_1.fundamentals.day_15.Inheritance.Bird");
+            birdClass = Class.forName("de.month_1.fundamentals.day_15.Inheritance.Bird");
         } catch (ClassNotFoundException e) {
-            fail("Die Klasse Vogel existiert nicht. Hast du sie richtig benannt und im richtigen Package de.month_1.fundamentals.day_15.vererbung erstellt?");
+            fail("The class Bird does not exist. Did you name it correctly and put it in the correct package de.month_1.fundamentals.day_15.Inheritance?");
         }
     }
 
     @BeforeEach
     void setUpInterface() {
         try {
-            kannFliegenClass = Class.forName("de.month_1.fundamentals.day_15.Inheritance.CanFly");
+            canFlyClass = Class.forName("de.month_1.fundamentals.day_15.Inheritance.CanFly");
         } catch (ClassNotFoundException e) {
-            fail("Das Interface KannFliegen existiert nicht. Hast du es richtig benannt und im richtigen Package de.month_1.fundamentals.day_15.vererbung erstellt?");
+            fail("The interface CanFly does not exist. Did you name it correctly and put it in the correct package de.month_1.fundamentals.day_15.Inheritance?");
         }
     }
 
     @Test
-    void testVogelErbtVonTier() throws Exception {
+    void testBirdExtendsAnimal() throws Exception {
         assertInstanceOf(
                 Animal.class,
-                vogelClass.getDeclaredConstructor(String.class).newInstance("Tweety"),
-                "Die Klasse Vogel muss von der Klasse Tier erben."
+                birdClass.getDeclaredConstructor(String.class).newInstance("Tweety"),
+                "The class Bird must extend the class Animal."
         );
     }
 
     @Test
-    void testVogelImplementiertKannFliegen() {
-        // Prüfen, ob das Interface implementiert wird (nicht nur Methode vorhanden)
+    void testBirdImplementsCanFly() {
+        // Check if the interface is implemented (not just method present)
         assertTrue(
-                kannFliegenClass.isAssignableFrom(vogelClass),
-                "Die Klasse Vogel muss das Interface KannFliegen implementieren."
+                canFlyClass.isAssignableFrom(birdClass),
+                "The class Bird must implement the interface CanFly."
         );
-        // Optional: Sicherstellen, dass 'KannFliegen' wirklich ein Interface ist
+        // Optional: Ensure 'CanFly' is really an interface
         assertTrue(
-                kannFliegenClass.isInterface(),
-                "KannFliegen sollte ein Interface sein."
+                canFlyClass.isInterface(),
+                "CanFly should be an interface."
         );
     }
 
     @Test
-    void lautGeben_returns_as_expected() {
+    void makeSound_returns_as_expected() {
         try {
-            Object vogel = vogelClass.getDeclaredConstructor(String.class).newInstance("Tweety");
+            Object bird = birdClass.getDeclaredConstructor(String.class).newInstance("Tweety");
             assertEquals(
-                    "Piep",
-                    vogelClass.getDeclaredMethod("lautGeben").invoke(vogel),
-                    "Die Methode lautGeben() der Klasse Vogel gibt nicht den erwarteten Wert zurück."
+                    "Chirp",
+                    birdClass.getDeclaredMethod("makeSound").invoke(bird),
+                    "The method makeSound() of the class Bird does not return the expected value."
             );
         } catch (Exception e) {
-            fail("Die Methode lautGeben() der Klasse Vogel konnte nicht aufgerufen werden. Hast du sie richtig benannt und deklariert?");
+            fail("The method makeSound() of the class Bird could not be called. Did you name and declare it correctly?");
         }
     }
 
     @Test
-    void fliegen_returns_as_expected() {
+    void fly_returns_as_expected() {
         try {
-            Object vogel = vogelClass.getDeclaredConstructor(String.class).newInstance("Tweety");
+            Object bird = birdClass.getDeclaredConstructor(String.class).newInstance("Tweety");
             assertEquals(
-                    "Tweety fliegt",
-                    vogelClass.getDeclaredMethod("fliegen").invoke(vogel),
-                    "Die Methode fliegen() der Klasse Vogel gibt nicht den erwarteten Wert zurück."
+                    "Tweety flies",
+                    birdClass.getDeclaredMethod("fly").invoke(bird),
+                    "The method fly() of the class Bird does not return the expected value."
             );
         } catch (Exception e) {
-            fail("Die Methode fliegen() der Klasse Vogel konnte nicht aufgerufen werden. Hast du sie richtig benannt und deklariert?");
+            fail("The method fly() of the class Bird could not be called. Did you name and declare it correctly?");
         }
     }
 }

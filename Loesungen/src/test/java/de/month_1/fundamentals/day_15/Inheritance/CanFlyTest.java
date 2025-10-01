@@ -27,5 +27,4 @@ class CanFlyTest {
             assertEquals(String.class, flyMethod.getReturnType(), "Method \"fly\" has wrong return type");
         }, "Method \"fly\" not found");
     }
-    }
 }

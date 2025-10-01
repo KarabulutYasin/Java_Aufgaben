@@ -2,27 +2,27 @@ package de.month_1.fundamentals.day_15.Inheritance;
 
 import java.util.Objects;
 
-public abstract class Tier {
+public abstract class Animal {
     private final String name;
-    public String art = "Tier";
+    public String species = "Animal";
 
-    public Tier(String name) {
+    public Animal(String name) {
         if (name == null || name.isBlank()) throw new IllegalArgumentException("name");
         this.name = name;
     }
 
     public String getName() { return name; }
 
-    public String basisLaut() { return "..."; }
+    public String basicSound() { return "..."; }
 
-    public abstract String lautGeben();
+    public abstract String makeSound();
 
     @Override
     public final boolean equals(Object o) {
         if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false; // Schaut nach ob die Klasse gleich ist
-        Tier tier = (Tier) o;
-        return Objects.equals(name, tier.name);
+        if (o == null || getClass() != o.getClass()) return false; // Checks if the class is the same
+        Animal animal = (Animal) o;
+        return Objects.equals(name, animal.name);
     }
 
     @Override

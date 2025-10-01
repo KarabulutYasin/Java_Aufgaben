@@ -1,9 +1,9 @@
-# Vererbungsaufgaben
+# Inheritance Tasks
 
-## In dieser Aufgabe ist die abstrakte Klasse Tier vorgegeben. Versuche diese nachzuvollziehen und löse die folgenden Aufgaben. 
+## In this task, the abstract class Animal is given. Try to understand it and solve the following tasks.
 
-* ### Erstelle ein Interface "KannFliegen" mit der Methode "fliegen()" die ein String zurückgibt.
-* ### Erstelle die Klassen "Hund" und "Vogel"
-* ### Implementiere und Erbe in den jeweiligen klassen so das es sinnvoll sind.
-* ### Überschreibe die Methode "lautMachen()" und "fliegen()" in den jeweiligen Klassen so das es sinnvoll ist.
+* ### Create an interface "CanFly" with the method "fly()" that returns a String.
+* ### Create the classes "Dog" and "Bird"
+* ### Implement and inherit in the respective classes so that it makes sense.
+* ### Override the method "makeSound()" and "fly()" in the respective classes so that it makes sense.
 

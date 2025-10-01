@@ -7,12 +7,10 @@ import java.util.Scanner;
 
 public class LibraryTasks {
 
-    // Aufgabe: Lies eine ganze Zahl aus einem Scanner und gib sie zurück.
-    public int readIntFromScanner(Scanner sc) {
-        return -1;
-    }
+    // Task: Read an integer from a Scanner and return it.
+    public int readIntFromScanner(Scanner scanner) {return -1;}
 
-    // Aufgabe: Schreibe Strings in eine Datei und lies sie wieder zurück.
+    // Task: Write strings to a file and read them back.
     public void writeLinesToFile(List<String> lines, Path path) throws IOException {
 
     }
@@ -21,22 +19,20 @@ public class LibraryTasks {
         return null;
     }
 
-    // Aufgabe: Zähle Wörter in einer Textdatei.
-    // Schaue regex nach und ja regex ist beschissen aber sollte man grob wissen
+    // Task: Count words in a text file.
+    // Check regex, and yes, regex is annoying but you should roughly know it
     public int countWordsInFile(Path path) throws IOException {
 
         return -1;
     }
 
-    // Aufgabe: Summe einer Liste von Integern (siehe Autoboxing/Unboxing).
-    public int sumIntegerList(List<Integer> nums) {
-        return -1;
-    }
+    // Task: Sum a list of Integers (see autoboxing/unboxing).
+    public int sumIntegerList(List<Integer> numbers) {return -1;}
 
-    //Aufgabe: Konkateniere denn String times mal hintereinander
-    //Vergleich mal wie lange der Test braucht wenn du StringBuilder benutzt
-    //und wie lange wenn du Strings "+" rechnest
-    public String repeatConcat(String s, int times) {
+    // Task: Concatenate the string `times` times in a row
+    // Compare how long the test takes when you use StringBuilder
+    // and how long when you use Strings with "+"
+    public String repeatConcat(String str, int times) {
 
         return null;
     }

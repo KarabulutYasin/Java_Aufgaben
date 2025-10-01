@@ -13,7 +13,7 @@ public class StaticDemo {
     }
 
     //TODO
-    // Create a static method that multiplies two numbers.
+    // Create a static method that multiplies two numbers named "multiply".
     public static int multiply(int a, int b) {
         return a * b;
     }
@@ -21,6 +21,7 @@ public class StaticDemo {
     //TODO
     // Count how many instances of StaticDemo have been created.
     // The attribute should be called "instanceCounter".
+    // Also create a static method that returns the instance count named "getInstanceCount".
     private static int instanceCounter = 0;
 
     public StaticDemo() {
@@ -32,7 +33,7 @@ public class StaticDemo {
     }
 
     //TODO
-    // Create a utility method that returns the maximum from a list.
+    // Create a utility method that returns the maximum from a list which is named maxFromList.
     // (Should be static because you don't need any "state".)
     public static int maxFromList(List<Integer> nums) {
         if (nums.isEmpty()) throw new IllegalArgumentException("List must not be empty");
@@ -42,7 +43,7 @@ public class StaticDemo {
     }
 
     //TODO
-    // Call the created utility method and return the maximum.
+    // Call the created utility method and return the maximum in a method named "getMaxFromList".
     public int getMaxFromList(List<Integer> nums) {
         return maxFromList(nums);
     }

@@ -7,7 +7,6 @@
 - [Getters and Setters](#getters-and-setters)
 - [toString Method](#tostring-method)
 - [Custom Exceptions](#custom-exceptions)
-- [Example: Person Class](#example-person-class)
 
 ### What are Classes?
 <details>

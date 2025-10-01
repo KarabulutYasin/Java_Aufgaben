@@ -1,17 +1,17 @@
 package de.month_1.fundamentals.day_15.Inheritance;
 
 public class Dog extends Animal {
-    public String art = "Hund"; // Feld-Verdecken (hiding) Demo
+    public String species = "Dog"; // Field hiding demo
 
     public Dog(String name) {
         super(name);
     }
 
     @Override
-    public String lautGeben() { return "Wuff"; }
+    public String makeSound() { return "Woof"; }
 
-    /** Zugriff auf die überschriebene Funktionalität der Basisklasse (super) */
-    public String lautMitBasis() {
-        return super.basisLaut() + " " + lautGeben();
+    /** Access to the overridden functionality of the base class (super) */
+    public String soundWithBase() {
+        return super.baseSound() + " " + makeSound();
     }
 }

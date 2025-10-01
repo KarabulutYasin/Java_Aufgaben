@@ -6,12 +6,12 @@ import java.util.*;
 
 public class LibraryTasks {
 
-    // Aufgabe: Lies eine ganze Zahl aus einem Scanner und gib sie zurück.
-    public int readIntFromScanner(Scanner sc) {
-        return sc.nextInt();
+    // Task: Read an integer from a Scanner and return it.
+    public int readIntFromScanner(Scanner scanner) {
+        return scanner.nextInt();
     }
 
-    // Aufgabe: Schreibe Strings in eine Datei und lies sie wieder zurück.
+    // Task: Write strings to a file and read them back.
     public void writeLinesToFile(List<String> lines, Path path) throws IOException {
         Files.write(path, lines);
     }
@@ -20,8 +20,8 @@ public class LibraryTasks {
         return Files.readAllLines(path);
     }
 
-    // Aufgabe: Zähle Wörter in einer Textdatei.
-    // Schaue regex nach und ja regex ist beschissen aber sollte man grob wissen
+    // Task: Count words in a text file.
+    // Check regex, and yes, regex is annoying but you should roughly know it
     public int countWordsInFile(Path path) throws IOException {
         int count = 0;
         for (String line : Files.readAllLines(path)) {
@@ -32,27 +32,27 @@ public class LibraryTasks {
         return count;
     }
 
-    // Aufgabe: Summe einer Liste von Integern (siehe Autoboxing/Unboxing).
-    public int sumIntegerList(List<Integer> nums) {
-        int s = 0;
-        for (int n : nums) s += n; // Autounboxing passiert hier
-        return s;
+    // Task: Sum a list of Integers (see autoboxing/unboxing).
+    public int sumIntegerList(List<Integer> numbers) {
+        int sum = 0;
+        for (int number : numbers) sum += number; // Autounboxing happens here
+        return sum;
     }
 
-    //Aufgabe: Konkateniere denn String times mal hintereinander
-    //Vergleich mal wie lange der Test braucht wenn du StringBuilder benutzt
-    //und wie lange wenn du Strings "+" rechnest
-    public String repeatConcat(String s, int times) {
+    // Task: Concatenate the string `times` times in a row
+    // Compare how long the test takes when you use StringBuilder
+    // and how long when you use Strings with "+"
+    public String repeatConcat(String str, int times) {
         /*
         if (times == 0) return "";
-        String result = s;
+        String result = str;
         for (int i = 1; i < times; i++) {
-            result += s;
+            result += str;
         }
         return result;
         */
         StringBuilder sb = new StringBuilder();
-        for (int i = 0; i < times; i++) sb.append(s);
+        for (int i = 0; i < times; i++) sb.append(str);
         return sb.toString();
     }
 }

@@ -1,82 +1,82 @@
-# Skript Kontrollstrukturen
+# Script Control Structures
 
-## Inhaltsverzeichnis
-- [Was sind Kontrollstrukturen?](#was-sind-kontrollstrukturen)
-- [Bedingungen: if, else, switch](#bedingungen-if-else-switch)
-- [Schleifen: for, while, do-while, for-each](#schleifen-for-while-do-while-for-each)
+## Table of Contents
+- [What are control structures?](#what-are-control-structures)
+- [Conditions: if, else, switch](#conditions-if-else-switch)
+- [Loops: for, while, do-while, for-each](#loops-for-while-do-while-for-each)
 
-### Was sind Kontrollstrukturen?
+### What are control structures?
 <details>
     <summary>Definition</summary>
-    Kontrollstrukturen steuern den Ablauf eines Programms. Sie bestimmen, welche Anweisungen ausgeführt werden und wie oft.
+    Control structures determine the flow of a program. They specify which instructions are executed and how often.
 </details>
 
-### Bedingungen: if, else, switch
+### Conditions: if, else, switch
 <details>
-    <summary>Bedingungen</summary>
-    Mit Bedingungen kann man Entscheidungen im Code treffen.
+    <summary>Conditions</summary>
+    With conditions, you can make decisions in code.
 
 ```java
-    **if / else Beispiel:**
-    int note = 1;
-    if (note == 1) {
-        System.out.println("Sehr gut");
-    } else if (note == 2) {
-        System.out.println("Gut");
+    **if / else example:**
+        int grade = 1;
+        if (grade == 1) {
+            System.out.println("Very good");
+        } else if (grade == 2) {
+            System.out.println("Good");
     } else {
-        System.out.println("Ungültig");
+            System.out.println("Invalid");
     }
-    // Man kann else if so oft man will hintereinander klatschen
+        // You can chain else if as many times as you want
 
-    **switch Beispiel:**
-    int tag = 6;
-    switch (tag) {
+        **switch example:**
+        int day = 6;
+        switch (day) {
         case 6:
         case 7:
-            System.out.println("Wochenende");
+                System.out.println("Weekend");
             break;
         default:
-            System.out.println("Werktag");
+                System.out.println("Weekday");
     }
-    // Wichtig wenn man kein Break einfügt, wird der Code darunter auch ausgeführt
+        // Important: if you do not insert a break, the code below will also be executed
 ```
 </details>
 
-### Schleifen: for, while, do-while, for-each
+### Loops: for, while, do-while, for-each
 <details>
-    <summary>Schleifen</summary>
-    Schleifenwiederholen Anweisungen, solange eine Bedingung erfüllt ist.
+    <summary>Loops</summary>
+    Loops repeat instructions as long as a condition is met.
 
 ```java
-    **for-Schleife:**
+    **for-loop:**
     for (int i = 1; i <= 5; i++) {
         System.out.println(i);
     }
-    // wiederholt die schleife bis i<=5 wahr wird danach wird die schleife beendet
+    // repeats the loop until i<=5 becomes false, then the loop ends
 
-    **while-Schleife:**
+    **while-loop:**
     int i = 1;
     while (i <= 5) {
         System.out.println(i);
         i++;
     }
-    // wiederholt die schleife bis i<=5 wahr wird danach wird die schleife beendet
+    // repeats the loop until i<=5 becomes false, then the loop ends
 
-    **do-while-Schleife:**
+    **do-while-loop:**
     int i = 1;
     do {
         System.out.println(i);
         i++;
     } while (i <= 5);
-    // Wie eine While schleife der unterschied ist 
-    // das der code mindestens einmal ausgeführt wird
-    // egal ob die bedingung erfüllt ist oder nicht 
+    // Like a while loop, the difference is 
+    // that the code is executed at least once
+    // no matter if the condition is met or not
 
-    **for-each-Schleife:**
-    List<String> namen = List.of("Max", "Anna");
-    for (String name : namen) {
+    **for-each-loop:**
+    List<String> names = List.of("Max", "Anna");
+    for (String name : names) {
         System.out.println(name);
     }
-    // Iteriert über jedes Element in der Liste
+    // Iterates over each element in the list
 ```
 </details>

@@ -1,27 +1,27 @@
 # Interfaces
 
-### In dieser aufgabe geht es Darum ein interface zu erstellen
+### In this exercise, you are to create an interface.
 
-## Aufgabe 
+## Task
 
-## Erstelle ein Interface namens "Fahrzeug" mit den folgenden Methoden:
+## Create an interface named `Vehicle` with the following methods:
 
-| ReturnType | Methodenname        | Parameter |
-|------------|---------------------|-----------|
-| void       | starten             |           |
-| void       | stoppen             |           |
-| int        | getGeschwindigkeit  |           |
-| void       | setGeschwindigkeit  | int       |
+| ReturnType | Method Name | Parameter |
+|------------|-------------|-----------|
+| void       | start       |           |
+| void       | stop        |           |
+| int        | getSpeed    |           |
+| void       | setSpeed    | int       |
 
-## Danach soll eine Klasse namens "Auto" erstellt werden die das interface implementiert
+## Then, create a class named `Car` that implements the interface.
 
-## Die Klasse soll die Methoden des interfaces implementieren und eine private attribute namens "geschwindigkeit" haben in Auto soll dann folgendes passieren 
+## The class should implement the methods of the interface and have a private attribute named `speed`. In `Car`, the following should happen:
 
-| Methode            | Was passieren soll                                                                                         |
-|--------------------|------------------------------------------------------------------------------------------------------------|
-| starten            | Auf der Konsole soll ausgegeben werden "Auto wird gestartet wrom wrom"                                     |
-| stoppen            | Auf der Konsole soll ausgegeben werden "Auto wurde gestoppt"                                               |
-| getGeschwindigkeit | Gibt denn Integer wert der attribute zurück                                                                |
-| setGeschwindigkeit | Setzt denn Integer wert der attribute (Denk dabei das sinnlose werte eine RuntimeException werfen sollten) |
+| Method   | What should happen                                                                                            |
+|----------|---------------------------------------------------------------------------------------------------------------|
+| start    | Print "Car is starting vroom vroom" to the console                                                            |
+| stop     | Print "Car has stopped" to the console                                                                        |
+| getSpeed | Return the integer value of the attribute                                                                     |
+| setSpeed | Set the integer value of the attribute (keep in mind that nonsensical values should throw a RuntimeException) |
 
 

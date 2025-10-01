@@ -6,19 +6,19 @@ import java.lang.reflect.Method;
 
 public class OwnMethods {
     //TODO
-    // Schreibe Folgende Methoden
-    // (auf die Namen Achten sonst entstehen Fehler bei denn Tests)
-    // 1. "nope" diese Methode soll nichts machen somit kein Parameter und kein Rückgabewert haben
-    // 2. "mult" die zwei int multipliziert und das Ergebnis (int) zurückgibt
-    // 3. "multByTwo" es soll "mult" mit einem festen Parameter 2 aufgerufen werden und zurückgegeben werden(int)
+    // Write the following methods
+    // (pay attention to the names, otherwise errors will occur in the tests)
+    // 1. "nope" this method should do nothing, so no parameters and no return value
+    // 2. "mult" which multiplies two ints and returns the result (int)
+    // 3. "multByTwo" should call "mult" with a fixed parameter 2 and return the result (int)
 
     public static void main(String[] args){
-        //Muss nicht bearbeitet werden
+        //Does not need to be edited
         Method[] methods = OwnMethods.class.getDeclaredMethods();
         Class<?> cls = OwnMethods.class;
 
         MainProvider.printAscii();
-        // Falls man etwas mit denn Parametern spielen will das nach "lp" sind die jeweiligen Parameter
+        // If you want to play with the parameters, after "lp" are the respective parameters
         for (Method method: methods){
             if (method.getName().equals("main")) continue;
             if (method.getName().equals("nope")) MainProvider.exec(method,cls);

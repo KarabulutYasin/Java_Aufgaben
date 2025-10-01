@@ -48,12 +48,12 @@ class ListTaskTest {
     }
 
     @ParameterizedTest
-    @MethodSource("entferneElementProvider")
-    void entferneElement(List list, String element, List expected) {
-        assertEquals(expected, objectUnderTest.entferneElement(list, element));
+    @MethodSource("removeElementProvider")
+    void removeElement(List list, String element, List expected) {
+        assertEquals(expected, objectUnderTest.removeElement(list, element));
     }
 
-    private static Stream<Arguments> entferneElementProvider() {
+    private static Stream<Arguments> removeElementProvider() {
         return Stream.of(
                 Arguments.of(new ArrayList<>(List.of("A", "B", "C")), "B", new ArrayList<>(List.of("A", "C"))),
                 Arguments.of(new ArrayList<>(List.of("1", "2", "3")), "4", new ArrayList<>(List.of("1", "2", "3"))),
@@ -78,12 +78,12 @@ class ListTaskTest {
     }
 
     @ParameterizedTest
-    @MethodSource("sortiereListeProvider")
-    void sortiereListe(List<Integer> list, List<Integer> expected) {
-        assertEquals(expected, objectUnderTest.sortiereListe(list));
+    @MethodSource("sortListProvider")
+    void sortList(List<Integer> list, List<Integer> expected) {
+        assertEquals(expected, objectUnderTest.sortList(list));
     }
 
-    private static Stream<Arguments> sortiereListeProvider() {
+    private static Stream<Arguments> sortListProvider() {
         return Stream.of(
                 Arguments.of(new ArrayList<>(List.of(3, 1, 2)), new ArrayList<>(List.of(1, 2, 3))),
                 Arguments.of(new ArrayList<>(List.of(10, 5, 7, 3)), new ArrayList<>(List.of(3, 5, 7, 10))),

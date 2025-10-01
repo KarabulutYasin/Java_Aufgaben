@@ -1,10 +1,10 @@
-# This und Super Aufgaben
+# This and Super Tasks
 
-### In dieser Aufgabe sollst du die Schlüsselwörter `this` und `super` in Java verwenden, um Konstruktoren und Methoden zu veranschaulichen.
+### In this task, you should use the keywords `this` and `super` in Java to illustrate constructors and methods.
 
-## Vorgegebene Klasse
-- ### [Tier](Tier.java)
+## Given Class
+- ### [Animal](Animal.java)
 
-## Zu bearbeitenden Klassen 
-- ### [Vogel](Vogel.java)
+## Classes to be edited
+- ### [Bird](Bird.java)
 - ### [ThisSuper](ThisSuperTasks.java)

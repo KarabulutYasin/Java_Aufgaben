@@ -1,3 +1,3 @@
-## Lösung für [This Super](ThisSuperTasks.java)
+## Solution for [This Super](ThisSuperTasks.java)
 
-## Lösung für [Vogel](Vogel.java)
+## Solution for [Bird](Bird.java)

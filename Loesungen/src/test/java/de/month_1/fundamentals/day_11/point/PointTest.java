@@ -27,7 +27,7 @@ class PointTest {
     }
 
     @Test
-    void Point_attributes_contains_x_and_y() {
+    void pointAttributesContainXAndY() {
         try{
             int[] expectedValues = new int[]{x,y};
             String[] expectedFields = new String[]{"x", "y"};
@@ -37,12 +37,12 @@ class PointTest {
                 assertEquals(expectedValues[i], (int) currentField.get(objUnderTest));
             }
         }catch (Exception e){
-            fail("Could not access field (Attribut): " + e.getMessage());
+            fail("Could not access field (attribute): " + e.getMessage());
         }
     }
 
     @Test
-    void Point_contains_constructor_with_x_and_y() {
+    void pointContainsConstructorWithXAndY() {
         assertDoesNotThrow(() -> {
             Constructor<Point> pointConstructor = Point.class.getDeclaredConstructor(int.class, int.class);
             pointConstructor.setAccessible(true);
@@ -51,7 +51,7 @@ class PointTest {
     }
 
     @Test
-    void Point_contains_declared_methods(){
+    void pointContainsDeclaredMethods() {
         String[] methodNames = {"getX", "getY", "distanceTo", "equals", "toString"};
         Class<?>[] returnTypes = {int.class, int.class, double.class, boolean.class, String.class};
         Class<?>[][] paramTypes = { {}, {}, {Point.class}, {Object.class}, {} };
@@ -60,91 +60,59 @@ class PointTest {
             try {
                 Method method = objUnderTest.getClass().getMethod(methodNames[i], paramTypes[i]);
                 assertEquals(returnTypes[i], method.getReturnType(),
-                        "Methode " + methodNames[i] + " hat nicht den erwarteten Rückgabetyp");
+                        "Method " + methodNames[i] + " does not have the expected return type");
             } catch (NoSuchMethodException e) {
-                fail("Methode " + methodNames[i] + " fehlt");
+                fail("Method " + methodNames[i] + " is missing");
             }
         }
     }
 
-//    @Test
-//    void Distance_works_how_it_should(){
-//        List<Point> point1Liste = Arrays.asList(
-//                CreatePoint(1,1),
-//                CreatePoint(2,0),
-//                CreatePoint(0,2),
-//                CreatePoint(4,4)
-//        );
-//        List<Point> point2Liste = Arrays.asList(
-//                CreatePoint(1,1), // Kein Abstand
-//                CreatePoint(0,2), // Hinrichtung
-//                CreatePoint(2,0), // Rückrichtung
-//                CreatePoint(2,2) // Erweiterung
-//
-//        );
-//    }
-
     @Test
-    void Equals_works_for_equal_objects() {
+    void equalsWorksForEqualObjects() {
         try {
             Point testPoint1;
             Point testPoint2;
 
-            //Gleiche Instanz
+            // Same instance
             testPoint1 = new Point(0,0);
             assertTrue(testPoint1.equals(testPoint1));
 
-            //Falsche Dynamischer Datentyp
+            // Wrong dynamic type
             assertFalse(testPoint1.equals(new Object()));
 
-            //Happy Day
-            testPoint1 = CreatePoint(1,2);
-            testPoint2 = CreatePoint(1,2);
+            // Happy path
+            testPoint1 = createPoint(1, 2);
+            testPoint2 = createPoint(1, 2);
             assertTrue(testPoint1.equals(testPoint2), "Equals does not work for equal objects");
 
-            // Y Wert Unterschiedlich
-            testPoint1 = CreatePoint(0,10);
-            testPoint2 = CreatePoint(0,0);
+            // Y value different
+            testPoint1 = createPoint(0, 10);
+            testPoint2 = createPoint(0, 0);
             assertFalse(testPoint1.equals(testPoint2), "Equals does not work for non-equal objects");
 
-            // X Wert Unterschiedlich
-            testPoint1 = CreatePoint(0,0);
-            testPoint2 = CreatePoint(5,0);
+            // X value different
+            testPoint1 = createPoint(0, 0);
+            testPoint2 = createPoint(5, 0);
             assertFalse(testPoint1.equals(testPoint2), "Equals does not work for non-equal objects");
 
-            //X und Y Vertauscht
-            testPoint1 = CreatePoint(2,1);
-            testPoint2 = CreatePoint(1,2);
+            // X and Y swapped
+            testPoint1 = createPoint(2, 1);
+            testPoint2 = createPoint(1, 2);
             assertFalse(testPoint1.equals(testPoint2), "Equals does not work for equal objects");
 
         }catch (Exception e){
-            fail("Could not access field (Attribut): " + e.getMessage());
+            fail("Could not access field (attribute): " + e.getMessage());
         }
-
     }
 
-    private Point CreatePoint(int x, int y) {
+    private Point createPoint(int x, int y) {
         try {
             Constructor<Point> pointConstructor = Point.class.getDeclaredConstructor(int.class, int.class);
             pointConstructor.setAccessible(true);
             return pointConstructor.newInstance(Integer.valueOf(x), Integer.valueOf(y));
         } catch (Exception e) {
-            fail("Could not create Object via int int Constructor" + e.getMessage());
+            fail("Could not create object via int int constructor: " + e.getMessage());
             return null;
         }
-
-//    @Test void equality() {
-//        Point a = new Point(3,4);
-//        Point b = new Point(3,4);
-//        assertEquals(a, b);
-//    }
-//    @Test void distance_works() {
-//        Point a = new Point(0,0);
-//        Point b = new Point(3,4);
-//        assertEquals(5.0, a.distanceTo(b), 1e-9);
-//    }
-//    @Test void toString_format() {
-//        assertEquals("Point(1,2)", new Point(1,2).toString());
-//    }
     }
 }

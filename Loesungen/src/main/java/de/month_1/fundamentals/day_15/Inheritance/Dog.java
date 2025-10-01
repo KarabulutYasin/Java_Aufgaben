@@ -12,6 +12,6 @@ public class Dog extends Animal {
 
     /** Access to the overridden functionality of the base class (super) */
     public String soundWithBase() {
-        return super.baseSound() + " " + makeSound();
+        return super.basicSound() + " " + makeSound();
     }
 }

@@ -7,39 +7,39 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class DogTest {
 
-    Class hundClass;
+    Class dogClass;
 
     @BeforeEach
     void setUp() {
         try {
-            hundClass = Class.forName("de.month_1.fundamentals.day_15.Inheritance.Dog");
+            dogClass = Class.forName("de.month_1.fundamentals.day_15.Inheritance.Dog");
         }catch (ClassNotFoundException e) {
-            fail("Die Klasse Hund existiert nicht. Hast du sie richtig benannt und im richtigen Package de.month_1.fundamentals.day_15.vererbung erstellt?");
+            fail("The class Dog does not exist. Did you name it correctly and put it in the correct package de.month_1.fundamentals.day_15.Inheritance?");
         }
     }
 
     @Test
-    void testHundErbtVonTier() throws Exception{
-        assertInstanceOf(Animal.class,hundClass.getDeclaredConstructor(String.class).newInstance("Bello"), "Die Klasse Hund muss von der Klasse Tier erben.");
+    void testDogInheritsFromAnimal() throws Exception {
+        assertInstanceOf(Animal.class, dogClass.getDeclaredConstructor(String.class).newInstance("Bello"), "The class Dog must inherit from the class Animal.");
     }
 
     @Test
-    void lautGeben_returns_as_expected(){
+    void makeSound_returns_as_expected() {
         try{
-            Object hund = hundClass.getDeclaredConstructor(String.class).newInstance("Bello");
-            assertEquals("Wuff", hundClass.getDeclaredMethod("lautGeben").invoke(hund), "Die Methode lautGeben() der Klasse Hund gibt nicht den erwarteten Wert zurück.");
+            Object dog = dogClass.getDeclaredConstructor(String.class).newInstance("Bello");
+            assertEquals("Woof", dogClass.getDeclaredMethod("makeSound").invoke(dog), "The method makeSound() of the class Dog does not return the expected value.");
         }catch (Exception e){
-            fail("Die Methode lautGeben() der Klasse Hund konnte nicht aufgerufen werden. Hast du sie richtig benannt und deklariert?");
+            fail("The method makeSound() of the class Dog could not be called. Did you name and declare it correctly?");
         }
     }
 
     @Test
-    void lautMitBasis(){
+    void soundWithBase_returns_as_expected() {
         try{
-            Object hund = hundClass.getDeclaredConstructor(String.class).newInstance("Bello");
-            assertEquals("... Wuff", hundClass.getDeclaredMethod("lautMitBasis").invoke(hund), "Die Methode lautMitBasis() der Klasse Hund gibt nicht den erwarteten Wert zurück.");
+            Object dog = dogClass.getDeclaredConstructor(String.class).newInstance("Bello");
+            assertEquals("... Woof", dogClass.getDeclaredMethod("soundWithBase").invoke(dog), "The method soundWithBase() of the class Dog does not return the expected value.");
         }catch (Exception e){
-            fail("Die Methode lautMitBasis() der Klasse Hund konnte nicht aufgerufen werden. Hast du sie richtig benannt und deklariert?");
+            fail("The method soundWithBase() of the class Dog could not be called. Did you name and declare it correctly?");
         }
     }
 }

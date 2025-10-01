@@ -1,4 +1,4 @@
-package de.month_1.fundamentals.day_15.vererbung;
+package de.month_1.fundamentals.day_15.Inheritance;
 
 public class Dog extends Animal {
     public String art = "Hund"; // Feld-Verdecken (hiding) Demo

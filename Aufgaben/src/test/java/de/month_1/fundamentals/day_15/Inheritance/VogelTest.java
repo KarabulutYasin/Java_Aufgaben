@@ -1,4 +1,4 @@
-package de.month_1.fundamentals.day_15.vererbung;
+package de.month_1.fundamentals.day_15.Inheritance;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -14,7 +14,7 @@ class VogelTest {
     @BeforeEach
     void setUpVogelClass() {
         try {
-            vogelClass = Class.forName("de.month_1.fundamentals.day_15.vererbung.Vogel");
+            vogelClass = Class.forName("de.month_1.fundamentals.day_15.Inheritance.Vogel");
         } catch (ClassNotFoundException e) {
             fail("Die Klasse Vogel existiert nicht. Hast du sie richtig benannt und im richtigen Package de.month_1.fundamentals.day_15.vererbung erstellt?");
         }
@@ -23,7 +23,7 @@ class VogelTest {
     @BeforeEach
     void setUpInterface() {
         try {
-            kannFliegenClass = Class.forName("de.month_1.fundamentals.day_15.vererbung.KannFliegen");
+            kannFliegenClass = Class.forName("de.month_1.fundamentals.day_15.Inheritance.KannFliegen");
         } catch (ClassNotFoundException e) {
             fail("Das Interface KannFliegen existiert nicht. Hast du es richtig benannt und im richtigen Package de.month_1.fundamentals.day_15.vererbung erstellt?");
         }

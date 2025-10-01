@@ -1,4 +1,4 @@
-package de.month_1.fundamentals.day_15.vererbung;
+package de.month_1.fundamentals.day_15.Inheritance;
 
 import org.junit.platform.suite.api.SelectClasses;
 import org.junit.platform.suite.api.Suite;

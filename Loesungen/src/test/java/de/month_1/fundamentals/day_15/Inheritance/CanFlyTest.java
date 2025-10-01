@@ -1,4 +1,4 @@
-package de.month_1.fundamentals.day_15.vererbung;
+package de.month_1.fundamentals.day_15.Inheritance;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -7,14 +7,14 @@ import java.lang.reflect.Method;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class KannFliegenTest {
+class CanFlyTest {
 
     Class<?> interfaceKannFliegen;
 
     @BeforeEach
     void setup() {
         try {
-            interfaceKannFliegen = Class.forName("de.month_1.fundamentals.day_15.vererbung.KannFliegen");
+            interfaceKannFliegen = Class.forName("de.month_1.fundamentals.day_15.Inheritance.CanFly");
         } catch (ClassNotFoundException e) {
             fail("Vogel class not found");
         }

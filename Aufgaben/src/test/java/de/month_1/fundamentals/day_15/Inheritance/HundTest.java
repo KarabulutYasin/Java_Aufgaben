@@ -1,4 +1,4 @@
-package de.month_1.fundamentals.day_15.vererbung;
+package de.month_1.fundamentals.day_15.Inheritance;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -12,7 +12,7 @@ class HundTest {
     @BeforeEach
     void setUp() {
         try {
-            hundClass = Class.forName("de.month_1.fundamentals.day_15.vererbung.Hund");
+            hundClass = Class.forName("de.month_1.fundamentals.day_15.Inheritance.Hund");
         }catch (ClassNotFoundException e) {
             fail("Die Klasse Hund existiert nicht. Hast du sie richtig benannt und im richtigen Package de.month_1.fundamentals.day_15.vererbung erstellt?");
         }

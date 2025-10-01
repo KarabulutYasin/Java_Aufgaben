@@ -10,25 +10,25 @@ class VehicleTest {
 
     @Test
     void testFahrzeug(){
-        String[] expectedMethods = {"starten", "stoppen", "getGeschwindigkeit", "setGeschwindigkeit"};
+        String[] expectedMethods = {"start", "stop", "getSpeed", "setSpeed"};
         Class<?>[] expectedReturnTypes = {void.class, void.class, int.class, void.class};
         Class<?>[][] expectedParamTypes = {new Class<?>[0], new Class<?>[0], new Class<?>[0], {int.class}};
         int i =0;
         try {
             Class<?> clazz = Class.forName("de.month_1.fundamentals.day_14.interfaces.Vehicle");
 
-            assertTrue(clazz.isInterface(), "Fahrzeug should be an interface");
+            assertTrue(clazz.isInterface(), "Vehicle should be an interface");
 
 
             for (i = 0; i < expectedMethods.length; i++) {
                     Method method = clazz.getDeclaredMethod(expectedMethods[i],expectedParamTypes[i]);
                     assertEquals(expectedReturnTypes[i], method.getReturnType(),
-                            "Methode " + expectedMethods[i] + " hat nicht den erwarteten Rückgabetyp");
+                            "Methode " + expectedMethods[i] + " does not have the expected return type");
             }
         }catch (ClassNotFoundException e){
-            fail("Fahrzeug interface not found");
+            fail("Vehicle interface not found");
         } catch (NoSuchMethodException e) {
-            fail("Methode " + expectedMethods[i] + " fehlt");
+            fail("Method " + expectedMethods[i] + " is missing");
         }
     }
 

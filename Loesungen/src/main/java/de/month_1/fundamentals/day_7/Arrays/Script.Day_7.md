@@ -1,74 +1,73 @@
-# Skript Arrays - ArrayAufgaben
+# Script Arrays - Array Exercises
 
-## Inhaltsverzeichnis
+## Table of Contents
 
-- [Was sind Arrays?](#was-sind-arrays)
-- [Array-Grundlagen](#array-grundlagen)
-- [Schleifen mit Arrays](#schleifen-mit-arrays)
-- [Modifizieren vs Neu erstellung](#modifizieren-vs-neues-array-erstellen)
-- [Debugging Tipps](#-debugging-tipps)
+- [What are arrays?](#what-are-arrays)
+- [Array Basics](#array-basics)
+- [Loops with Arrays](#loops-with-arrays)
+- [Modifying vs Creating New](#modifying-vs-creating-new-array)
+- [Debugging Tips](#-debugging-tips)
 
-### Was sind Arrays?
+### What are arrays?
 <details>
     <summary>Definition</summary>
 
-Arrays sind Datenstrukturen, die mehrere Werte des gleichen Typs speichern können.
+Arrays are data structures that can store multiple values of the same type.
 
-Die jeweiligen Elemente sind über einen Index zugreifbar. wichtig ist hierbei das der Index bei 0 beginnt.
+The individual elements are accessible via an index. It is important to note that the index starts at 0.
 
-Visualisierung eines Arrays:
+Visualization of an array:
 
 <img src="../../../../../../resources/array_img.png" alt="Array Visualization" width="300"/>
 
-.#### Wichtige Eigenschaften:
-- Arrays haben eine feste Größe
-- Indizierung beginnt bei 0
-- Alle Elemente haben den gleichen Datentyp (Zumindest in Java so)
-- Zugriff über Index: array[0] gibt das erste Element (man beachte index), array[1] gibt das zweite Element, etc.
+#### Key Properties:
+- Arrays have a fixed size
+- Indexing starts at 0
+- All elements have the same data type (at least in Java)
+- Access via index: array[0] gives the first element (note the index), array[1] gives the second element, etc.
 
 </details>
 
-### Array-Grundlagen
+### Array Basics
 <details>
-    <summary>Array-Erstellung und Zugriff</summary>
+    <summary>Array Creation and Access</summary>
 
-Array erstellen:
+Array creation:
 ```java
-java// Variante 1: Größe angeben
-int[] numbers = new int[5]; // Array mit 5 Elementen (alle 0) 
+// Variant 1: Specify size
+int[] numbers = new int[5]; // Array with 5 elements (all 0) 
 
-// Variante 2: Mit Werten initialisieren
-int[] numbers = {1, 2, 3, 4, 5}; // Das Array ist dann so lange wie die Anzahl der Werte
+// Variant 2: Initialize with values
+int[] numbers = {1, 2, 3, 4, 5}; // The array length matches the number of values
 
-// Variante 3: new mit Werten
+// Variant 3: new with values
 int[] numbers = new int[]{1, 2, 3, 4, 5};
 ```
 
-Array-Zugriff:
+Array access:
 ```java 
 int[] array = {10, 20, 30};
-System.out.println(array[0]); // Ausgabe: 10
-System.out.println(array.length); // Ausgabe: 3 (Länge des Arrays)
+System.out.println(array[0]); // Output: 10
+System.out.println(array.length); // Output: 3 (length of the array)
 
-array[1] = 99; // Wert ändern
-// Array ist jetzt: {10, 99, 30}
+array[1] = 99; // Change value
+// Array is now: {10, 99, 30}
 ```
-
-Array-Grenzen beachten:
+Pay attention to array boundaries:
 ```java
-javaint[] array = {1, 2, 3};
-System.out.println(array[3]); // Fehler!
-// array[3] würde einen IndexOutOfBoundsException werfen da der index 3 nicht existiert!
-// Gültige Indizes: 0, 1, 2
+int[] array = {1, 2, 3};
+System.out.println(array[3]); // Error!
+// array\[3\] would throw an IndexOutOfBoundsException because index 3 does not exist!
+// Valid indices: 0, 1, 2
 ```
 
 </details>
 
-### Schleifen mit Arrays
+### Loops with Arrays
 <details>
-    <summary>for-Schleife vs for-each-Schleife</summary>
+    <summary>for loop vs for-each loop</summary>
 
-Klassische for-Schleife:
+Classic for loop:
 
 ```java
 int[] numbers = {10, 20, 30, 40, 50};
@@ -78,59 +77,59 @@ System.out.print("Index " + i + ": " + numbers[i]);
 }
 ```
 
-Vorteile: Zugriff auf Index, kann Array modifizieren
+Advantages: Access to index, can modify array
 
-for-each-Schleife (enhanced for loop):
+for-each loop (enhanced for loop):
 
 ```java 
 int[] numbers = {10, 20, 30, 40, 50};
 
 for (int number : numbers) {
-System.out.println("Wert: " + number);
+System.out.println("Value: " + number);
 }
 ```
 
-Vorteile: Einfacher zu schreiben, weniger fehleranfällig
+Advantages: Easier to write, less error-prone
 
-#### Wann welche Schleife?
-- for-each: Wenn du nur die Werte brauchst (lesen)
-- klassische for: Wenn du den Index brauchst oder das Array ändern willst
+#### When to use which loop?
+- for-each: When you only need the values (read-only)
+- classic for: When you need the index or want to modify the array
 
 </details>
 
-### Modifizieren vs. Neues Array erstellen
+### Modifying vs. Creating a New Array
 
 <details>
-    <summary>Wichtiger Unterschied bei Array-Operationen</summary>
+    <summary>Important difference in array operations</summary>
 
-Es gibt einen wichtigen Unterschied zwischen Modifizieren (das ursprüngliche Array ändern) und Manipulieren (ein neues Array erstellen):
+There is an important difference between modifying (changing the original array) and manipulating (creating a new array):
 
-🔄 Modifizieren - Ursprüngliches Array ändern:
+🔄 Modifying - Change the original array:
 
 ```java
-// Methode ändert das übergebene Array direkt
+// Method directly modifies the passed array
 public void reverse(int[] numbers) {
-    // Hier wird das GLEICHE Array verändert
+    // The SAME array is modified here
     for (int i = 0; i < numbers.length / 2; i++) {
         int temp = numbers[i];
         numbers[i] = numbers[numbers.length - 1 - i];
         numbers[numbers.length - 1 - i] = temp;
     }
-    // Kein return nötig - das Original ist geändert!
+    // No return needed - the original is changed!
 }
 
-// Verwendung:
+// Usage:
 int[] myArray = {1, 2, 3, 4, 5};
 reverse(myArray);
 System.out.println(Arrays.toString(myArray)); // [5, 4, 3, 2, 1]
 ```
 
-🆕 Neues Array erstellen - Original bleibt unverändert:
+🆕 Create a new array - original remains unchanged:
 
 ```java
-// Methode erstellt ein NEUES Array
+// Method creates a NEW array
 public int[] filterEven(int[] numbers) {
-// Hier wird ein komplett neues Array erstellt
+// Here a completely new array is created
 List<Integer> evenNumbers = new ArrayList<>();
 for (int num : numbers) {
 if (num % 2 == 0) {
@@ -138,32 +137,31 @@ evenNumbers.add(num);
 }
 }
 return evenNumbers.stream().mapToInt(i -> i).toArray();
-// Original Array bleibt unverändert!
+// Original array remains unchanged!
 }
 
-// Verwendung:
+// Usage:
 int[] myArray = {1, 2, 3, 4, 5};
 int[] evenArray = filterEven(myArray);
-System.out.println(Arrays.toString(myArray));    // [1, 2, 3, 4, 5] (unverändert!)
+System.out.println(Arrays.toString(myArray));    // [1, 2, 3, 4, 5] (unchanged!)
 System.out.println(Arrays.toString(evenArray));  // [2, 4]
 ```
 
-#### 🎯 Wann welcher Ansatz?
-Modifizieren verwenden wenn:
-- ✅ Du Speicher sparen willst
-- ✅ Das ursprüngliche Array nicht mehr gebraucht wird
-- ✅ Performance wichtig ist (keine Array-Erstellung)
-- ✅ Beispiele: reverse(), multiplyBy()
+#### 🎯 When to use which approach?
+Use modification when:
+- ✅ You want to save memory
+- ✅ The original array is no longer needed
+- ✅ Performance is important (no array creation)
+- ✅ Examples: reverse(), multiplyBy()
 
-Neues Array erstellen wenn:
-- ✅ Das Original erhalten bleiben soll
-- ✅ Die Größe sich ändert (Filter-Operationen)
-- ✅ Verschiedene Datentypen im Ergebnis
-- ✅ Beispiele: filterEven(), concatenate(), removeDuplicates()
+Create a new array when:
+- ✅ The original should be preserved
+- ✅ The size changes (filter operations)
+- ✅ Different data types in the result
+- ✅ Examples: filterEven(), concatenate(), removeDuplicates()
 
-⚠️ Wichtiger Hinweis:
-Arrays in Java werden als Referenz übergeben. Das bedeutet, dass die Methode auf das gleiche Array-Objekt zugreift wie der Aufrufer. Änderungen in der Methode wirken sich daher auf das ursprüngliche Array aus!
-
+⚠️ Important note:
+Arrays in Java are passed by reference. This means that the method accesses the same array object as the caller. Changes in the method therefore affect the original array!
 </details>
 
 ### 🎯 Debugging-Tipps
@@ -172,42 +170,42 @@ Arrays in Java werden als Referenz übergeben. Das bedeutet, dass die Methode au
 1. IndexOutOfBoundsException:
 
 ```java
-java// ❌ Falsch
-for (int i = 0; i <= array.length; i++) // <= ist falsch!
+java// ❌ Wrong
+for (int i = 0; i <= array.length; i++) // <= is wrong!
 
-// ✅ Richtig  
-for (int i = 0; i < array.length; i++) // oder 
+// ✅ Correct  
+for (int i = 0; i < array.length; i++) // or 
 for (int i = 0; i <= array.length - 1; i++)
 ```
 
 2. NullPointerException:
 
 ```java
-// ❌ Null-Array nicht prüfen
+// ❌ Not checking for null array
    public int sum(int[] numbers) {
    int sum = 0;
-   for (int num : numbers) { // Fehler wenn numbers == null
+   for (int num : numbers) { // Error if numbers == null
    sum += num;
    }
    return sum;
    }
 
-// ✅ Null-Check hinzufügen
+// ✅ Add null check
 public int sum(int[] numbers) {
 if (numbers == null) return 0;
-// ... rest der Methode
+// ... rest of the method
 }
 ```
 
-3. Leeres Array vergessen:
+3. Forgot empty array:
 ```java
-// ❌ Leeres Array nicht behandeln
+// ❌ Not handling empty array
 public int findMax(int[] numbers) {
-int max = numbers[0]; // Fehler bei leerem Array!
+    int max = numbers[0]; // Error with empty array!
 // ...
 }
 
-// ✅ Leeres Array prüfen
+// ✅ Check for empty array
 public int findMax(int[] numbers) {
 if (numbers.length == 0) return Integer.MIN_VALUE;
 int max = numbers[0];

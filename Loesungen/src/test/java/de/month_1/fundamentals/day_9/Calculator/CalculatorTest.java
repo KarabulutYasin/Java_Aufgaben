@@ -29,25 +29,25 @@ class CalculatorTest {
         "15 + 5, 20",
         "30 - 10, 20"
     })
-    void berechne_with_valid_input(String input, double expected) {
-        assertEquals(expected, calculator.berechne(input));
+    void calculate_with_valid_input(String input, double expected) {
+        assertEquals(expected, calculator.calculate(input));
     }
 
     @ParameterizedTest
     @CsvSource({
-        "7* 4, Ungültiges Pattern",
-        "9 -3, Ungültiges Pattern",
-        "8 / 0, Division durch Null nicht möglich",
-        "6 ^ 2, Ungültige Rechenart",
-        "4 + a, Ungültige Zahl",
-        "5 & 2, Ungültige Rechenart",
-        "10 / 0, Division durch Null nicht möglich",
-        "abc + 5, Ungültige Zahl",
-        "5 + , Ungültiges Pattern",
-        " + 5, Ungültiges Pattern"
+        "7* 4, Invalid pattern",
+        "9 -3, Invalid pattern",
+        "8 / 0, Division by zero not possible",
+        "6 ^ 2, Invalid operator",
+        "4 + a, Invalid number",
+        "5 & 2, Invalid operator",
+        "10 / 0, Division by zero not possible",
+        "abc + 5, Invalid number",
+        "5 + , Invalid pattern",
+        " + 5, Invalid pattern"
     })
-    void berechne_with_invalid_input(String input, String expectedMessage) {
-        RuntimeException exception = assertThrows(RuntimeException.class, () -> calculator.berechne(input));
+    void calculate_with_invalid_input(String input, String expectedMessage) {
+        RuntimeException exception = assertThrows(RuntimeException.class, () -> calculator.calculate(input));
         assertEquals(expectedMessage, exception.getMessage());
     }
 }

@@ -2,30 +2,30 @@ package de.month_1.fundamentals.day_14.interfaces;
 
 public class Car implements Vehicle {
 
-    private int geschwindigkeit;
+    private int speed;
 
     @Override
-    public void starten() {
-        System.out.println("Auto wird gestartet wrom wrom");
+    public void start() {
+        System.out.println("Car is starting vroom vroom");
     }
 
     @Override
-    public void stoppen() {
-        System.out.println("Auto wurde gestoppt");
-        geschwindigkeit = 0;
+    public void stop() {
+        System.out.println("Car has stopped");
+        speed = 0;
     }
 
     @Override
-    public int getGeschwindigkeit() {
-        return geschwindigkeit;
+    public int getSpeed() {
+        return speed;
     }
 
     @Override
-    public void setGeschwindigkeit(int wert) {
-        if (wert < 0) {
-            throw new IllegalArgumentException("Geschwindigkeit darf nicht negativ sein");
+    public void setSpeed(int value) {
+        if (value < 0) {
+            throw new IllegalArgumentException("Speed cannot be negative");
         }
-        geschwindigkeit = wert;
+        speed = value;
     }
 
 }

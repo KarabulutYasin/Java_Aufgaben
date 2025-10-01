@@ -4,88 +4,80 @@ import de.utiltiy.MainProvider;
 
 import java.lang.reflect.Method;
 
-public class ArrayAufgaben {
+public class ArrayTasks {
 
     //TODO
-    // Arbeite mit Arrays um die folgenden Aufgaben zu lösen
-    // Nutze sowohl for-Schleifen als auch for-each Schleifen zur Übung
+    // Work with arrays to solve the following tasks
+    // Use both for-loops and for-each loops for practice
 
     //TODO
-    // Erstelle ein int Array der Größe n und fülle es mit den Zahlen 1 bis n
-    public int[] createSequence(int n) {
-        return null;
-    }
+    // Create an int array of size n and fill it with the numbers 1 to n
+    public int[] createSequence(int n) {return null;}
 
     //TODO
-    // Finde das Maximum in einem Array
-    public int findMax(int[] numbers) {
-        return -1;
-    }
+    // Find the maximum in an array
+    public int findMax(int[] numbers) {return -1;}
 
     //TODO
-    // Berechne die Summe aller Elemente im Array
-    public int sum(int[] numbers) {
-        return -1;
-    }
+    // Calculate the sum of all elements in the array
+    public int sum(int[] numbers) {return -1;}
 
     //TODO
-    // Zähle, wie oft ein bestimmter Wert im Array vorkommt
-    public int countOccurrences(int[] numbers, int value) {
-        return -1;
-    }
+    // Count how often a certain value occurs in the array
+    public int countOccurrences(int[] numbers, int value) {return -1;}
 
     //TODO
-    // Kehre die Reihenfolge der Elemente um (Array wird modifiziert!)
+    // Reverse the order of the elements (array is modified!)
     public void reverse(int[] numbers) {
     }
 
     //TODO
-    // Erstelle eine Kopie des Arrays nur mit den geraden Zahlen
+    // Create a copy of the array with only the even numbers
     public int[] filterEven(int[] numbers) {
         return null;
     }
 
     //TODO
-    // Prüfe, ob das Array sortiert ist (aufsteigend)
+    // Check if the array is sorted (ascending)
     public boolean isSorted(int[] numbers) {
         return false;
     }
 
     //TODO
-    // Finde den Index des ersten Vorkommens von value, -1 wenn nicht gefunden
+    // Find the index of the first occurrence of value, -1 if not found
     public int indexOf(int[] numbers, int value) {
         return -2;
     }
 
     //TODO
-    // Multipliziere jedes Element mit dem Faktor (Array wird modifiziert!)
+    // Multiply each element by the factor (array is modified!)
     public void multiplyBy(int[] numbers, int factor) {
     }
 
     //TODO
-    // Erstelle ein neues Array durch Zusammenfügen zweier Arrays
+    // Create a new array by concatenating two arrays
     public int[] concatenate(int[] first, int[] second) {
         return null;
     }
 
     //TODO
-    // Berechne den Durchschnitt aller Werte (als double)
+    // Calculate the average of all values (as double)
     public double average(int[] numbers) {
         return -1;
     }
 
     //TODO
-    // Entferne alle Duplikate und gebe ein neues Array zurück
-    // TIPP: Verwende ein temporäres Array und zähle eindeutige Elemente
+    // Remove all duplicates and return a new array
+    // TIP: Use a temporary array and count unique elements
     public int[] removeDuplicates(int[] numbers) {
 
         return null;
     }
 
     public static void main(String[] args) {
-        //Muss nicht bearbeitet werden
-        Method[] methods = ArrayAufgaben.class.getDeclaredMethods();
-        Class<?> clazz = ArrayAufgaben.class;
+        //No need to edit
+        Method[] methods = ArrayTasks.class.getDeclaredMethods();
+        Class<?> clazz = ArrayTasks.class;
 
         MainProvider.printAscii();
         for(Method method: methods){
@@ -93,7 +85,7 @@ public class ArrayAufgaben {
             if ("createSequence".equals(method.getName())) MainProvider.exec(method, clazz, 10);
             if ("findMax".equals(method.getName())) MainProvider.exec(method, clazz, (Object) new int[]{3, 5, 1, 8, 2});
             if ("sum".equals(method.getName())) MainProvider.exec(method, clazz, (Object) new int[]{3, 5, 1, 8, 2});
-            if ("countOccurrences".equals(method.getName())) MainProvider.exec(method, clazz, (Object) new int[]{3, 5, 1, 8, 2, 3, 3}, 3);
+            if ("countOccurrences".equals(method.getName())) MainProvider.exec(method, clazz, new int[]{3, 5, 1, 8, 2, 3, 3}, 3);
             if ("reverse".equals(method.getName())) MainProvider.exec(method, clazz, (Object) new int[]{3, 5, 1, 8, 2});
             if ("filterEven".equals(method.getName())) MainProvider.exec(method, clazz, (Object) new int[]{3, 5, 1, 8, 2});
             if ("isSorted".equals(method.getName())) MainProvider.exec(method, clazz, (Object) new int[]{1, 2, 3, 4, 5});

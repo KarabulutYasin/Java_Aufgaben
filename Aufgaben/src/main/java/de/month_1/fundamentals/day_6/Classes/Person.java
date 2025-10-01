@@ -3,12 +3,12 @@ package de.month_1.fundamentals.day_6.Classes;
 
 public class Person {
     //TODO
-    // Schreibe eine Klasse Person welche die Attributen name und alter hat
-    // Schreibe einen jedes Argument Konstruktor (AllArgs)
-    // Schreibe dafür eine AlterNegativException und Throw sie falls die person unter 0 Jahre ist
-    // Schreibe eine toString Methode die ausgibt wie bei folgendem Beispiel
-    // Schreibe Getter und Setter
-    //TIPP Achte darauf das eine Person nicht unter 0 Jahre sein kann
+    // Write a class Person which has the attributes name and age
+    // Write an all-args constructor
+    // Write an AgeNegativeException and throw it if the person is younger than 0 years
+    // Write a toString method that outputs as in the following example
+    // Write getters and setters
+    //TIP: Make sure that a person cannot be younger than 0 years
 
-    // Name: Yasin, Alter: 21
+    // Name: Yasin, Age: 21
 }

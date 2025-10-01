@@ -1,83 +1,82 @@
-# Skript Eigene Methoden
+# Script Own Methods
 
-## Inhaltsverzeichnis
-- [Was sind Methoden?](#was-sind-methoden)
-- [Die Syntax (Rechtschreibung) einer Methode](#die-syntax-rechtschreibung-einer-methode)
-- [Die Sichtbarkeit einer Methode](#die-sichtbarkeit-einer-methode)
-- [Der Rückgabetyp einer Methode](#der-rückgabetyp-einer-methode)
-- [Die Parameter einer Methode](#die-parameter-einer-methode)
+## Table of Contents
+- [The syntax (spelling) of a method](#the-syntax-spelling-of-a-method-is-divided-into-several-aspects-each-fulfilling-specific-tasks)
+- [The visibility of a method](#the-visibility-of-a-method-determines-from-where-the-method-can-be-called)
+- [The return type of a method](#the-return-type-of-the-method-determines-which-data-type-the-method-returns-when-it-is-called)
+- [The parameters of a method](#the-parameters-of-a-method-are-variables-that-are-passed-to-the-method-when-it-is-called)
 
-### Die Syntax (Rechtschreibung) einer Methode wird in mehrere Aspekte gegliedert die jeweils bestimmte Aufgaben erfüllen.
+### The syntax (spelling) of a method is divided into several aspects, each fulfilling specific tasks.
 
 <details>
     <summary>Syntax</summary>
 
-\<Sichtbarkeit> \<Rückgabetyp> \<NameDerMethode>(\<Parameter>) { 
+\<Visibility> \<ReturnType> \<MethodName>(\<Parameter>) {
 
-     Code was die Methode ausführt 
+     Code that the method executes
 
 }
 
-Beispiele:
+Examples:
 
 ```java
-public void meineMethode() {
-    System.out.println("Hallo Welt");
+public void myMethod() {
+    System.out.println("Hello World");
 }
 ```
-Diese Methode hat die Sichtbarkeit "public", gibt keinen Wert zurück (void) und hat keine Parameter.
+This method has the visibility "public", returns no value (void), and has no parameters.
 ```java
-private int addiere(int a, int b) {
+private int add(int a, int b) {
     return a + b;
 }
 ```
-Diese Methode hat die Sichtbarkeit "private", gibt einen int-Wert zurück und hat zwei Parameter (int a, int b).
+This method has the visibility "private", returns an int value, and has two parameters (int a, int b).
 ```java
-String begruesse(String name) {
-    return "Hallo " + name;
+String greet(String name) {
+    return "Hello " + name;
 }
 ```
-Diese Methode hat die Sichtbarkeit "package protected" (default), gibt einen String zurück und hat einen Parameter (String name).
+This method has the visibility "package protected" (default), returns a String, and has one parameter (String name).
 </details>
 
-### Die Sichtbarkeit einer Methode bestimmt von wo aus die Methode aufgerufen werden kann.
+### The visibility of a method determines from where the method can be called.
 
 <details>
-    <summary>Sichtbarkeiten</summary>
+    <summary>Visibilities</summary>
 
 - ### public
-    - Die Methode ist von überall aus aufrufbar.
+    - The method can be called from anywhere.
 - ### private
-    - Die Methode ist nur innerhalb der Klasse aufrufbar in der sie definiert wurde.
+    - The method can only be called within the class in which it is defined.
 - ### protected
-    - Die Methode ist innerhalb der Klasse und in allen Unterklassen aufrufbar.
-- ### package protected (per default also wenn nichts angegeben wird)
-    - Die Methode ist innerhalb des Pakets aufrufbar.
-    - und gleichzeitig Protected
+    - The method can be called within the class and in all subclasses.
+- ### package protected (by default, i.e., if nothing is specified)
+    - The method can be called within the package. 
+    - and at the same time Protected
   
 </details>
 
-### Der Rückgabetyp einer Methode bestimmt welchen Datentyp die Methode zurückgibt wenn sie aufgerufen wird.
+### The return type of the method determines which data type the method returns when it is called.
 
 <details>
-    <summary>Rückgabetypen</summary>
+    <summary>Return Types</summary>
 
 - ### void
-    - Die Methode gibt keinen Wert zurück.
-- ### Primitive Datentypen
+    - The method does not return a value.
+- ### Primitive data types
     - int, double, boolean, char, byte, short, long, float
-    - Die Methode gibt einen Wert des jeweiligen primitiven Datentyps zurück.
-- ### Referenzdatentypen
-    - String, Arrays, Objekte (z.B. eigene Klassen)
-    - Die Methode gibt einen Wert des jeweiligen Referenzdatentyps zurück.
+    - The method returns a value of the respective primitive data type.
+- ### Reference data types
+    - String, arrays, objects (e.g., own classes)
+    - The method returns a value of the respective reference data type.
 </details>  
 
-### Die Parameter einer Methode sind Variablen die der Methode übergeben werden wenn sie aufgerufen wird.
+### The parameters of a method are variables that are passed to the method when it is called.
 <details>
-    <summary>Parameter</summary>
+    <summary>Parameters</summary>
 
-- ### Eine Methode kann keine, einen oder mehrere Parameter haben.
-- ### Jeder Parameter hat einen Datentyp und einen Namen.
-- ### Parameter werden durch Kommas getrennt.
-- ### WICHTIG!!! Parameter sind nur innerhalb der Methode sichtbar.
+- ### A method can have none, one, or several parameters.
+- ### Each parameter has a data type and a name.
+- ### Parameters are separated by commas.
+- ### IMPORTANT!!! Parameters and variables which was declared in the method are only visible within the method.
 </details>  

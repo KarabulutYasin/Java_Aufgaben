@@ -44,6 +44,52 @@ mvn clean install -DskipTests
 
 </details>
 
+## 🧪 How to test
+
+<details>
+    <summary>How to test</summary>
+
+#### Simple version (Current File):
+
+- Set the Run/Debug configuration on current File
+<details>
+    <summary>Run/Debug config image</summary>
+
+<img src="Solutions/src/main/resources//RunDebug.png" alt="Run Configuration" width="400"/>
+</details>
+
+- Open the file/test file you want to run
+- Click on the green play button next to the Run/Debug configuration
+
+#### Advanced version (Run Configuration):
+
+- Open the Run/Debug configuration and press Edit Configurations...
+<details>
+    <summary>Run/Debug config image</summary>
+
+<img src="Solutions/src/main/resources//RunDebug.png" alt="Run Configuration" width="400"/>
+</details>
+
+
+- Add a Junit Configuration
+<details>
+    <summary>Add Junit a Junit Config image</summary>
+
+<img src="Solutions/src/main/resources/AddJunit.png" alt="Add Junit Configuration" width="400"/>
+</details>
+
+<details>
+    <summary>Configurate Test</summary>
+
+<img src="Solutions/src/main/resources/ConfigurateJuniTest.png" alt="Junit Configuration" width="400"/>
+
+- <span style="color:blue">Is the name of the Test (is just important for your Organisation)</span>
+- <span style="color:red">Is the name of the Module (in our Project Exercises)</span>
+- <span style="color:green">Is the name of the Class left to it the Path to the Class (the Test you want to run)</span>
+- <span style="color:green">You can also Run specific methods in the test if you chance Class to method</span>
+</details>
+</details>
+
 ## 📦 Project Structure
 
 <details>

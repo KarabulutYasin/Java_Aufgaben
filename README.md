@@ -51,8 +51,8 @@ mvn clean install -DskipTests
 
 The project is divided into 2 modules
 
-* [Exercises](Aufgaben)
-* [Solutions](Loesungen)
+* [Exercises](Exercises)
+* [Solutions](Solutions)
 
 The modules "Exercises" and "Solutions" contain the same tasks and tests, but the tasks in the "Exercises" module are unedited.
 

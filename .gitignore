@@ -1,7 +1,7 @@
 target/
 .idea/*
 !.mvn/wrapper/maven-wrapper.jar
-!**/src/lineareProgramme/**/target/
+!**/src/linearPrograms/**/target/
 !**/src/test/**/target/
 
 ### IntelliJ IDEA ###
@@ -33,7 +33,7 @@ target/
 /nbdist/
 /.nb-gradle/
 build/
-!**/src/lineareProgramme/**/build/
+!**/src/linearPrograms/**/build/
 !**/src/test/**/build/
 
 ### VS Code ###

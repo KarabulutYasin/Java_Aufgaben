@@ -6,6 +6,7 @@ This repository contains a collection of Java exercises designed to teach and re
 
 - [Before Start](#Before-Start)
 - [Project Structure](#-Project-Structure)
+- [How to test](#-How-to-test)
 - [Direct Links](#-direct-links)
 -
     - [Month 1 Fundamentals](#month-1)
@@ -42,6 +43,26 @@ mvn clean install -DskipTests
 ./mvnw clean install -DskipTests
 ```
 
+</details>
+
+## 📦 Project Structure
+
+<details>
+    <summary>Project Structure</summary>
+
+The project is divided into 2 modules
+
+* [Exercises](Exercises)
+* [Solutions](Solutions)
+
+The modules "Exercises" and "Solutions" contain the same tasks and tests, but the tasks in the "Exercises" module are unedited.
+
+You work on the exercises and can then check your solution approach with the corresponding tests.
+
+Note that from about day 12 onwards, the tasks become a bit less strict so
+that you start thinking for yourself and reading error messages.
+
+(or peek at the solution if you get stuck :D)
 </details>
 
 ## 🧪 How to test
@@ -88,26 +109,6 @@ mvn clean install -DskipTests
 - <span style="color:green">Is the name of the Class left to it the Path to the Class (the Test you want to run)</span>
 - <span style="color:green">You can also Run specific methods in the test if you chance Class to method</span>
 </details>
-</details>
-
-## 📦 Project Structure
-
-<details>
-    <summary>Project Structure</summary>
-
-The project is divided into 2 modules
-
-* [Exercises](Exercises)
-* [Solutions](Solutions)
-
-The modules "Exercises" and "Solutions" contain the same tasks and tests, but the tasks in the "Exercises" module are unedited.
-
-You work on the exercises and can then check your solution approach with the corresponding tests.
-
-Note that from about day 12 onwards, the tasks become a bit less strict so
-that you start thinking for yourself and reading error messages.
-
-(or peek at the solution if you get stuck :D)
 </details>
 
 ## 📝 Direct Links

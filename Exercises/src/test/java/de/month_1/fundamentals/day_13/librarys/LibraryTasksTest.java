@@ -1,12 +1,16 @@
 package de.month_1.fundamentals.day_13.librarys;
 
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.Arguments;
+import org.junit.jupiter.params.provider.MethodSource;
 
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.List;
 import java.util.Scanner;
+import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -28,11 +32,22 @@ class LibraryTasksTest {
         assertEquals(lines, sut.readLinesFromFile(temp));
     }
 
-    @Test
-    void countWords_countsProperly() throws IOException {
+    @ParameterizedTest
+    @MethodSource("provide_countWords_countsProperly")
+    void countWords_countsProperly(List list,int expected) throws IOException {
         Path temp = Files.createTempFile("words", ".txt");
-        Files.write(temp, List.of("Hi you", "How are you"));
-        assertEquals(5, sut.countWordsInFile(temp));
+        Files.write(temp, list);
+        assertEquals(expected, sut.countWordsInFile(temp));
+    }
+
+    private static Stream<Arguments> provide_countWords_countsProperly() {
+        return Stream.of(
+                Arguments.of(List.of("One two three", "Four five"), 5),
+                Arguments.of(List.of("SingleWord"), 1),
+                Arguments.of(List.of("   Leading and trailing spaces   "), 4),
+                Arguments.of(List.of("", "   ", "\t"), 0),
+                Arguments.of(List.of("Multiple    spaces between words"), 4)
+        );
     }
 
     @Test

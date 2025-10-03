@@ -50,9 +50,19 @@ class LibraryTasksTest {
         );
     }
 
-    @Test
-    void sumIntegerList_sumsCorrectly() {
-        assertEquals(6, sut.sumIntegerList(List.of(1, 2, 3)));
+    @ParameterizedTest
+    @MethodSource("provide_sumIntegerList_sumsCorrectly")
+    void sumIntegerList_sumsCorrectly(List <Integer> numbers, int expected) {
+        assertEquals(expected, sut.sumIntegerList(numbers));
+    }
+
+    private static Stream<Arguments> provide_sumIntegerList_sumsCorrectly() {
+        return Stream.of(
+                Arguments.of(List.of(1, 2, 3), 6),
+                Arguments.of(List.of(-1, -2, -3), -6),
+                Arguments.of(List.of(0, 0, 0), 0),
+                Arguments.of(List.of(100, 200, 300), 600)
+        );
     }
 
     @Test

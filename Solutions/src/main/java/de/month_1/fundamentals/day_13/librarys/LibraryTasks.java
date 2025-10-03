@@ -65,7 +65,7 @@ public class LibraryTasks {
         return sb.toString();
     }
     /*
-     * There are also other libraries instead of java.nio.file.Files
+     * There are other libraries instead of java.nio.file.Files
      * if you want to explore them, feel free to do so you can understand legacy code.
      *
      * https://docs.oracle.com/javase/8/docs/api/java/nio/Buffer.html
